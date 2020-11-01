@@ -8,20 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class EscenarioCasa extends AppCompatActivity {
+public class elegirCamino extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_entrada_casa);
+        setContentView(R.layout.activity_elegir_camino);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
-
-    public void caminoBueno(View view){
-        Intent caminoBueno = new Intent (this, elegirCamino.class);
-        startActivity(caminoBueno);
-    }
-
 
 }

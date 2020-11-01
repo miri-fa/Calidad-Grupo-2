@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicacionPS">
         <activity android:name=".EscenarioCasa"></activity>
+        <activity android:name=".elegirCamino"></activity>
+        <activity android:name=".Escenario1" />
         <activity android:name=".ComoJugar" />
         <activity android:name=".Logros" />
         <activity android:name=".Jugar" />
