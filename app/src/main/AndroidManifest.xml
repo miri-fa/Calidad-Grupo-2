@@ -8,16 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AplicacionPS">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".ComoJugar"></activity>
-
-        <activity android:name=".Logros" />
-        <activity android:name=".Jugar" />
+        <activity android:name=".Logros"/>
+        <activity android:name=".Jugar"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme"> <!--AQUI SE LAMMA AL TEMA DE LA PANTALLA SPLASH-->
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
