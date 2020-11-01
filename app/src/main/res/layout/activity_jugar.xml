@@ -12,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="317dp"
         android:layout_height="155dp"
-        android:onClick="escenario1"
+        android:onClick="escenarioCasa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"

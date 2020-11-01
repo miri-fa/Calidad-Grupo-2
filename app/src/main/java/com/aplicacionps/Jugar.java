@@ -24,8 +24,8 @@ public class Jugar extends AppCompatActivity {
         Toast.makeText(this, "OnStart", Toast.LENGTH_SHORT).show();
         // La actividad está a punto de hacerse visible.
     }
-    public void escenario1(View view){
-        Intent escenario1 = new Intent (this, Escenario1.class);
+    public void escenarioCasa(View view){
+        Intent escenario1 = new Intent (this, EscenarioCasa.class);
         startActivity(escenario1);
     }
     @Override
