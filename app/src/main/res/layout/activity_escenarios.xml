@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     android:orientation="horizontal"
-    tools:context=".Escenarios">
+    tools:context=".Escenario1">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

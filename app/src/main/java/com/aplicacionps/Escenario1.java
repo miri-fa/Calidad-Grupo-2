@@ -6,7 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-public class Escenarios extends AppCompatActivity {
+public class Escenario1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
