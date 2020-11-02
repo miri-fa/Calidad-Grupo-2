@@ -17,5 +17,8 @@ public class elegirCamino extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
-
+    public void caminoAutobus(View view){
+        Intent caminoAutobus = new Intent (this, autobusInterior.class);
+        startActivity(caminoAutobus);
+    }
 }
