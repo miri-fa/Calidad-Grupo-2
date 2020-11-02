@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".EscenarioCasa"></activity>
-        <activity android:name=".elegirCamino"></activity>
+        <activity android:name=".autobusInterior"></activity>
+        <activity android:name=".EscenarioCasa" />
+        <activity android:name=".elegirCamino" />
         <activity android:name=".ComoJugar" />
         <activity android:name=".Logros" />
         <activity android:name=".Jugar" />
