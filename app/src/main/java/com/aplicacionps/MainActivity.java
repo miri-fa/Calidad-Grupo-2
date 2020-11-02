@@ -10,15 +10,19 @@ import android.view.WindowManager;
 public class MainActivity extends AppCompatActivity {
 
 
+    Intent jugar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
     }
     public void jugar(View view){
-        Intent jugar = new Intent (this, Jugar.class);
+        Intent jugar= new Intent (this, Jugar.class);
         startActivity(jugar);
     }
     public void logros(View view){
@@ -29,4 +33,5 @@ public class MainActivity extends AppCompatActivity {
         Intent csj = new Intent (this, ComoJugar.class);
         startActivity(csj);
     }
+
 }

@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+
 public class Jugar extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +48,10 @@ public class Jugar extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         // La actividad está a punto de ser destruida.
+    }
+    public void volver(View view){
+        Intent volver= new Intent (this, MainActivity.class);
+        startActivity(volver);
+
     }
 }
