@@ -8,24 +8,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class EscenarioCasa extends AppCompatActivity {
+public class colaparapagar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_entrada_casa);
+        setContentView(R.layout.activity_colaparapagar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+    }
+    //clase personaje...+%
+    public void efectivo(View view){
+        Intent efectivo= new Intent (this, colaparapagar.class);
+        startActivity(efectivo);
     }
 
-    public void caminoBueno(View view){
-        Intent caminoBueno = new Intent (this, elegirCamino.class);
-        startActivity(caminoBueno);
+    public void tarjeta(View view){
+        Intent tarjeta= new Intent (this, colaparapagar.class);
+        startActivity(tarjeta);
     }
-    //Falta crear una clase personaje en la que al elegir el camino malo incremente el porcentaje de contagio
-    public void caminoMalo(View view){
-        Intent caminoMalo = new Intent (this, elegirCamino.class);
-        startActivity(caminoMalo);
-    }
-
 }
