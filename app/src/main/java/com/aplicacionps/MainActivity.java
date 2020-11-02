@@ -29,4 +29,8 @@ public class MainActivity extends AppCompatActivity {
         Intent csj = new Intent (this, ComoJugar.class);
         startActivity(csj);
     }
+    public void ajustes(View view){
+        Intent sett = new Intent (this, Ajustes.class);
+        startActivity(sett);
+    }
 }
