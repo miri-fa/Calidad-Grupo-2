@@ -16,22 +16,34 @@
         android:text="¿DÓNDE TE SIENTAS?"
         android:textColor="#000000"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
 
     <Button
         android:id="@+id/buttonSeñora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AL LADO DE LA SEÑORA"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="337dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/buttonSolo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SÓLO ATRÁS"
-        tools:layout_editor_absoluteX="513dp"
-        tools:layout_editor_absoluteY="337dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,8 +2,10 @@ package com.aplicacionps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 public class autobusInterior extends AppCompatActivity {
@@ -16,4 +18,14 @@ public class autobusInterior extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
+    //Falta crear una clase personaje en la que al elegir el camino malo incremente el porcentaje de contagio
+    public void sitioSenhora(View view){
+        Intent sitioSenhora = new Intent (this, superfuera.class);
+        startActivity(sitioSenhora);
+    }
+
+    public void sitioSolo(View view){
+        Intent sitioSolo = new Intent (this, superfuera.class);
+        startActivity(sitioSolo);
+    }
 }
