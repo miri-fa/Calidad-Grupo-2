@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.367" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/flechaatras_escenarios"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:onClick="volver"
