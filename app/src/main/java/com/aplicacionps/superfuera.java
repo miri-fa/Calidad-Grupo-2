@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class superfuera extends AppCompatActivity {
 
@@ -20,12 +21,12 @@ public class superfuera extends AppCompatActivity {
     }
     //clase personaje...+%
     public void entrar(View view){
-        Intent entrar= new Intent (this, superdentro.class);
-        startActivity(entrar);
+            Intent entrar = new Intent(this, superdentro.class);
+            startActivity(entrar);
     }
     public void esperar(View view){
-        Intent esperar= new Intent (this, superdentro.class);
-        startActivity(esperar);
+            Intent esperar = new Intent (this, superdentro.class);
+            startActivity(esperar);
     }
     @Override
     public void onPause() {

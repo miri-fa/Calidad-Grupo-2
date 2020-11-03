@@ -2,26 +2,29 @@ package com.aplicacionps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-
-public class elegirCamino extends AppCompatActivity {
+public class pantallafinal extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_elegir_camino);
+        setContentView(R.layout.activity_pantallafinal);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
     }
-    public void caminoAutobus(View view){
-        Intent caminoAutobus = new Intent (this, autobusInterior.class);
-        startActivity(caminoAutobus);
+
+    public void volverajugar(View view){
+        Intent volverajugar = new Intent (this, EscenarioCasa.class);
+        startActivity(volverajugar);
+    }
+
+    public void menuprincipal(View view){
+        Intent menuprincipal = new Intent (this, MainActivity.class);
+        startActivity(menuprincipal);
     }
 }

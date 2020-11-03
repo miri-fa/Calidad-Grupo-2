@@ -19,12 +19,12 @@ public class superdentro extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
     public void guantesygel(View view){
-        Intent guantesygel= new Intent (this, colaparapagar.class);
+        Intent guantesygel = new Intent (this, colaparapagar.class);
         startActivity(guantesygel);
     }
     //clase personaje...+%
     public void nada(View view){
-        Intent nada= new Intent (this, colaparapagar.class);
+        Intent nada = new Intent (this, colaparapagar.class);
         startActivity(nada);
     }
     @Override

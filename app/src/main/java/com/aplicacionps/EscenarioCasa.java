@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 
 public class EscenarioCasa extends AppCompatActivity {
+private Personaje personaje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +20,14 @@ public class EscenarioCasa extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
-    public void caminoBueno(View view){
-        Intent caminoBueno = new Intent (this, elegirCamino.class);
-        startActivity(caminoBueno);
+    public void mascarilla(View view){
+        Intent mascarilla = new Intent (this, elegirCamino.class);
+        startActivity(mascarilla);
     }
     //Falta crear una clase personaje en la que al elegir el camino malo incremente el porcentaje de contagio
-    public void caminoMalo(View view){
-        Intent caminoMalo = new Intent (this, elegirCamino.class);
-        startActivity(caminoMalo);
+    public void noMascarilla(View view){
+        Intent noMascarilla = new Intent (this, elegirCamino.class);
+        startActivity(noMascarilla);
     }
     @Override
     public void onPause() {

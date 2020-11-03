@@ -21,12 +21,12 @@ public class colaparapagar extends AppCompatActivity {
     }
     //clase personaje...+%
     public void efectivo(View view){
-        Intent efectivo= new Intent (this, colaparapagar.class);
+        Intent efectivo = new Intent (this, pantallafinal.class);
         startActivity(efectivo);
     }
 
     public void tarjeta(View view){
-        Intent tarjeta= new Intent (this, colaparapagar.class);
+        Intent tarjeta = new Intent (this, pantallafinal.class);
         startActivity(tarjeta);
     }
     @Override

@@ -64,5 +64,4 @@ public class Jugar extends AppCompatActivity {
         startActivity(volver);
 
     }
-
 }
