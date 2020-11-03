@@ -10,12 +10,17 @@ public class AudioService extends Service {
     static final int DECREASE = 1, INCREASE= 2, START = 3, PAUSE = 4;
     Boolean shouldPause = false;
     MediaPlayer loop;
+    Boolean ajustes;
+
+
 
     private void startLoop(){
+        Ajustes audio = new Ajustes();
+        ajustes = audio.getSonido();
         if(loop == null){
             loop = MediaPlayer.create(this, R.raw.cancion_fondo);
         }
-        if(!loop.isPlaying()){
+        if(!loop.isPlaying() && (ajustes == true)){
             loop.setLooping(true);
             loop.start();
         }
