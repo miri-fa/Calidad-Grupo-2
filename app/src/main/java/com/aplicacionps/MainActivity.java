@@ -1,17 +1,17 @@
 package com.aplicacionps;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.WindowManager;
 
+
 public class MainActivity extends AppCompatActivity {
-
-
-    Intent jugar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +33,27 @@ public class MainActivity extends AppCompatActivity {
         Intent csj = new Intent (this, ComoJugar.class);
         startActivity(csj);
     }
+    public void ajustes(View view){
+        Intent sett = new Intent (this, Ajustes.class);
+        startActivity(sett);
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.PAUSE);
+        startService(i);
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
+        Boolean valordelboton = sharedPreferences.getBoolean("value", false);
+        if (valordelboton != true) {
+            Intent i = new Intent(this, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            startService(i);
+        }
+    }
 }

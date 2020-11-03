@@ -23,6 +23,7 @@
         android:id="@+id/imageButton12"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:onClick="ajustes"
         android:padding="0px"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
