@@ -7,11 +7,11 @@
     android:background="@drawable/fondo"
     tools:context=".Ajustes">
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch1"
         android:layout_width="286dp"
         android:layout_height="108dp"
-        android:text="Audio"
+        android:text="Silenciar"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,4 +34,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.082" />
+
+    <ImageButton
+        android:id="@+id/flechaatras_escenarios"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:onClick="volver"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/flecha" />
 </androidx.constraintlayout.widget.ConstraintLayout>
