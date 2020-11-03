@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".Ajustes"></activity>
+        <activity android:name=".pantallafinal" />
         <activity android:name=".colaparapagar" />
         <activity android:name=".superdentro" />
         <activity android:name=".superfuera" />
