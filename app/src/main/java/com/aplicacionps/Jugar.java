@@ -3,6 +3,7 @@ package com.aplicacionps;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -30,14 +31,23 @@ public class Jugar extends AppCompatActivity {
         startActivity(escenario1);
     }
     @Override
-    protected void onResume() {
-        super.onResume();
-        // La actividad se ha vuelto visible (ahora se "reanuda").
-    }
-    @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
-        // Enfocarse en otra actividad  (esta actividad está a punto de ser "detenida").
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
+        Boolean valordelboton = sharedPreferences.getBoolean("value", false);
+        if (valordelboton != true) {
+            Intent i = new Intent(this, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            startService(i);
+        }
     }
     @Override
     protected void onStop() {
@@ -54,4 +64,5 @@ public class Jugar extends AppCompatActivity {
         startActivity(volver);
 
     }
+
 }

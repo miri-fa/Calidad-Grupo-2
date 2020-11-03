@@ -19,7 +19,7 @@ public class AudioService extends Service {
     private void startLoop(){
 
         if(loop == null){
-            loop = MediaPlayer.create(this, R.raw.cancion_fondo);
+            loop = MediaPlayer.create(this, R.raw.musica_fondo_final);
         }
         if(!loop.isPlaying()){
             loop.setLooping(true);

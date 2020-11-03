@@ -19,7 +19,6 @@ public class Logros extends AppCompatActivity {
         Intent volver= new Intent (this, MainActivity.class);
         startActivity(volver);
     }
-
     @Override
     public void onPause() {
         super.onPause();
