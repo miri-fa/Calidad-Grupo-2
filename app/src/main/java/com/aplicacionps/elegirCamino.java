@@ -26,4 +26,9 @@ private Personaje personaje;
             startActivity(caminoAutobus);
     }
 
+    public void caminoAndando(View view){
+        Intent caminoAndando = new Intent(this, irAndando.class);
+        startActivity(caminoAndando);
+    }
+
 }
