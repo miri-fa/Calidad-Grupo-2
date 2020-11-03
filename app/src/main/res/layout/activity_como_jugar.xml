@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
     tools:context=".ComoJugar"
+    android:background="@drawable/fondo"
     android:orientation="horizontal"
     >
 
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.395" />
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/flechaatras_escenarios"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:onClick="volver"

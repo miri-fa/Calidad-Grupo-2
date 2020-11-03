@@ -7,26 +7,25 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
-public class EscenarioCasa extends AppCompatActivity {
-private Personaje personaje;
+public class superfuera extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_entrada_casa);
+        setContentView(R.layout.activity_superfuera);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
-
-    public void mascarilla(View view){
-        Intent mascarilla = new Intent (this, elegirCamino.class);
-        startActivity(mascarilla);
+    //clase personaje...+%
+    public void entrar(View view){
+            Intent entrar = new Intent(this, superdentro.class);
+            startActivity(entrar);
     }
-    //Falta crear una clase personaje en la que al elegir el camino malo incremente el porcentaje de contagio
-    public void noMascarilla(View view){
-        Intent noMascarilla = new Intent (this, elegirCamino.class);
-        startActivity(noMascarilla);
+    public void esperar(View view){
+            Intent esperar = new Intent (this, superdentro.class);
+            startActivity(esperar);
     }
 
 }
