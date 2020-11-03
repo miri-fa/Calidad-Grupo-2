@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".colaparapagar"></activity>
+        <activity android:name=".pantallafinal"></activity>
+        <activity android:name=".colaparapagar" />
         <activity android:name=".superdentro" />
         <activity android:name=".superfuera" />
         <activity android:name=".autobusInterior" />

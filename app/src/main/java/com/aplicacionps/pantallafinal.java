@@ -7,25 +7,24 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-public class superfuera extends AppCompatActivity {
+public class pantallafinal extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_superfuera);
+        setContentView(R.layout.activity_pantallafinal);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
-    //clase personaje...+%
-    public void entrar(View view){
-            Intent entrar = new Intent(this, superdentro.class);
-            startActivity(entrar);
-    }
-    public void esperar(View view){
-            Intent esperar = new Intent (this, superdentro.class);
-            startActivity(esperar);
+
+    public void volverajugar(View view){
+        Intent volverajugar = new Intent (this, EscenarioCasa.class);
+        startActivity(volverajugar);
     }
 
+    public void menuprincipal(View view){
+        Intent menuprincipal = new Intent (this, MainActivity.class);
+        startActivity(menuprincipal);
+    }
 }

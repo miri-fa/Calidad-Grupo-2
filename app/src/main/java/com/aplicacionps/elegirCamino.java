@@ -8,10 +8,11 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 
 public class elegirCamino extends AppCompatActivity {
-
+private Personaje personaje;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,8 @@ public class elegirCamino extends AppCompatActivity {
 
     }
     public void caminoAutobus(View view){
-        Intent caminoAutobus = new Intent (this, autobusInterior.class);
-        startActivity(caminoAutobus);
+            Intent caminoAutobus = new Intent(this, autobusInterior.class);
+            startActivity(caminoAutobus);
     }
+
 }

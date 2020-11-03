@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.WindowManager;
 
 public class autobusInterior extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +17,6 @@ public class autobusInterior extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
-    //Falta crear una clase personaje en la que al elegir el camino malo incremente el porcentaje de contagio
     public void sitioSenhora(View view){
         Intent sitioSenhora = new Intent (this, superfuera.class);
         startActivity(sitioSenhora);
