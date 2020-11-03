@@ -13,6 +13,8 @@
         <activity android:name=".colaparapagar" />
         <activity android:name=".superdentro" />
         <activity android:name=".superfuera" />
+        <activity android:name=".DentroDeLaCalle" />
+        <activity android:name=".irAndando" />
         <activity android:name=".autobusInterior" />
         <activity android:name=".EscenarioCasa" />
         <activity android:name=".elegirCamino" />

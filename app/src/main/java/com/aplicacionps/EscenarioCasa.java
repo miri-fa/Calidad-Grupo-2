@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class EscenarioCasa extends AppCompatActivity {
 private Personaje personaje;
@@ -26,8 +27,7 @@ private Personaje personaje;
     }
     //Falta crear una clase personaje en la que al elegir el camino malo incremente el porcentaje de contagio
     public void noMascarilla(View view){
-        Intent noMascarilla = new Intent (this, elegirCamino.class);
-        startActivity(noMascarilla);
+        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onPause() {

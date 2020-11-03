@@ -33,6 +33,7 @@ public class elegirCamino extends AppCompatActivity {
         startService(i);
     }
 
+
     @Override
     public void onResume() {
         super.onResume();
@@ -44,4 +45,11 @@ public class elegirCamino extends AppCompatActivity {
             startService(i);
         }
     }
+
+    public void caminoAndando(View view){
+        Intent caminoAndando = new Intent(this, irAndando.class);
+        startActivity(caminoAndando);
+    }
+
+
 }
