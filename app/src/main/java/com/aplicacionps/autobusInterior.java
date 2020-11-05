@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class autobusInterior extends AppCompatActivity {
     @Override
@@ -19,8 +20,9 @@ public class autobusInterior extends AppCompatActivity {
     }
 
     public void sitioSenhora(View view){
-        Intent sitioSenhora = new Intent (this, superfuera.class);
-        startActivity(sitioSenhora);
+        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
+        //Intent sitioSenhora = new Intent (this, superfuera.class);
+        //startActivity(sitioSenhora);
     }
 
     public void sitioSolo(View view){

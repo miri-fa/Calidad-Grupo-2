@@ -21,8 +21,9 @@ public class superfuera extends AppCompatActivity {
     }
     //clase personaje...+%
     public void entrar(View view){
-            Intent entrar = new Intent(this, superdentro.class);
-            startActivity(entrar);
+        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
+        // Intent entrar = new Intent(this, superdentro.class);
+        // startActivity(entrar);
     }
     public void esperar(View view){
             Intent esperar = new Intent (this, superdentro.class);
