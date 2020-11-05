@@ -4,22 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ComoJugar"
-    android:background="@drawable/fondo"
+    android:background="@drawable/comosejuega"
     android:orientation="horizontal"
-    >
+    tools:context=".ComoJugar">
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Texto de ejemplo de como se juega"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
     <ImageButton
         android:id="@+id/flechaatras_escenarios"
         android:layout_width="45dp"
