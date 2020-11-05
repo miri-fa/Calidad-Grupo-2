@@ -57,7 +57,7 @@
                 android:id="@+id/boton_supermercado"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
-                android:onClick="escenarioCasa"
+                android:onClick="supermercado"
                 app:srcCompat="@drawable/supermercado" />
 
             <ImageView
@@ -70,6 +70,7 @@
                 android:id="@+id/boton_instituto"
                 android:layout_width="match_parent"
                 android:layout_height="232dp"
+                android:onClick="instituto"
                 app:srcCompat="@drawable/instituto" />
         </LinearLayout>
     </ScrollView>

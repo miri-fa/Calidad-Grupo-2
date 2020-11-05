@@ -26,9 +26,12 @@ public class Jugar extends AppCompatActivity {
         super.onStart();
         // La actividad está a punto de hacerse visible.
     }
-    public void escenarioCasa(View view){
-        Intent escenario1 = new Intent (this, EscenarioCasa.class);
-        startActivity(escenario1);
+    public void supermercado(View view){
+        Intent supermercado = new Intent (this, EscenarioCasa.class);
+        startActivity(supermercado);
+    }
+    public void instituto(View view){
+        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onPause() {
