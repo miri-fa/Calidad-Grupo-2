@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class colaparapagar extends AppCompatActivity {
 
@@ -21,8 +22,9 @@ public class colaparapagar extends AppCompatActivity {
     }
     //clase personaje...+%
     public void efectivo(View view){
-        Intent efectivo = new Intent (this, pantallafinal.class);
-        startActivity(efectivo);
+        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
+        //Intent efectivo = new Intent (this, pantallafinal.class);
+        //startActivity(efectivo);
     }
 
     public void tarjeta(View view){

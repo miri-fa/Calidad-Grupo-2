@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class superdentro extends AppCompatActivity {
 
@@ -24,8 +25,9 @@ public class superdentro extends AppCompatActivity {
     }
     //clase personaje...+%
     public void nada(View view){
-        Intent nada = new Intent (this, colaparapagar.class);
-        startActivity(nada);
+        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
+        //Intent nada = new Intent (this, colaparapagar.class);
+        //startActivity(nada);
     }
     @Override
     public void onPause() {

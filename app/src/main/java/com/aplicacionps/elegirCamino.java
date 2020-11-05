@@ -25,6 +25,11 @@ public class elegirCamino extends AppCompatActivity {
         Intent caminoAutobus = new Intent (this, autobusInterior.class);
         startActivity(caminoAutobus);
     }
+    public void caminoAndando(View view){
+        Intent caminoAndando = new Intent(this, irAndando.class);
+        startActivity(caminoAndando);
+    }
+
     @Override
     public void onPause() {
         super.onPause();
@@ -44,11 +49,6 @@ public class elegirCamino extends AppCompatActivity {
             i.putExtra("action", AudioService.START);
             startService(i);
         }
-    }
-
-    public void caminoAndando(View view){
-        Intent caminoAndando = new Intent(this, irAndando.class);
-        startActivity(caminoAndando);
     }
 
 
