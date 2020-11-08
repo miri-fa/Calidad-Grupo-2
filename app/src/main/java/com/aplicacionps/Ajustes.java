@@ -12,8 +12,9 @@ import android.view.WindowManager;
 public class Ajustes extends AppCompatActivity {
 
     SwitchCompat silenciar;
-    Boolean sonido;
 
+    //Relacionamos la clase Ajustes con su correspondiente clase XML y activamos la orientacion horizontal
+    //Incluimos un boton switch para poder silenciar o escuchar la música de la aplicacion
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,7 @@ public class Ajustes extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        silenciar = findViewById(R.id.switch1);
+        silenciar = findViewById(R.id.boton_Silenciar);
 
         //SE SALVA EL ESTADO DEL SWITCH EN shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
@@ -46,6 +47,7 @@ public class Ajustes extends AppCompatActivity {
             }
         });
     }
+    // Los siguientes metodos onPause y onResume permiten escuchar o no la musica de la aplicacion en esta pantalla
     @Override
     public void onPause() {
         super.onPause();
@@ -66,12 +68,13 @@ public class Ajustes extends AppCompatActivity {
         }
     }
 
+    //Metodo para poder volver a la pantalla inicio
     public void volver(View view){
         Intent volver= new Intent (this, MainActivity.class);
         startActivity(volver);
 
     }
-
+    //Al cierre el boton switch se desactiva por defecto
     public void onDestroy() {
         super.onDestroy();
         SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
