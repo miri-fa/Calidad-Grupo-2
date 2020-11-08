@@ -9,11 +9,11 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/texto_donde_sentarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="¿DÓNDE TE SIENTAS?"
+        android:text="@string/texto_donde_sentarse"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,11 +24,11 @@
         app:layout_constraintVertical_bias="0.107" />
 
     <Button
-        android:id="@+id/buttonSeñora"
+        android:id="@+id/boton_Senora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sitioSenhora"
-        android:text="AL LADO DE LA SEÑORA"
+        android:text="@string/boton_senora"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
@@ -37,11 +37,11 @@
         app:layout_constraintVertical_bias="0.917" />
 
     <Button
-        android:id="@+id/buttonSolo"
+        android:id="@+id/boton_Solo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sitioSolo"
-        android:text="SÓLO ATRÁS"
+        android:text="@string/boton_solo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.897"

@@ -11,6 +11,16 @@
     <string name="boton_coger_mascarilla_y_gel">Coger mascarilla y gel</string>
     <string name="boton_no_coger_nada">No coger nada</string>
 
+    <!-- Activity_elegir_camino -->
+    <string name="texto_como_ir_super">¿CÓMO QUIERES IR AL SUPERMERCADO?</string>
+    <string name="boton_andando">IR ANDANDO</string>
+    <string name="boton_autobus">IR EN AUTOBÚS</string>
+
+    <!-- Activity_autobus_interior -->
+    <string name="texto_donde_sentarse">¿DÓNDE TE SIENTAS?</string>
+    <string name="boton_esperar">ESPERAR Y ENTRAR LUEGO</string>
+    <string name="boton_entrar">ENTRAR CON TODO EL MUNDO</string>
+
     <!-- Activity_ir_andando -->
     <string name="texto_que_camino_escoges">¿QUÉ CAMINO ESCOGES?</string>
     <string name="boton_calle_vacia">Calle vacía, pero tardo más</string>
@@ -20,5 +30,25 @@
     <string name="texto_que_hacer_con_mascarilla">¿QUÉ HACES CON LA MASCARILLA?</string>
     <string name="boton_me_la_quito">Me la quito, necesito respirar</string>
     <string name="boton_no_me_la_quito">No me la quito</string>
+
+    <!-- Activity_superfuera -->
+    <string name="texto_como_entrar">LLEGAS AL SUPER Y HAY MUCHA GENTE, ¿QUÉ HACES?</string>
+    <string name="boton_senora">AL LADO DE LA SEÑORA</string>
+    <string name="boton_solo">SÓLO ATRÁS</string>
+
+    <!-- Activity_superdentro -->
+    <string name="texto_al_entrar_super">ANTES DE EMPEZAR LA COMPRA ¿QUÉ HACES?</string>
+    <string name="boton_gelyguantes">TE ECHAS GEL Y TE PONES GUANTES</string>
+    <string name="boton_nada">NADA</string>
+
+    <!-- Activity_colaparapagar -->
+    <string name="texto_cola_para_pagar">¿CÓMO VAS A PAGAR?</string>
+    <string name="boton_tarjeta">CON TARJETA</string>
+    <string name="boton_efectivo">EN EFECTIVO</string>
+
+    <!-- Activity_pantallafinal -->
+    <string name="texto_final_historia">¡CAMINO ACABADO!</string>
+    <string name="boton_volve_menu">MENÚ</string>
+    <string name="boton_volver_a_jugar">VOLVER A JUGAR</string>
 
 </resources>

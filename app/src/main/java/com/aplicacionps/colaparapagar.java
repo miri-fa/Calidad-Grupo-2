@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class colaparapagar extends AppCompatActivity {
 
+    // AQUI SE RELACIONA LA CLASE colaparapagar.java CON SU XML activity_colaparapagar.xml
+    //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,17 +22,21 @@ public class colaparapagar extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
-    //clase personaje...+%
+
+    // EL BOTÓN HACE QUE SALGA UN MENSAJE EMERGENTE QUE PONE "NO DISPONIBLE"
     public void efectivo(View view){
         Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
         //Intent efectivo = new Intent (this, pantallafinal.class);
         //startActivity(efectivo);
     }
 
+    // EL BOTÓN TE LLEVA A LA PANTALLA FINAL AL HABER ACABADO EL RECORRIDO
     public void tarjeta(View view){
         Intent tarjeta = new Intent (this, pantallafinal.class);
         startActivity(tarjeta);
     }
+
+    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
     @Override
     public void onPause() {
         super.onPause();

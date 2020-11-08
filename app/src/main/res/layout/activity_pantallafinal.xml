@@ -9,11 +9,11 @@
     android:orientation="horizontal">
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/boton_volver_a_jugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="volverajugar"
-        android:text="VOLVER A JUGAR"
+        android:text="@string/boton_volver_a_jugar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
@@ -22,11 +22,11 @@
         app:layout_constraintVertical_bias="0.842" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/boton_volver_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="menuprincipal"
-        android:text="MENÚ"
+        android:text="@string/boton_volve_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.83"
@@ -35,10 +35,10 @@
         app:layout_constraintVertical_bias="0.842" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/texto_camino_acabado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¡CAMINO ACABADO!"
+        android:text="@string/texto_final_historia"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"

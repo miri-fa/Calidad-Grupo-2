@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class superdentro extends AppCompatActivity {
 
+    // AQUI SE RELACIONA LA CLASE superdentro.java CON SU XML activity_superdentro.xml
+    //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +21,21 @@ public class superdentro extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
+
+    //  EL BOTÓN TE LLEVA A LA COLA DEL SUPER AL HABER ACABADO LA COMPRA
     public void guantesygel(View view){
         Intent guantesygel = new Intent (this, colaparapagar.class);
         startActivity(guantesygel);
     }
-    //clase personaje...+%
+
+    // EL BOTÓN HACE QUE SALGA UN MENSAJE EMERGENTE QUE PONE "NO DISPONIBLE"
     public void nada(View view){
         Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
         //Intent nada = new Intent (this, colaparapagar.class);
         //startActivity(nada);
     }
+
+    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
     @Override
     public void onPause() {
         super.onPause();
