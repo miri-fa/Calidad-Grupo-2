@@ -5,4 +5,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_como_jugar">ComoJugar</string>
+
+    <!-- Activity_entrada_casa -->
+    <string name="texto_que_voy_a_coger">¿QUÉ VAS A COGER ANTES DE SALIR DE CASA?</string>
+    <string name="boton_coger_mascarilla_y_gel">Coger mascarilla y gel</string>
+    <string name="boton_no_coger_nada">No coger nada</string>
+
+    <!-- Activity_ir_andando -->
+    <string name="texto_que_camino_escoges">¿QUÉ CAMINO ESCOGES?</string>
+    <string name="boton_calle_vacia">Calle vacía, pero tardo más</string>
+    <string name="boton_calle_llena">Calle con gente</string>
+
+    <!-- Activity_dentro_de_la_calle -->
+    <string name="texto_que_hacer_con_mascarilla">¿QUÉ HACES CON LA MASCARILLA?</string>
+    <string name="boton_me_la_quito">Me la quito, necesito respirar</string>
+    <string name="boton_no_me_la_quito">No me la quito</string>
+
 </resources>

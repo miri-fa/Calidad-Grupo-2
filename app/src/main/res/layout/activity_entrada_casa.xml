@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Aquí aplicamos el fondo de pantalla de este activity, lo colocamos en orientación
+ horizontal y relacionamos este XML con la clase EscenarioCasa-->
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,12 +13,15 @@
     android:orientation="horizontal"
     tools:context=".EscenarioCasa">
 
+    <!-- Aquí implementamos el texto donde se hace la pregunta al usuario y
+     personalizamos su aspecto-->
+
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/TextoQueVoyACoger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="¿QUÉ VAS A COGER ANTES DE SALIR DE CASA?"
+        android:text="@string/texto_que_voy_a_coger"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,12 +31,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.17" />
 
+    <!-- Implementamos el botón 'Coger mascarilla y gel', donde relacionamos esta parte del diseño
+     con la parte lógica que se encontrará en el método mascarilla de la clase EscenarioCasa-->
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botonCogerMascarillaYGel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="mascarilla"
-        android:text="COGER MASCARILLA Y GEL"
+        android:text="@string/boton_coger_mascarilla_y_gel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.032"
@@ -37,12 +47,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.895" />
 
+    <!-- Implementamos el botón 'No coger nada', donde relacionamos esta parte del diseño
+     con la parte lógica que se encontrará en el método noMascarilla de la clase EscenarioCasa-->
+
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/botonNoCogerNada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="noMascarilla"
-        android:text="NO COGER NADA"
+        android:text="@string/boton_no_coger_nada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.921"
