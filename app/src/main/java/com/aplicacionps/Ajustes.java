@@ -6,10 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Switch;
 
 public class Ajustes extends AppCompatActivity {
 
@@ -24,7 +22,8 @@ public class Ajustes extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         silenciar = findViewById(R.id.switch1);
-        //Se salva el estado del switch en shared preferences
+
+        //SE SALVA EL ESTADO DEL SWITCH EN shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
         silenciar.setChecked(sharedPreferences.getBoolean("value", false));
 
@@ -32,13 +31,13 @@ public class Ajustes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (silenciar.isChecked()){
-                    //Cuando está en activo
+                    //CUANDO ESTÁ ACTIVO
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("value",true);
                     editor.apply();
                     silenciar.setChecked(true);
                 }else {
-                    //Cuando esta inactivo
+                    //CUANDO ESTÁ INACTIVO
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("value",false);
                     editor.apply();
