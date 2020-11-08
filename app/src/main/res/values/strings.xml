@@ -51,4 +51,8 @@
     <string name="boton_volve_menu">MENÚ</string>
     <string name="boton_volver_a_jugar">VOLVER A JUGAR</string>
 
+    <!-- Activity_ajustes -->
+    <string name="switch_silenciar">SILENCIAR</string>
+    <string name="titulo_ajustes">AJUSTES</string>
+    <string name="boton_atras">BOTON ATRAS</string>
 </resources>

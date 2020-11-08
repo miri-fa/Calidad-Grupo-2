@@ -8,10 +8,10 @@
     tools:context=".Ajustes">
 
     <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/switch1"
+        android:id="@+id/boton_Silenciar"
         android:layout_width="623dp"
         android:layout_height="78dp"
-        android:text="Silenciar"
+        android:text="@string/switch_silenciar"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,11 +20,11 @@
         app:layout_constraintVertical_bias="0.351" />
 
     <TextView
-        android:id="@+id/texto_como_pagar"
+        android:id="@+id/titulo_Ajustes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00F8F6F6"
-        android:text="AJUSTES"
+        android:text="@string/titulo_ajustes"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -39,6 +39,7 @@
         android:id="@+id/flechaatras_escenarios"
         android:layout_width="45dp"
         android:layout_height="45dp"
+        android:contentDescription="@string/boton_atras"
         android:onClick="volver"
         android:padding="0px"
         android:scaleType="fitXY"
