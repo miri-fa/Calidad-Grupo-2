@@ -5,8 +5,6 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -40,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
+
+        //IMPLEMENTACIÓN DEL SERVICIO DE AUDIO (INTERRUMPE EL SERVICIO CUANDO SE SALE DE ESTA ACTIVITY
         Intent i = new Intent(this, AudioService.class);
         i.putExtra("action", AudioService.PAUSE);
         startService(i);
@@ -48,8 +48,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
+
+        //SE RECUPERA DE VALORES GUARDADOS EL VALOR DEL SWITCH SILENCIAR Y SE ALMACENA EN valorboton.
         SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
         Boolean valordelboton = sharedPreferences.getBoolean("value", false);
+
+        //DEPENDIENDO DEL CONTENIDO DE valorboton SE REANUDA EL SERVICIO DE AUDIO EN ESTA ACTIVITY
         if (valordelboton != true) {
             Intent i = new Intent(this, AudioService.class);
             i.putExtra("action", AudioService.START);

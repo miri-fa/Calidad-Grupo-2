@@ -26,7 +26,7 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
-            android:theme="@style/SplashTheme"> <!-- AQUI SE LAMMA AL TEMA DE LA PANTALLA SPLASH -->
+            android:theme="@style/SplashTheme"> <!-- AQUI SE LLAMA AL TEMA DE LA PANTALLA SPLASH -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
