@@ -11,6 +11,9 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 public class autobusInterior extends AppCompatActivity {
+
+    // AQUI SE RELACIONA LA CLASE autobusInterior.java CON SU XML activity_autobus_interior.xml
+    //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +22,20 @@ public class autobusInterior extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
+    // EL BOTÓN HACE QUE SALGA UN MENSAJE EMERGENTE QUE PONE "NO DISPONIBLE"
     public void sitioSenhora(View view){
         Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
         //Intent sitioSenhora = new Intent (this, superfuera.class);
         //startActivity(sitioSenhora);
     }
 
+    // EL BOTÓN TE LLEVA DIRECTAMENTE A LA ENTRADA DEL SUPER
     public void sitioSolo(View view){
         Intent sitioSolo = new Intent (this, superfuera.class);
         startActivity(sitioSolo);
     }
+
+    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
     @Override
     public void onPause() {
         super.onPause();

@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class superfuera extends AppCompatActivity {
 
+    // AQUI SE RELACIONA LA CLASE superfuera.java CON SU XML activity_superfuera.xml
+    //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +21,21 @@ public class superfuera extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
-    //clase personaje...+%
+
+    // EL BOTÓN HACE QUE SALGA UN MENSAJE EMERGENTE QUE PONE "NO DISPONIBLE"
     public void entrar(View view){
         Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
         // Intent entrar = new Intent(this, superdentro.class);
         // startActivity(entrar);
     }
+
+    // EL BOTON TE LLEVA AL INTERIOR DEL SUPERMERCADO PARA INICIAR LA COMPRA
     public void esperar(View view){
             Intent esperar = new Intent (this, superdentro.class);
             startActivity(esperar);
     }
+
+    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
     @Override
     public void onPause() {
         super.onPause();

@@ -10,11 +10,11 @@
     >
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/texto_superdentro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="ANTES DE EMPEZAR LA COMPRA ¿QUÉ HACES?"
+        android:text="@string/texto_al_entrar_super"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,11 +25,11 @@
         app:layout_constraintVertical_bias="0.084" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/boton_gel_super"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="guantesygel"
-        android:text="TE ECHAS GEL Y TE PONES GUANTES"
+        android:text="@string/boton_gelyguantes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
@@ -38,11 +38,11 @@
         app:layout_constraintVertical_bias="0.878" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/boton_nada_super"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nada"
-        android:text="NADA"
+        android:text="@string/boton_nada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.866"
