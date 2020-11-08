@@ -11,24 +11,39 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 public class EscenarioCasa extends AppCompatActivity {
-private Personaje personaje;
 
+    //Relacionamos la clase EscenarioCasa con su respectivo XML activity_entrada_casa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entrada_casa);
+
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
+        //se muestre a pantalla completa, sin barra de notificaciones
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
+
+    //Este método mascarilla corresponde con la parte lógica del botón 'coger mascarilla y gel' del XML activity_entrada_casa,
+    //y lo que hará es que nos llevará al siguiente escenario que corresponde la clase elegirCamino
 
     public void mascarilla(View view){
         Intent mascarilla = new Intent (this, elegirCamino.class);
         startActivity(mascarilla);
     }
-    //Falta crear una clase personaje en la que al elegir el camino malo incremente el porcentaje de contagio
+
+    //Este método noMascarilla corresponde con la parte lógica del botón 'no coger nada' del XML activity_entrada_casa,
+    //y por el momento, al no estar disponible la acción de incrementar el porcentaje de contagio de nuestro personaje,
+    //nos saldrá por pantalla un toast con el mensaje 'No disponible'
+
     public void noMascarilla(View view){
         Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
     }
+
+    //Estos 2 últimos métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
+    //siendo la música constante y permanente durante el tiempo que te encuentres dentro del juego
+
     @Override
     public void onPause() {
         super.onPause();
