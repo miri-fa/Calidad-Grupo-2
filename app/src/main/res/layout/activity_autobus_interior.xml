@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- AQUÍ SE COLOCA EL FONDO DE PANTALLA DEL ACTIVITY, SE CAMBIA LA ORIENTACIÓN A HORIZONTAL Y SE RELACIONA EL XML CON LA CLASE CORRESPONDIENTE-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +10,7 @@
     android:background="@drawable/autobuspordentro"
     android:orientation="horizontal">
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "¿DÓNDE TE SIENTAS?" -->
     <TextView
         android:id="@+id/texto_donde_sentarse"
         android:layout_width="wrap_content"
@@ -23,6 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.107" />
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN SEÑORA QUE HACE APARECER UN MENSAJE EMERGENTE -->
     <Button
         android:id="@+id/boton_Senora"
         android:layout_width="wrap_content"
@@ -36,6 +40,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.917" />
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN SOLO QUE TE LLEVA AL EXTERIOR DEL SUPERMERCADO -->
     <Button
         android:id="@+id/boton_Solo"
         android:layout_width="wrap_content"

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- AQUÍ SE COLOCA EL FONDO DE PANTALLA DEL ACTIVITY, SE CAMBIA LA ORIENTACIÓN A HORIZONTAL Y SE RELACIONA EL XML CON LA CLASE CORRESPONDIENTE-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +10,7 @@
     android:background="@drawable/supermarketfuera"
     android:orientation="horizontal"
     >
-
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "LLEGAS AL SUPER Y HAY MUCHA GENTE, ¿QUÉ HACES?" -->
     <TextView
         android:id="@+id/texto_como_entrar"
         android:layout_width="wrap_content"
@@ -24,6 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.105" />
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ESPERAR PARA ENTRAR AL SUPER QUE TE LLEVA AL INTERIOR DEL SUPERMERCADO -->
     <Button
         android:id="@+id/boton_esperar"
         android:layout_width="wrap_content"
@@ -37,6 +40,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.876" />
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ENTRAR DIRECTAMENTE QUE HACE QUE APAREZCA UN MENSAJE EMERGENTE -->
     <Button
         android:id="@+id/boton_entrar"
         android:layout_width="wrap_content"
