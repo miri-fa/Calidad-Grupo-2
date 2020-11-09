@@ -14,13 +14,18 @@ public class Logros extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logros);
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
+        //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
+    //Metodo para poder volver a la pantalla inicio
     public void volver(View view){
         Intent volver= new Intent (this, MainActivity.class);
         startActivity(volver);
     }
+    //Estos 2 últimos métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
+    //siendo la música constante y permanente durante el tiempo que te encuentres dentro del juego
     @Override
     public void onPause() {
         super.onPause();

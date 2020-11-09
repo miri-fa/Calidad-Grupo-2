@@ -13,6 +13,7 @@
         android:id="@+id/flechaatras_escenarios"
         android:layout_width="45dp"
         android:layout_height="45dp"
+        android:contentDescription="@string/botonvolver"
         android:onClick="volver"
         android:padding="0px"
         android:scaleType="fitXY"
