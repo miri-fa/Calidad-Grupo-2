@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/espacio_boton"
+        android:id="@+id/logo"
         android:layout_width="451dp"
         android:layout_height="104dp"
         android:contentDescription="@string/logo"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/logocoronastop" />
 
     <ImageButton
-        android:id="@+id/imageButton12"
+        android:id="@+id/ajustes"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:contentDescription="@string/botonajustes"
@@ -37,7 +37,7 @@
         app:srcCompat="@drawable/ajustesboton" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/logros"
         android:layout_width="488dp"
         android:layout_height="55dp"
         android:contentDescription="@string/botonlogros"
@@ -53,7 +53,7 @@
         app:srcCompat="@drawable/logros" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/comojugar"
         android:layout_width="488dp"
         android:layout_height="55dp"
         android:contentDescription="@string/botoncomosejuega"
@@ -69,7 +69,7 @@
         app:srcCompat="@drawable/comojugar" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/jugar"
         android:layout_width="488dp"
         android:layout_height="55dp"
         android:contentDescription="@string/botonjugar"
