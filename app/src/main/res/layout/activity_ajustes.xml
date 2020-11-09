@@ -7,6 +7,8 @@
     android:background="@drawable/fondo"
     tools:context=".Ajustes">
 
+    //Las siguientes lineas de codigo corresponden al boton switch
+
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/boton_Silenciar"
         android:layout_width="623dp"
@@ -18,6 +20,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.351" />
+
+    //Las siguientes lineas corresponden al titulo de la pantalla
 
     <TextView
         android:id="@+id/titulo_Ajustes"
@@ -34,6 +38,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.085" />
+
+    //Las siguientes lineas de codigo corresponden al boton de vuelta al menu ppal
 
     <ImageButton
         android:id="@+id/flechaatras_escenarios"
