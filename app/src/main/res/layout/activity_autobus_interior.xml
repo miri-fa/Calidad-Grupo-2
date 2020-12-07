@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- AQUÍ SE COLOCA EL FONDO DE PANTALLA DEL ACTIVITY, SE CAMBIA LA ORIENTACIÓN A HORIZONTAL Y SE RELACIONA EL XML CON LA CLASE CORRESPONDIENTE-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,12 +10,13 @@
     android:background="@drawable/autobuspordentro"
     android:orientation="horizontal">
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "¿DÓNDE TE SIENTAS?" -->
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/texto_donde_sentarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="¿DÓNDE TE SIENTAS?"
+        android:text="@string/texto_donde_sentarse"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,12 +26,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.107" />
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN SEÑORA QUE HACE APARECER UN MENSAJE EMERGENTE -->
     <Button
-        android:id="@+id/buttonSeñora"
+        android:id="@+id/boton_Senora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sitioSenhora"
-        android:text="AL LADO DE LA SEÑORA"
+        android:text="@string/boton_senora"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
@@ -36,12 +40,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.917" />
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN SOLO QUE TE LLEVA AL EXTERIOR DEL SUPERMERCADO -->
     <Button
-        android:id="@+id/buttonSolo"
+        android:id="@+id/boton_Solo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sitioSolo"
-        android:text="SÓLO ATRÁS"
+        android:text="@string/boton_solo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.897"

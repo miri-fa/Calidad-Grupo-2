@@ -9,18 +9,23 @@ import android.view.View;
 import android.view.WindowManager;
 
 public class ComoJugar extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_como_jugar);
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
+        //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
+    //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
+    //se muestre a pantalla completa, sin barra de notificaciones
     public void volver(View view){
         Intent volver= new Intent (this, MainActivity.class);
         startActivity(volver);
     }
+    //Estos 2 últimos métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
+    //siendo la música constante y permanente durante el tiempo que te encuentres dentro del juego
     @Override
     public void onPause() {
         super.onPause();

@@ -13,6 +13,8 @@ import android.view.WindowManager;
 
 public class elegirCamino extends AppCompatActivity {
 
+    // AQUI SE RELACIONA LA CLASE elegirCamino.java CON SU XML activity_elegir_camino.xml
+    //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,15 +23,20 @@ public class elegirCamino extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
+
+    // EL BOTÓN TE LLEVA AL INTERIOR DEL AUTOBÚS
     public void caminoAutobus(View view){
         Intent caminoAutobus = new Intent (this, autobusInterior.class);
         startActivity(caminoAutobus);
     }
+
+    // EL BOTÓN TE LLEVA A LA CALLE QUE LLEVA AL SUPERMERCADO
     public void caminoAndando(View view){
         Intent caminoAndando = new Intent(this, irAndando.class);
         startActivity(caminoAndando);
     }
 
+    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
     @Override
     public void onPause() {
         super.onPause();
@@ -37,7 +44,6 @@ public class elegirCamino extends AppCompatActivity {
         i.putExtra("action", AudioService.PAUSE);
         startService(i);
     }
-
 
     @Override
     public void onResume() {

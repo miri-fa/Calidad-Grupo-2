@@ -11,6 +11,8 @@ import android.view.WindowManager;
 
 public class pantallafinal extends AppCompatActivity {
 
+    // AQUI SE RELACIONA LA CLASE pantallafinal.java CON SU XML activity_pantallafinal.xml
+    //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +21,19 @@ public class pantallafinal extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
+    //AL PULSAR EL BOTON DE VOLVER A JUGAR, EL JUEGO TE LLEVA A LA CASA DEL JUGADOR PARA INICIAR DE NUEVO EL CAMINO
     public void volverajugar(View view){
         Intent volverajugar = new Intent (this, EscenarioCasa.class);
         startActivity(volverajugar);
     }
 
+    //AL PULSAR EL BOTÓN DE MENÚ, TE LLEVA A LA PANTALLA PRINCIPAL DEL JUEGO
     public void menuprincipal(View view){
         Intent menuprincipal = new Intent (this, MainActivity.class);
         startActivity(menuprincipal);
     }
 
+    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
     @Override
     public void onPause() {
         super.onPause();

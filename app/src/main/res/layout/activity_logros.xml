@@ -8,12 +8,12 @@
     tools:context=".Logros">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/proximamente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:layout_marginLeft="108dp"
-        android:text="PROXIMAMENTE ..."
+        android:text="@string/txtproximamente"
         android:textSize="56sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +24,7 @@
         android:id="@+id/flechaatras_escenarios"
         android:layout_width="45dp"
         android:layout_height="45dp"
+        android:contentDescription="@string/botonvolver"
         android:onClick="volver"
         android:orientation="horizontal"
         android:padding="0px"

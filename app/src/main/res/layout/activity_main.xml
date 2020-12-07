@@ -9,9 +9,10 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/logo"
         android:layout_width="451dp"
         android:layout_height="104dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,9 +21,10 @@
         app:srcCompat="@drawable/logocoronastop" />
 
     <ImageButton
-        android:id="@+id/imageButton12"
+        android:id="@+id/ajustes"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/botonajustes"
         android:onClick="ajustes"
         android:padding="0px"
         android:scaleType="fitXY"
@@ -35,9 +37,10 @@
         app:srcCompat="@drawable/ajustesboton" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/logros"
         android:layout_width="488dp"
         android:layout_height="55dp"
+        android:contentDescription="@string/botonlogros"
         android:onClick="logros"
         android:padding="0px"
         android:scaleType="fitXY"
@@ -50,9 +53,10 @@
         app:srcCompat="@drawable/logros" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/comojugar"
         android:layout_width="488dp"
         android:layout_height="55dp"
+        android:contentDescription="@string/botoncomosejuega"
         android:onClick="comoSeJuega"
         android:padding="0px"
         android:scaleType="fitXY"
@@ -65,9 +69,10 @@
         app:srcCompat="@drawable/comojugar" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/jugar"
         android:layout_width="488dp"
         android:layout_height="55dp"
+        android:contentDescription="@string/botonjugar"
         android:onClick="jugar"
         android:padding="0px"
         android:scaleType="fitXY"

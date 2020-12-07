@@ -6,16 +6,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Switch;
 
 public class Ajustes extends AppCompatActivity {
 
     SwitchCompat silenciar;
-    Boolean sonido;
 
+    //Relacionamos la clase Ajustes con su correspondiente clase XML y activamos la orientacion horizontal
+    //Incluimos un boton switch para poder silenciar o escuchar la música de la aplicacion
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +22,9 @@ public class Ajustes extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        silenciar = findViewById(R.id.switch1);
-        //Se salva el estado del switch en shared preferences
+        silenciar = findViewById(R.id.boton_Silenciar);
+
+        //SE SALVA EL ESTADO DEL SWITCH EN shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
         silenciar.setChecked(sharedPreferences.getBoolean("value", false));
 
@@ -32,13 +32,13 @@ public class Ajustes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (silenciar.isChecked()){
-                    //Cuando está en activo
+                    //CUANDO ESTÁ ACTIVO
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("value",true);
                     editor.apply();
                     silenciar.setChecked(true);
                 }else {
-                    //Cuando esta inactivo
+                    //CUANDO ESTÁ INACTIVO
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("value",false);
                     editor.apply();
@@ -47,6 +47,7 @@ public class Ajustes extends AppCompatActivity {
             }
         });
     }
+    // Los siguientes metodos onPause y onResume permiten escuchar o no la musica de la aplicacion en esta pantalla
     @Override
     public void onPause() {
         super.onPause();
@@ -67,12 +68,13 @@ public class Ajustes extends AppCompatActivity {
         }
     }
 
+    //Metodo para poder volver a la pantalla inicio
     public void volver(View view){
         Intent volver= new Intent (this, MainActivity.class);
         startActivity(volver);
 
     }
-
+    //Al cierre el boton switch se desactiva por defecto
     public void onDestroy() {
         super.onDestroy();
         SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
