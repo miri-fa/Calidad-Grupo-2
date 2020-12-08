@@ -64,8 +64,8 @@
     <string name="boton_atras">BOTON ATRAS</string>
     <!-- Activity_comosejuega -->
     <string name="botonvolver">volver</string>
-    <!-- Activity_logros -->
-    <string name="txtproximamente">proximamente</string>
+    <!-- Activity_desafios -->
+    <string name="desafio_bronce_01">bronce_01</string>
     <!-- Activity_main -->
     <string name="botonjugar">jugar</string>
     <string name="botonlogros">logros</string>
