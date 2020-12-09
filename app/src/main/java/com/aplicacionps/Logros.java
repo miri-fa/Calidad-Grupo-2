@@ -38,11 +38,11 @@ public class Logros extends AppCompatActivity {
     }
 
     public void irdesafiobronce02(View view) {
-        Intent bronce02= new Intent (this, Bronce_02.class);
+        Intent bronce02= new Intent (this, Bronce_02_ConductorDePrimera.class);
         startActivity(bronce02);
     }
     public void irdesafioplata02(View view) {
-        Intent plata02= new Intent (this, Plata_02.class);
+        Intent plata02= new Intent (this, Plata_02_HoustonTenemosUnProblema.class);
         startActivity(plata02);
     }
 
