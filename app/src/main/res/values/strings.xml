@@ -67,10 +67,12 @@
     <!-- Activity_desafios -->
     <string name="desafio_bronce_01">bronce_01</string>
     <string name="desafio_bronce_02">bronce_02</string>
+    <string name="desafio_plata_02">plata_02</string>
     <!-- Activity_main -->
     <string name="botonjugar">jugar</string>
     <string name="botonlogros">logros</string>
     <string name="botoncomosejuega">comosejuega</string>
     <string name="logo">logo</string>
     <string name="botonajustes">ajustes</string>
+
 </resources>
