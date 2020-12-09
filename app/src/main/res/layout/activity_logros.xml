@@ -59,7 +59,15 @@
                 android:layout_height="115dp"
                 android:contentDescription="@string/desafio_bronce_02"
                 android:onClick="irdesafiobronce02"
-                app:srcCompat="@drawable/demo" />
+                app:srcCompat="@drawable/copabronce" />
+
+            <ImageView
+                android:id="@+id/titulo_desafioplata"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_plata_02"
+                android:onClick="irdesafioplata02"
+                app:srcCompat="@drawable/naveespacial" />
 
             <ImageView
                 android:id="@+id/espacio_boton"
