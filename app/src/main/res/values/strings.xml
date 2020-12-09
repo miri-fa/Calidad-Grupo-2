@@ -66,6 +66,7 @@
     <string name="botonvolver">volver</string>
     <!-- Activity_desafios -->
     <string name="desafio_bronce_01">bronce_01</string>
+    <string name="desafio_bronce_02">bronce_02</string>
     <!-- Activity_main -->
     <string name="botonjugar">jugar</string>
     <string name="botonlogros">logros</string>
