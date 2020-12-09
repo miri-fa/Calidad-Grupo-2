@@ -9,11 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class Logros extends AppCompatActivity {
+public class Bronce_02 extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logros);
+        setContentView(R.layout.activity_bronce_02);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
         //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -28,22 +29,10 @@ public class Logros extends AppCompatActivity {
 
     //Metodo para poder volver a la pantalla inicio
     public void volver(View view){
-        Intent volver= new Intent (this, MainActivity.class);
+        Intent volver= new Intent (this, Logros.class);
         startActivity(volver);
     }
 
-    public void irdesafiobronce01(View view) {
-        Intent bronce01= new Intent (this, Bronce_01_PrimeraHistoria.class);
-        startActivity(bronce01);
-    }
-
-    public void irdesafiobronce02(View view) {
-        Intent bronce02= new Intent (this, Bronce_02.class);
-        startActivity(bronce02);
-    }
-
-    //Los siguientes 2 métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
-    //siendo la música constante y permanente durante el tiempo que te encuentres dentro del juego
     @Override
     public void onPause() {
         super.onPause();
@@ -75,5 +64,4 @@ public class Logros extends AppCompatActivity {
         super.onDestroy();
         // La actividad está a punto de ser destruida.
     }
-
 }
