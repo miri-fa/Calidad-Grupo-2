@@ -14,7 +14,7 @@ public class Plata_02_HoustonTenemosUnProblema extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plata_02_HoustonTenemosUnProblema);
+        setContentView(R.layout.activity_plata_02_houston_tenemos_un_problema);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
         //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
