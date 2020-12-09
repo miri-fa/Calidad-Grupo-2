@@ -32,7 +32,7 @@
         android:layout_height="91dp"
         android:contentDescription="@string/desafio_bronce_02"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/demo"
+        app:srcCompat="@drawable/fotobusdibujo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -58,7 +58,8 @@
                 android:layout_height="236dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:text='Para completar este desafio deberas subir en el autobus en la historia del supermercado'
+                android:text='Para ser conductor de primera acelera, acelera. Para ser conductor de segunda ten cuidado, con las curvas.
+                              Para ser conductor de tercera ten cuidado con la acera... Bien hecho, has montado en el autobus.'
                 android:textSize="24sp" />
 
             <ImageView
