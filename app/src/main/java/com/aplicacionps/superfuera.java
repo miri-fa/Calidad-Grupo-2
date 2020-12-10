@@ -8,9 +8,13 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class superfuera extends AppCompatActivity {
+
+    private ProgressBar progressbar;
+    private int porcentajeActual;
 
     // AQUI SE RELACIONA LA CLASE superfuera.java CON SU XML activity_superfuera.xml
     //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
@@ -20,19 +24,29 @@ public class superfuera extends AppCompatActivity {
         setContentView(R.layout.activity_superfuera);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        String Dato = getIntent().getStringExtra("dato");
+        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
+        porcentajeActual = Integer.parseInt(Dato);
+        progressbar= (ProgressBar)findViewById(R.id.barra1);
+        progressbar.setProgress(porcentajeActual);
     }
 
     // EL BOTÓN HACE QUE SALGA UN MENSAJE EMERGENTE QUE PONE "NO DISPONIBLE"
     public void entrar(View view){
-        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
-        // Intent entrar = new Intent(this, superdentro.class);
-        // startActivity(entrar);
+        int valor= porcentajeActual + 10;
+        String val= String.valueOf(valor);
+        Intent entrar = new Intent(this, superdentro.class);
+        entrar.putExtra("dato", val);
+        startActivity(entrar);
     }
 
     // EL BOTON TE LLEVA AL INTERIOR DEL SUPERMERCADO PARA INICIAR LA COMPRA
     public void esperar(View view){
-            Intent esperar = new Intent (this, superdentro.class);
-            startActivity(esperar);
+        int valor= porcentajeActual;
+        String val= String.valueOf(valor);
+        Intent esperar = new Intent (this, superdentro.class);
+        esperar.putExtra("dato", val);
+        startActivity(esperar);
     }
 
     // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN

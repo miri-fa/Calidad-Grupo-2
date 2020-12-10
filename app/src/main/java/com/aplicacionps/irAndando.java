@@ -6,11 +6,15 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class irAndando extends AppCompatActivity {
+
+    private ProgressBar progressbar;
+    private int porcentajeActual;
 
     //Relacionamos la clase irAndando con su respectivo XML activity_ir_andando
 
@@ -24,13 +28,21 @@ public class irAndando extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        String Dato = getIntent().getStringExtra("dato");
+        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
+        porcentajeActual = Integer.parseInt(Dato);
+        progressbar= (ProgressBar)findViewById(R.id.barra1);
+        progressbar.setProgress(porcentajeActual);
     }
 
     //Este método CalleSinGente corresponde con la parte lógica del botón 'calle vacía, pero tardo más' del XML activity_ir_andando,
     //y lo que hará es que nos llevará al siguiente escenario que corresponde la clase DentroDeLaCalle
 
     public void CalleSinGente(View view){
+        int valor= porcentajeActual;
+        String val= String.valueOf(valor);
         Intent CalleSinGente= new Intent(this, DentroDeLaCalle.class);
+        CalleSinGente.putExtra("dato", val);
         startActivity(CalleSinGente);
 
     }
@@ -40,7 +52,11 @@ public class irAndando extends AppCompatActivity {
     //nos saldrá por pantalla un toast con el mensaje 'No disponible'
 
     public void CalleConGente(View view){
-        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
+        int valor= porcentajeActual +10;
+        String val= String.valueOf(valor);
+        Intent CalleConGente = new Intent (this, DentroDeLaCalle.class);
+        CalleConGente.putExtra("dato", val);
+        startActivity(CalleConGente);
     }
 
     //Estos 2 últimos métodos sirven para implementar la música del juego dentro de esta clase y para las demás,

@@ -6,11 +6,15 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DentroDeLaCalle extends AppCompatActivity {
+
+    private ProgressBar progressbar;
+    private int porcentajeActual;
 
     //Relacionamos la clase DentroDeLaCalle con su respectivo XML activity_dentro_de_la_calle
 
@@ -24,6 +28,11 @@ public class DentroDeLaCalle extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        String Dato = getIntent().getStringExtra("dato");
+        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
+        porcentajeActual = Integer.parseInt(Dato);
+        progressbar= (ProgressBar)findViewById(R.id.barra1);
+        progressbar.setProgress(porcentajeActual);
     }
 
     //Este método MeLaQuito corresponde con la parte lógica del botón 'Me la quito, necesito respirar' del XML activity_dentro_de_la_calle,
@@ -31,14 +40,21 @@ public class DentroDeLaCalle extends AppCompatActivity {
     //nos saldrá por pantalla un toast con el mensaje 'No disponible'
 
     public void MeLaQuito(View view){
-        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
+        int valor= porcentajeActual + 10;
+        String val= String.valueOf(valor);
+        Intent MeLaQuito= new Intent(this, superfuera.class);
+        MeLaQuito.putExtra("dato", val);
+        startActivity(MeLaQuito);
     }
 
     //Este método NoMeLaQuito corresponde con la parte lógica del botón 'No me la quito' del XML activity_dentro_de_la_calle,
     //y lo que hará es que nos llevará al siguiente escenario que corresponde la clase superfuera
 
     public void NoMeLaQuito(View view){
+        int valor= porcentajeActual;
+        String val= String.valueOf(valor);
         Intent NoMeLaQuito= new Intent(this, superfuera.class);
+        NoMeLaQuito.putExtra("dato", val);
         startActivity(NoMeLaQuito);
     }
 
