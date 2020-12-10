@@ -85,6 +85,13 @@
                 android:onClick="irdesafiooro01"
                 app:srcCompat="@drawable/camino_ninja"/>
 
+            <ImageView
+                android:id="@+id/titulo_desafiooro02"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_oro_02"
+                android:onClick="irdesafiooro02"
+                app:srcCompat="@drawable/alumno_excelente"/>
 
 
         </LinearLayout>
