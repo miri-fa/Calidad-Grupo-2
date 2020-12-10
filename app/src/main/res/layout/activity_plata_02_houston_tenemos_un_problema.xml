@@ -60,8 +60,8 @@
                 android:contentDescription="@string/desafio_plata_02"
                 android:gravity="center"
                 android:text='Fue el día 13 de abril de 1970 cuando Jack Swigert dijo las famosas palabras ¡Houston, tenemos un problema!,
-                              debido a las explosiones de los tanques de oxígeno de la nave en la viajaban. Pero ahora el que tiene el problema
-                              eres tú, y no porque hayan explotado unos tanques de oxigeno, si no porque el coronavirus seguramente este
+                              debido a las explosiones de los tanques de oxígeno de la nave en la que viajaban. Pero ahora el que tiene el problema
+                              eres tú, y no porque hayan explotado unos tanques de oxigeno, sino porque el coronavirus seguramente esté
                               corriendo por tus venas, ya que te has llenado tu barra de contagio al 100%.'
                 android:textSize="24sp" />
 
