@@ -39,14 +39,17 @@ public class elegirCamino extends AppCompatActivity {
     // EL BOTÓN TE LLEVA AL INTERIOR DEL AUTOBÚS
     public void caminoAutobus(View view) {
         int valor = porcentajeActual;
+        String bool = Boolean.toString(mascarilla);
         String val = String.valueOf(valor);
         Intent caminoAutobus = new Intent(this, autobusInterior.class);
         Intent caminoVuelta = new Intent(this, CaminoVuelta.class);
         if (!mascarilla) {
             caminoVuelta.putExtra("dato", val);
+            caminoVuelta.putExtra("masc", bool);
             startActivity(caminoVuelta);
         } else {
             caminoAutobus.putExtra("dato", val);
+            caminoAutobus.putExtra("masc", bool);
             startActivity(caminoAutobus);
         }
     }
@@ -55,8 +58,10 @@ public class elegirCamino extends AppCompatActivity {
     public void caminoAndando(View view){
         int valor= porcentajeActual;
         String val= String.valueOf(valor);
+        String bool = Boolean.toString(mascarilla);
         Intent caminoAndando = new Intent(this, irAndando.class);
         caminoAndando.putExtra("dato", val);
+        caminoAndando.putExtra("masc", bool);
         startActivity(caminoAndando);
     }
 
