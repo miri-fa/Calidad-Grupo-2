@@ -12,7 +12,7 @@
     android:orientation="horizontal"
     tools:context=".Jugar">
 
-    <!-- Aquí implementamos la imagen de la felcha que nos lleva
+    <!-- Aquí implementamos la imagen de la flecha que nos lleva
      a la pantalla inicial-->
     <ImageButton
         android:id="@+id/flechaatras_escenarios"

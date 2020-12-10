@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Ajustes"></activity>
+        <activity android:name=".Oro_02_Alumno_Excelente"></activity>
+        <activity android:name=".Plata_01_SindromeIndianaJones" />
+        <activity android:name=".Oro_01_CaminoDelNinja" />
+        <activity android:name=".Plata_02_HoustonTenemosUnProblema" />
+        <activity android:name=".Bronce_02_ConductorDePrimera" />
+        <activity android:name=".Bronce_01_PrimeraHistoria" />
+        <activity android:name=".Ajustes" />
         <activity android:name=".pantallafinal" />
         <activity android:name=".colaparapagar" />
         <activity android:name=".superdentro" />
@@ -29,9 +35,11 @@
             android:theme="@style/SplashTheme"> <!-- AQUI SE LLAMA AL TEMA DE LA PANTALLA SPLASH -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".AudioService"
             android:icon="@mipmap/ic_launcher"

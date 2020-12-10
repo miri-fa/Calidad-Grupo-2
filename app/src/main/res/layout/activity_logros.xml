@@ -4,21 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pantallalogros"
+    android:background="@drawable/fondo"
     tools:context=".Logros">
 
-    <TextView
-        android:id="@+id/proximamente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginLeft="108dp"
-        android:text="@string/txtproximamente"
-        android:textSize="56sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
 
     <ImageButton
         android:id="@+id/flechaatras_escenarios"
@@ -36,4 +24,59 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/flecha" />
+
+    <ScrollView
+        android:id="@+id/scrollview_escenarios"
+        android:layout_width="731dp"
+        android:layout_height="323dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Implementación del botón referente al primer desafío bronce-->
+
+            <!-- Separador gráfico entre los diferentes desafíos-->
+
+            <ImageView
+                android:id="@+id/titulo_desafiobronce01"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_bronce_01"
+                android:onClick="irdesafiobronce01"
+                app:srcCompat="@drawable/demo" />
+
+            <ImageView
+                android:id="@+id/titulo_desafiobronce02"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_bronce_02"
+                android:onClick="irdesafiobronce02"
+                app:srcCompat="@drawable/fotobusdibujo" />
+
+            <ImageView
+                android:id="@+id/titulo_desafioplata"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_plata_02"
+                android:onClick="irdesafioplata02"
+                app:srcCompat="@drawable/naveespacial" />
+
+            <ImageView
+                android:id="@+id/espacio_boton"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:contentDescription="@string/espaciador"
+                app:srcCompat="@drawable/separador" />
+
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
