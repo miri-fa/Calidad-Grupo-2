@@ -15,6 +15,7 @@ public class DentroDeLaCalle extends AppCompatActivity {
 
     private ProgressBar progressbar;
     private int porcentajeActual;
+    private boolean mascarilla;
 
     //Relacionamos la clase DentroDeLaCalle con su respectivo XML activity_dentro_de_la_calle
 
@@ -29,10 +30,12 @@ public class DentroDeLaCalle extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         String Dato = getIntent().getStringExtra("dato");
+        String Masc = getIntent().getStringExtra("masc");
         Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
         porcentajeActual = Integer.parseInt(Dato);
         progressbar= (ProgressBar)findViewById(R.id.barra1);
         progressbar.setProgress(porcentajeActual);
+        mascarilla = Boolean.valueOf(Masc);
     }
 
     //Este método MeLaQuito corresponde con la parte lógica del botón 'Me la quito, necesito respirar' del XML activity_dentro_de_la_calle,
@@ -40,10 +43,12 @@ public class DentroDeLaCalle extends AppCompatActivity {
     //nos saldrá por pantalla un toast con el mensaje 'No disponible'
 
     public void MeLaQuito(View view){
+        String bool = Boolean.toString(mascarilla);
         int valor= porcentajeActual + 10;
         String val= String.valueOf(valor);
         Intent MeLaQuito= new Intent(this, superfuera.class);
         MeLaQuito.putExtra("dato", val);
+        MeLaQuito.putExtra("masc", bool);
         startActivity(MeLaQuito);
     }
 
@@ -51,10 +56,12 @@ public class DentroDeLaCalle extends AppCompatActivity {
     //y lo que hará es que nos llevará al siguiente escenario que corresponde la clase superfuera
 
     public void NoMeLaQuito(View view){
+        String bool = Boolean.toString(mascarilla);
         int valor= porcentajeActual;
         String val= String.valueOf(valor);
         Intent NoMeLaQuito= new Intent(this, superfuera.class);
         NoMeLaQuito.putExtra("dato", val);
+        NoMeLaQuito.putExtra("masc", bool);
         startActivity(NoMeLaQuito);
     }
 

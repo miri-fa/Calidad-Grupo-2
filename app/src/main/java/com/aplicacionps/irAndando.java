@@ -15,6 +15,7 @@ public class irAndando extends AppCompatActivity {
 
     private ProgressBar progressbar;
     private int porcentajeActual;
+    private boolean mascarilla;
 
     //Relacionamos la clase irAndando con su respectivo XML activity_ir_andando
 
@@ -29,22 +30,25 @@ public class irAndando extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         String Dato = getIntent().getStringExtra("dato");
+        String Masc = getIntent().getStringExtra("masc");
         Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
         porcentajeActual = Integer.parseInt(Dato);
         progressbar= (ProgressBar)findViewById(R.id.barra1);
         progressbar.setProgress(porcentajeActual);
+        mascarilla = Boolean.valueOf(Masc);
     }
 
     //Este método CalleSinGente corresponde con la parte lógica del botón 'calle vacía, pero tardo más' del XML activity_ir_andando,
     //y lo que hará es que nos llevará al siguiente escenario que corresponde la clase DentroDeLaCalle
 
     public void CalleSinGente(View view){
+        String bool = Boolean.toString(mascarilla);
         int valor= porcentajeActual;
         String val= String.valueOf(valor);
         Intent CalleSinGente= new Intent(this, DentroDeLaCalle.class);
         CalleSinGente.putExtra("dato", val);
+        CalleSinGente.putExtra("masc", bool);
         startActivity(CalleSinGente);
-
     }
 
     //Este método CalleConGente corresponde con la parte lógica del botón 'calle con gente' del XML activity_ir_andando,
@@ -52,10 +56,12 @@ public class irAndando extends AppCompatActivity {
     //nos saldrá por pantalla un toast con el mensaje 'No disponible'
 
     public void CalleConGente(View view){
+        String bool = Boolean.toString(mascarilla);
         int valor= porcentajeActual +10;
         String val= String.valueOf(valor);
         Intent CalleConGente = new Intent (this, DentroDeLaCalle.class);
         CalleConGente.putExtra("dato", val);
+        CalleConGente.putExtra("masc", bool);
         startActivity(CalleConGente);
     }
 
