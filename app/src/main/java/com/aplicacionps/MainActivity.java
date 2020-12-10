@@ -21,9 +21,13 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
+
+    //SistemaContagio SI= new SistemaContagio(0);
+
     //implementacion del boton jugar que lleva al menu de juego
     public void jugar(View view){
         Intent jugar= new Intent (this, Jugar.class);
+        //jugar.putExtra("dato", 0);
         startActivity(jugar);
     }
     //implementacion del boton logros que lleva al menu de logros
