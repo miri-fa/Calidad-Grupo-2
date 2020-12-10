@@ -8,38 +8,31 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-public class pantallafinal extends AppCompatActivity {
+public class Plata_02_HoustonTenemosUnProblema extends AppCompatActivity {
 
-    private int porcentajeActual;
-
-    // AQUI SE RELACIONA LA CLASE pantallafinal.java CON SU XML activity_pantallafinal.xml
-    //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantallafinal);
+        setContentView(R.layout.activity_plata_02_houston_tenemos_un_problema);
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
+        //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        String Dato = getIntent().getStringExtra("dato");
-        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
-        porcentajeActual = Integer.parseInt(Dato);
     }
 
-    //AL PULSAR EL BOTON DE VOLVER A JUGAR, EL JUEGO TE LLEVA A LA CASA DEL JUGADOR PARA INICIAR DE NUEVO EL CAMINO
-    public void volverajugar(View view){
-        Intent volverajugar = new Intent (this, EscenarioCasa.class);
-        startActivity(volverajugar);
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // La actividad está a punto de hacerse visible.
     }
 
-    //AL PULSAR EL BOTÓN DE MENÚ, TE LLEVA A LA PANTALLA PRINCIPAL DEL JUEGO
-    public void menuprincipal(View view){
-        Intent menuprincipal = new Intent (this, MainActivity.class);
-        startActivity(menuprincipal);
+    //Metodo para poder volver a la pantalla inicio
+    public void volver(View view){
+        Intent volver= new Intent (this, Logros.class);
+        startActivity(volver);
     }
 
-    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
     @Override
     public void onPause() {
         super.onPause();
@@ -58,5 +51,17 @@ public class pantallafinal extends AppCompatActivity {
             i.putExtra("action", AudioService.START);
             startService(i);
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // La actividad ya no es visible (ahora está "detenida")
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // La actividad está a punto de ser destruida.
     }
 }

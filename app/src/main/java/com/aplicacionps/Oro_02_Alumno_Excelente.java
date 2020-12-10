@@ -9,12 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class Bronce_02 extends AppCompatActivity {
+public class Oro_02_Alumno_Excelente extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bronce_02);
+        setContentView(R.layout.activity_oro_02__alumno__excelente);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
         //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);

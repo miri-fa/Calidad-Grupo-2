@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Plata_01_SindromeIndianaJones"></activity>
+        <activity android:name=".Oro_02_Alumno_Excelente"></activity>
+        <activity android:name=".Plata_01_SindromeIndianaJones" />
         <activity android:name=".Oro_01_CaminoDelNinja" />
-        <activity android:name=".Plata_02" />
-        <activity android:name=".Bronce_02" />
+        <activity android:name=".Plata_02_HoustonTenemosUnProblema" />
+        <activity android:name=".Bronce_02_ConductorDePrimera" />
         <activity android:name=".Bronce_01_PrimeraHistoria" />
         <activity android:name=".Ajustes" />
         <activity android:name=".pantallafinal" />
