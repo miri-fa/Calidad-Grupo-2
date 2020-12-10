@@ -1,5 +1,7 @@
 package com.aplicacionps;
 
+import android.text.style.ImageSpan;
+
 public class SistemaContagio {
 
     private int porcentaje;

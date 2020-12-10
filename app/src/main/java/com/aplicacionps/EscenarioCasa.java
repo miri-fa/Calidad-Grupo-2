@@ -37,9 +37,11 @@ public class EscenarioCasa extends AppCompatActivity {
 
     public void mascarilla(View view){
         int valor= si.getPorcentaje();
+        String bool = Boolean.toString(true);
         String val= String.valueOf(valor);
         Intent mascarilla = new Intent (this, elegirCamino.class);
         mascarilla.putExtra("dato", val);
+        mascarilla.putExtra("masc", bool);
         startActivity(mascarilla);
 
 
@@ -51,9 +53,11 @@ public class EscenarioCasa extends AppCompatActivity {
 
     public void noMascarilla(View view){
         int valor= si.getPorcentaje() +10;
+        String bool = Boolean.toString(false);
         String val= String.valueOf(valor);
         Intent noMascarilla = new Intent (this, elegirCamino.class);
         noMascarilla.putExtra("dato", val);
+        noMascarilla.putExtra("masc", bool);
         startActivity(noMascarilla);
         //Toast.makeText(this, val, Toast.LENGTH_SHORT).show();
     }
