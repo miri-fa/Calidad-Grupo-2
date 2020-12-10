@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".Logros">
+    tools:context=".Desafios">
 
 
     <ImageButton
@@ -51,7 +51,7 @@
                 android:layout_height="115dp"
                 android:contentDescription="@string/desafio_bronce_01"
                 android:onClick="irdesafiobronce01"
-                app:srcCompat="@drawable/demo" />
+                app:srcCompat="@drawable/primera_historia" />
 
             <ImageView
                 android:id="@+id/titulo_desafiobronce02"
@@ -59,22 +59,39 @@
                 android:layout_height="115dp"
                 android:contentDescription="@string/desafio_bronce_02"
                 android:onClick="irdesafiobronce02"
-                app:srcCompat="@drawable/fotobusdibujo" />
+                app:srcCompat="@drawable/conductor_primera"/>
 
             <ImageView
-                android:id="@+id/titulo_desafioplata"
+                android:id="@+id/titulo_desafioplata01"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_plata_01"
+                android:onClick="irdesafioplata01"
+                app:srcCompat="@drawable/indiana_jones"/>
+
+            <ImageView
+                android:id="@+id/titulo_desafioplata02"
                 android:layout_width="match_parent"
                 android:layout_height="115dp"
                 android:contentDescription="@string/desafio_plata_02"
                 android:onClick="irdesafioplata02"
-                app:srcCompat="@drawable/naveespacial" />
+                app:srcCompat="@drawable/houston"/>
 
             <ImageView
-                android:id="@+id/espacio_boton"
+                android:id="@+id/titulo_desafiooro01"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:contentDescription="@string/espaciador"
-                app:srcCompat="@drawable/separador" />
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_oro_01"
+                android:onClick="irdesafiooro01"
+                app:srcCompat="@drawable/camino_ninja"/>
+
+            <ImageView
+                android:id="@+id/titulo_desafiooro02"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_oro_02"
+                android:onClick="irdesafiooro02"
+                app:srcCompat="@drawable/alumno_excelente"/>
 
 
         </LinearLayout>

@@ -29,7 +29,7 @@ public class Oro_02_Alumno_Excelente extends AppCompatActivity {
 
     //Metodo para poder volver a la pantalla inicio
     public void volver(View view){
-        Intent volver= new Intent (this, Logros.class);
+        Intent volver= new Intent (this, Desafios.class);
         startActivity(volver);
     }
 

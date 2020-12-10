@@ -30,10 +30,10 @@
         android:layout_width="733dp"
         android:layout_height="91dp"
         android:contentDescription="@string/desafio_oro_01"
-        app:srcCompat="@drawable/demo"
+        app:srcCompat="@drawable/el_camino_del_ninja"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-5dp" />
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ScrollView
         android:id="@+id/scrollview_escenarios"
@@ -58,7 +58,7 @@
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text='Cuatro hermanos vigilan las calles pero ahora están en cuarentena bajo tierra. ¿Cumplirás tu su misión? LLévales la pizza que tanto adoran. Pero cuidado, solo se la podrás dar si no tienes ningún riesgo de tener coronavirus. Buena suerte'
-                android:textColor="#FF5722"
+                android:textColor="#FFFFFF"
                 android:textSize="23dp" />
 
             <ImageView
