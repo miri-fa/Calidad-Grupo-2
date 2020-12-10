@@ -77,6 +77,9 @@
     <string name="botoncomosejuega">comosejuega</string>
     <string name="logo">logo</string>
     <string name="botonajustes">ajustes</string>
-
+    <string name="desafio_bronce_02_Letra" />
+    <string name="desafio_plata_01_Letra" />
+    <string name="desafio_plata_02_Letra" />
+    <string name="botondesafios" />
 
 </resources>

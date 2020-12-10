@@ -25,13 +25,13 @@
         app:srcCompat="@drawable/flecha" />
 
     <ImageView
-        android:id="@+id/titulo_desafioplata02"
+        android:id="@+id/titulo_desafioplata02_Letra"
         android:layout_width="733dp"
         android:layout_height="91dp"
         android:layout_marginTop="4dp"
-        android:contentDescription="@string/desafio_plata_02"
+        android:contentDescription="@string/desafio_plata_02_Letra"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/naveespacial"
+        app:srcCompat="@drawable/houston_tenemos_un_problema_letra"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-2dp" />
 
@@ -51,6 +51,7 @@
             android:orientation="vertical"
             android:layout_marginHorizontal="50dp">
 
+
             <TextView
                 android:id="@+id/plata_02"
                 android:layout_width="match_parent"
@@ -65,11 +66,23 @@
                 android:textSize="24sp" />
 
             <ImageView
+                android:id="@+id/titulo_desafioplata02"
+                android:layout_width="733dp"
+                android:layout_height="91dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/desafio_plata_02"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/naveespacial"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="-2dp" />
+
+            <ImageView
                 android:id="@+id/desafioplata02"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
                 android:contentDescription="@string/desafio_plata_02"
                 app:srcCompat="@drawable/progressbar" />
+
         </LinearLayout>
     </ScrollView>
 

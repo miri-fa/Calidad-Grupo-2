@@ -9,11 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class Logros extends AppCompatActivity {
+public class Desafios extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logros);
+        setContentView(R.layout.activity_desafios);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
         //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -41,9 +41,22 @@ public class Logros extends AppCompatActivity {
         Intent bronce02= new Intent (this, Bronce_02_ConductorDePrimera.class);
         startActivity(bronce02);
     }
+    public void irdesafioplata01(View view) {
+        Intent plata01= new Intent (this, Plata_01_SindromeIndianaJones.class);
+        startActivity(plata01);
+    }
     public void irdesafioplata02(View view) {
         Intent plata02= new Intent (this, Plata_02_HoustonTenemosUnProblema.class);
         startActivity(plata02);
+    }
+
+    public void irdesafiooro01(View view) {
+        Intent oro01= new Intent (this, Oro_01_CaminoDelNinja.class);
+        startActivity(oro01);
+    }
+    public void irdesafiooro02(View view) {
+        Intent oro02= new Intent (this, Oro_02_Alumno_Excelente.class);
+        startActivity(oro02);
     }
 
     //Los siguientes 2 métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
@@ -79,5 +92,6 @@ public class Logros extends AppCompatActivity {
         super.onDestroy();
         // La actividad está a punto de ser destruida.
     }
+
 
 }

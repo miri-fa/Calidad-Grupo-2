@@ -7,6 +7,16 @@
     tools:context=".Bronce_01_PrimeraHistoria">
 
 
+    <ImageView
+        android:id="@+id/titulo_desafiobronce02_Letra"
+        android:layout_width="733dp"
+        android:layout_height="91dp"
+        android:contentDescription="@string/desafio_bronce_02_Letra"
+        app:srcCompat="@drawable/conductor_primera_letra"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <ImageButton
         android:id="@+id/flechaatras_escenarios"
         android:layout_width="45dp"
@@ -26,16 +36,6 @@
 
     <!-- Implementación del título del desafío-->
 
-    <ImageView
-        android:id="@+id/titulo_desafiobronce02"
-        android:layout_width="733dp"
-        android:layout_height="91dp"
-        android:contentDescription="@string/desafio_bronce_02"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fotobusdibujo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
-
     <ScrollView
         android:id="@+id/scrollview_escenarios"
         android:layout_width="731dp"
@@ -51,6 +51,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginHorizontal="50dp">
+
+            <ImageView
+                android:id="@+id/titulo_desafiobronce02"
+                android:layout_width="733dp"
+                android:layout_height="91dp"
+                android:contentDescription="@string/desafio_bronce_02"
+                app:srcCompat="@drawable/fotobusdibujo"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/bronce_02"
