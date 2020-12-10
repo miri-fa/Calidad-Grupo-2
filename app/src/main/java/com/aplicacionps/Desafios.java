@@ -13,7 +13,7 @@ public class Desafios extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logros);
+        setContentView(R.layout.activity_desafios);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
         //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -54,6 +54,10 @@ public class Desafios extends AppCompatActivity {
         Intent oro01= new Intent (this, Oro_01_CaminoDelNinja.class);
         startActivity(oro01);
     }
+    public void irdesafiooro02(View view) {
+        Intent oro02= new Intent (this, Oro_02_Alumno_Excelente.class);
+        startActivity(oro02);
+    }
 
     //Los siguientes 2 métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
     //siendo la música constante y permanente durante el tiempo que te encuentres dentro del juego
@@ -88,4 +92,6 @@ public class Desafios extends AppCompatActivity {
         super.onDestroy();
         // La actividad está a punto de ser destruida.
     }
+
+
 }
