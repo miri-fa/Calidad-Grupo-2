@@ -8,9 +8,13 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class colaparapagar extends AppCompatActivity {
+
+    private ProgressBar progressbar;
+    private int porcentajeActual;
 
     // AQUI SE RELACIONA LA CLASE colaparapagar.java CON SU XML activity_colaparapagar.xml
     //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
@@ -20,19 +24,29 @@ public class colaparapagar extends AppCompatActivity {
         setContentView(R.layout.activity_colaparapagar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        String Dato = getIntent().getStringExtra("dato");
+        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
+        porcentajeActual = Integer.parseInt(Dato);
+        progressbar= (ProgressBar)findViewById(R.id.barra1);
+        progressbar.setProgress(porcentajeActual);
 
     }
 
     // EL BOTÓN HACE QUE SALGA UN MENSAJE EMERGENTE QUE PONE "NO DISPONIBLE"
     public void efectivo(View view){
-        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
-        //Intent efectivo = new Intent (this, pantallafinal.class);
-        //startActivity(efectivo);
+        int valor= porcentajeActual + 10;
+        String val= String.valueOf(valor);
+        Intent efectivo = new Intent (this, pantallafinal.class);
+        efectivo.putExtra("dato", val);
+        startActivity(efectivo);
     }
 
     // EL BOTÓN TE LLEVA A LA PANTALLA FINAL AL HABER ACABADO EL RECORRIDO
     public void tarjeta(View view){
+        int valor= porcentajeActual;
+        String val= String.valueOf(valor);
         Intent tarjeta = new Intent (this, pantallafinal.class);
+        tarjeta.putExtra("dato", val);
         startActivity(tarjeta);
     }
 

@@ -8,9 +8,13 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class autobusInterior extends AppCompatActivity {
+
+    private ProgressBar progressbar;
+    private int porcentajeActual;
 
     // AQUI SE RELACIONA LA CLASE autobusInterior.java CON SU XML activity_autobus_interior.xml
     //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
@@ -20,18 +24,29 @@ public class autobusInterior extends AppCompatActivity {
         setContentView(R.layout.activity_autobus_interior);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        String Dato = getIntent().getStringExtra("dato");
+        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
+        porcentajeActual = Integer.parseInt(Dato);
+        progressbar= (ProgressBar)findViewById(R.id.barra1);
+        progressbar.setProgress(porcentajeActual);
     }
+
 
     // EL BOTÓN HACE QUE SALGA UN MENSAJE EMERGENTE QUE PONE "NO DISPONIBLE"
     public void sitioSenhora(View view){
-        Toast.makeText(this, "No disponible", Toast.LENGTH_SHORT).show();
-        //Intent sitioSenhora = new Intent (this, superfuera.class);
-        //startActivity(sitioSenhora);
+        int valor= porcentajeActual +10;
+        String val= String.valueOf(valor);
+        Intent sitioSenhora = new Intent (this, superfuera.class);
+        sitioSenhora.putExtra("dato", val);
+        startActivity(sitioSenhora);
     }
 
     // EL BOTÓN TE LLEVA DIRECTAMENTE A LA ENTRADA DEL SUPER
     public void sitioSolo(View view){
+        int valor= porcentajeActual;
+        String val= String.valueOf(valor);
         Intent sitioSolo = new Intent (this, superfuera.class);
+        sitioSolo.putExtra("dato", val);
         startActivity(sitioSolo);
     }
 

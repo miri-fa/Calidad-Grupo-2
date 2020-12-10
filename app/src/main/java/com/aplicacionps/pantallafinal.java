@@ -8,8 +8,11 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class pantallafinal extends AppCompatActivity {
+
+    private int porcentajeActual;
 
     // AQUI SE RELACIONA LA CLASE pantallafinal.java CON SU XML activity_pantallafinal.xml
     //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
@@ -19,6 +22,9 @@ public class pantallafinal extends AppCompatActivity {
         setContentView(R.layout.activity_pantallafinal);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        String Dato = getIntent().getStringExtra("dato");
+        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
+        porcentajeActual = Integer.parseInt(Dato);
     }
 
     //AL PULSAR EL BOTON DE VOLVER A JUGAR, EL JUEGO TE LLEVA A LA CASA DEL JUGADOR PARA INICIAR DE NUEVO EL CAMINO
