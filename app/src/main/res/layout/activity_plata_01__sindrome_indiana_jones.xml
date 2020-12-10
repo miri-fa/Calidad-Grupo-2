@@ -26,14 +26,14 @@
     <!-- Implementación del título del desafío-->
 
     <ImageView
-        android:id="@+id/titulo_desafioplata01"
+        android:id="@+id/titulo_desafioplata01_Letra"
         android:layout_width="733dp"
         android:layout_height="91dp"
-        android:contentDescription="@string/desafio_plata_01"
-        app:srcCompat="@drawable/demo"
+        android:contentDescription="@string/desafio_plata_01_Letra"
+        app:srcCompat="@drawable/sindrome_indiana_jones_letra"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-5dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ScrollView
         android:id="@+id/scrollview_escenarios"

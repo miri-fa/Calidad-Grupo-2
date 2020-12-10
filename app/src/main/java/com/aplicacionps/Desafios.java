@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class Logros extends AppCompatActivity {
+public class Desafios extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +41,18 @@ public class Logros extends AppCompatActivity {
         Intent bronce02= new Intent (this, Bronce_02.class);
         startActivity(bronce02);
     }
+    public void irdesafioplata01(View view) {
+        Intent plata01= new Intent (this, Plata_01_SindromeIndianaJones.class);
+        startActivity(plata01);
+    }
     public void irdesafioplata02(View view) {
         Intent plata02= new Intent (this, Plata_02.class);
         startActivity(plata02);
+    }
+
+    public void irdesafiooro01(View view) {
+        Intent oro01= new Intent (this, Oro_01_CaminoDelNinja.class);
+        startActivity(oro01);
     }
 
     //Los siguientes 2 métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
@@ -79,5 +88,4 @@ public class Logros extends AppCompatActivity {
         super.onDestroy();
         // La actividad está a punto de ser destruida.
     }
-
 }
