@@ -6,27 +6,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".superfuera"
     android:background="@drawable/supermarketfuera"
     android:orientation="horizontal"
-    >
+    tools:context=".superfuera">
     <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "LLEGAS AL SUPER Y HAY MUCHA GENTE, ¿QUÉ HACES?" -->
+
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ESPERAR PARA ENTRAR AL SUPER QUE TE LLEVA AL INTERIOR DEL SUPERMERCADO -->
+
     <TextView
         android:id="@+id/texto_como_entrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="611dp"
+        android:layout_height="47dp"
         android:background="#FFFFFF"
         android:text="@string/texto_como_entrar"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.136" />
 
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ESPERAR PARA ENTRAR AL SUPER QUE TE LLEVA AL INTERIOR DEL SUPERMERCADO -->
     <Button
         android:id="@+id/boton_esperar"
         android:layout_width="wrap_content"
@@ -57,12 +58,17 @@
     <ProgressBar
         android:id="@+id/barra1"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="408dp"
-        android:layout_height="50dp"
+        android:layout_width="398dp"
+        android:layout_height="33dp"
         android:indeterminate="false"
         android:max="100"
         android:progress="10"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:progressDrawable="@drawable/customprogressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
