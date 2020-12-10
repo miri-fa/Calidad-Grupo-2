@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(jugar);
     }
     //implementacion del boton logros que lleva al menu de logros
-    public void logros(View view){
-        Intent logros = new Intent (this, Logros.class);
-        startActivity(logros);
+    public void desafios(View view){
+        Intent desafios = new Intent (this, Desafios.class);
+        startActivity(desafios);
     }
     //implementacion del como se juga que lleva al menu de como se juega
     public void comoSeJuega(View view){
