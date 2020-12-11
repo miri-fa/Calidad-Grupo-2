@@ -8,21 +8,6 @@
     android:orientation="horizontal"
     tools:context=".CaminoVuelta">
 
-    <TextView
-        android:id="@+id/textoVuelta"
-        android:layout_width="590dp"
-        android:layout_height="181dp"
-        android:text="Al no llevar mascarilla no te han dejado entrar, por lo que has vuelto a tu casa y te la has puesto"
-        android:textAllCaps="true"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -35,4 +20,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.865" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/meninamensajevuelta" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

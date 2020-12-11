@@ -25,7 +25,7 @@ public class superdentro extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         String Dato = getIntent().getStringExtra("dato");
-        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
+
         porcentajeActual = Integer.parseInt(Dato);
         progressbar= (ProgressBar)findViewById(R.id.barra1);
         progressbar.setProgress(porcentajeActual);
