@@ -40,18 +40,19 @@
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/comojugar1c" />
 
-            <ImageButton
-                android:id="@+id/boton_comojugar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="siguiente"
-                android:background="#00FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/flechasiguiente" />
         </LinearLayout>
     </HorizontalScrollView>
+
+    <ImageButton
+        android:id="@+id/boton_comojugar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#00FFFFFF"
+        android:onClick="siguiente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flechasiguiente" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
