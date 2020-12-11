@@ -1,6 +1,7 @@
 package com.aplicacionps;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -8,11 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class ComoJugar extends AppCompatActivity {
+public class Comojugar22 extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_como_jugar);
+        setContentView(R.layout.activity_comojugar22);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
         //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -22,7 +24,7 @@ public class ComoJugar extends AppCompatActivity {
     //se muestre a pantalla completa, sin barra de notificaciones
 
     public void siguiente(View view){
-        Intent siguiente = new Intent (this, Comojugar22.class);
+        Intent siguiente = new Intent (this, Comojugar33.class);
         startActivity(siguiente);
     }
 
@@ -47,5 +49,4 @@ public class ComoJugar extends AppCompatActivity {
             startService(i);
         }
     }
-
 }
