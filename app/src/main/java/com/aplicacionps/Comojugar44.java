@@ -1,5 +1,7 @@
 package com.aplicacionps;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -7,13 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class Comojugar44 extends AppCompatActivity {
 
-public class comojugar3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comojugar3);
+        setContentView(R.layout.activity_comojugar44);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
         //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -22,9 +23,11 @@ public class comojugar3 extends AppCompatActivity {
     //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
     //se muestre a pantalla completa, sin barra de notificaciones
 
-    public void siguiente(View view){
-        Intent siguiente = new Intent (this, comojugar4.class);
-        startActivity(siguiente);
+    //Metodo para poder volver a la pantalla inicio
+    public void volver(View view){
+        Intent volver= new Intent (this, MainActivity.class);
+        startActivity(volver);
+
     }
 
     //Estos 2 últimos métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
@@ -48,4 +51,5 @@ public class comojugar3 extends AppCompatActivity {
             startService(i);
         }
     }
+
 }

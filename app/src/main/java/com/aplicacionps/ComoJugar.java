@@ -22,7 +22,7 @@ public class ComoJugar extends AppCompatActivity {
     //se muestre a pantalla completa, sin barra de notificaciones
 
     public void siguiente(View view){
-        Intent siguiente = new Intent (this, comojugar2.class);
+        Intent siguiente = new Intent (this, Comojugar22.class);
         startActivity(siguiente);
     }
 

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".CaminoVuelta"></activity>
+        <activity android:name=".Comojugar44"></activity>
+        <activity android:name=".Comojugar33" />
+        <activity android:name=".Comojugar22" />
+        <activity android:name=".CaminoVuelta" />
         <activity android:name=".Oro_02_Alumno_Excelente" />
         <activity android:name=".Plata_01_SindromeIndianaJones" />
         <activity android:name=".Oro_01_CaminoDelNinja" />
