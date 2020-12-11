@@ -57,7 +57,7 @@
                 android:layout_height="236dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:text='Eres el mejor alumno de tu instituto, eres un ejemplo tanto para tus compañeros como para tus profesores, es por ello que has completado con exito este dificl desafio de oro. Consigue un 0% de contagio en el mapa del instituto.'
+                android:text='Eres el mejor alumno de tu instituto, eres un ejemplo tanto para tus compañeros como para tus profesores, es por ello que has completado con exito este difícil desafío de oro. Consigue un 0% de contagio en el mapa del instituto.'
                 android:textSize="23dp" />
 
             <ImageView
