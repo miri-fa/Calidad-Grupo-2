@@ -27,7 +27,7 @@ public class superfuera extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         String Dato = getIntent().getStringExtra("dato");
         String Masc = getIntent().getStringExtra("masc");
-        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
+
         porcentajeActual = Integer.parseInt(Dato);
         progressbar= (ProgressBar)findViewById(R.id.barra1);
         progressbar.setProgress(porcentajeActual);
