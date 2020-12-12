@@ -11,12 +11,6 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".Comojugar22" />
         <activity android:name=".CaminoVuelta" />
-        <activity android:name=".Oro_02_Alumno_Excelente" />
-        <activity android:name=".Plata_01_SindromeIndianaJones" />
-        <activity android:name=".Oro_01_CaminoDelNinja" />
-        <activity android:name=".Plata_02_HoustonTenemosUnProblema" />
-        <activity android:name=".Bronce_02_ConductorDePrimera" />
-        <activity android:name=".Bronce_01_PrimeraHistoria" />
         <activity android:name=".Ajustes" />
         <activity android:name=".pantallafinal" />
         <activity android:name=".colaparapagar" />
@@ -27,7 +21,6 @@
         <activity android:name=".autobusInterior" />
         <activity android:name=".EscenarioCasa" />
         <activity android:name=".elegirCamino" />
-        <activity android:name=".Desafios" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
