@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Bronce_01_PrimeraHistoria">
+    tools:context=".bronce01">
 
 
     <ImageButton
-        android:id="@+id/flechaatras_escenarios"
+        android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:contentDescription="@string/botonvolver"
@@ -63,7 +63,7 @@
                 android:textSize="24sp" />
 
             <ImageView
-                android:id="@+id/boton_supermercado"
+                android:id="@+id/btnHistoriaSupermercado"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
                 android:contentDescription="@string/boton_supermercado"

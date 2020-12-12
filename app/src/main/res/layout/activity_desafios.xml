@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".Desafios">
+    tools:context=".MenuDesafios">
 
 
     <ImageButton
-        android:id="@+id/flechaatras_escenarios"
+        android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:contentDescription="@string/botonvolver"
