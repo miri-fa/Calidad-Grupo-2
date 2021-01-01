@@ -12,13 +12,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class irAndando extends AppCompatActivity {
-
+    // se crea un progressbar para representar el pocentaje de contagio que lleva el personaje
+    // se crean dos variables para almacenar los valores que se pasan de un activity a otro
     private ProgressBar progressbar;
     private int porcentajeActual;
     private boolean mascarilla;
 
     //Relacionamos la clase irAndando con su respectivo XML activity_ir_andando
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,24 +26,28 @@ public class irAndando extends AppCompatActivity {
 
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
         //se muestre a pantalla completa, sin barra de notificaciones
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // se obtienen los datos como strings y luego se convierten en sus tipos correspondientes
         String Dato = getIntent().getStringExtra("dato");
         String Masc = getIntent().getStringExtra("masc");
         porcentajeActual = Integer.parseInt(Dato);
+        mascarilla = Boolean.valueOf(Masc);
+
+        // la barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con el numero anteriormente obtenido
         progressbar= (ProgressBar)findViewById(R.id.barra1);
         progressbar.setProgress(porcentajeActual);
-        mascarilla = Boolean.valueOf(Masc);
     }
 
     //Este método CalleSinGente corresponde con la parte lógica del botón 'calle vacía, pero tardo más' del XML activity_ir_andando,
     //y lo que hará es que nos llevará al siguiente escenario que corresponde la clase DentroDeLaCalle
-
     public void CalleSinGente(View view){
+        // se obtiene el porcentaje actual y el booleano de la mascarilla
         String bool = Boolean.toString(mascarilla);
         int valor= porcentajeActual;
         String val= String.valueOf(valor);
+        // se crea el nuevo activity, se pasan los datos anteriormente sacados y se inicializa
         Intent CalleSinGente= new Intent(this, DentroDeLaCalle.class);
         CalleSinGente.putExtra("dato", val);
         CalleSinGente.putExtra("masc", bool);
@@ -55,9 +59,11 @@ public class irAndando extends AppCompatActivity {
     //nos saldrá por pantalla un toast con el mensaje 'No disponible'
 
     public void CalleConGente(View view){
+        // se obtiene el porcentaje actual y el booleano de la mascarilla y se actualiza al elegir una mala opcion
         String bool = Boolean.toString(mascarilla);
-        int valor= porcentajeActual +10;
+        int valor= porcentajeActual + 10;
         String val= String.valueOf(valor);
+        // se crea el nuevo activity, se pasan los datos anteriormente sacados y se inicializa
         Intent CalleConGente = new Intent (this, DentroDeLaCalle.class);
         CalleConGente.putExtra("dato", val);
         CalleConGente.putExtra("masc", bool);

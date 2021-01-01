@@ -55,8 +55,14 @@
 
     <!-- Activity_pantallafinal -->
     <string name="texto_final_historia">¡CAMINO ACABADO!</string>
-    <string name="boton_volve_menu">MENÚ</string>
+    <string name="boton_volver_menu">MENÚ</string>
     <string name="boton_volver_a_jugar">VOLVER A JUGAR</string>
+    <string name="mensajeFinal">MENSAJEALEATORIO</string>
+    <string name="porciento">PORCENTAJEFINAL</string>
+
+    <!-- Activity camino vuelta -->
+    <string name="boton_camino_vuelta">SIGUIENTE</string>
+    <string name="imagenCaminoVuelta">IMAGEN ALICIA CAMINO VUELTA</string>
 
     <!-- Activity_ajustes -->
     <string name="switch_silenciar">SILENCIAR</string>
