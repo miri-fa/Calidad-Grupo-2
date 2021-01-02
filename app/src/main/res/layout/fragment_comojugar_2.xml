@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_liso"
     android:orientation="horizontal"
-    tools:context=".tutorial1">
+    tools:context=".ComoJugar_1">
 
     <HorizontalScrollView
         android:id="@+id/scrollview_comojugar2"
@@ -27,6 +27,7 @@
                 android:layout_width="650dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/imagen_comojugar23"
                 app:srcCompat="@drawable/comojugar2a" />
 
             <ImageView
@@ -34,6 +35,7 @@
                 android:layout_width="650dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/imagen_comojugar22"
                 app:srcCompat="@drawable/comojugar2b" />
 
             <ImageView
@@ -41,6 +43,7 @@
                 android:layout_width="650dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/imagen_comojugar21"
                 app:srcCompat="@drawable/comojugar2c" />
 
             <ImageButton
@@ -49,6 +52,7 @@
                 android:layout_height="400dp"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
+                android:contentDescription="@string/boton_comosejuega2"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

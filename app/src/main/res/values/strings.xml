@@ -68,8 +68,29 @@
     <string name="switch_silenciar">SILENCIAR</string>
     <string name="titulo_ajustes">AJUSTES</string>
     <string name="boton_atras">BOTON ATRAS</string>
-    <!-- Activity_comosejuega -->
-    <string name="botonvolver">volver</string>
+
+    <!-- Fragment_ComoJugar_1 -->
+    <string name="imagen_comojugar12">IMAGENCOMOJUGAR12</string>
+    <string name="imagen_comojugar1">IMAGENCOMOJUGAR1</string>
+    <string name="imagen_comojugar13">IMAGENCOMOJUGAR13</string>
+    <string name="boton_comosejuega1">COMOSEJUEGA1</string>
+
+    <!-- Fragment_ComoJugar_2 -->
+    <string name="imagen_comojugar21">IMAGENCOMOJUGAR21</string>
+    <string name="imagen_comojugar22">IMAGENCOMOJUGAR22</string>
+    <string name="imagen_comojugar23">IMAGENCOMOJUGAR23</string>
+    <string name="boton_comosejuega2">COMOSEJUEGA2</string>
+
+    <!-- Fragment_ComoJugar_3 -->
+    <string name="imagen_comojugar31">IMAGENCOMOJUGAR31</string>
+    <string name="imagen_comojugar32">IMAGENCOMOJUGAR32</string>
+    <string name="imagen_comojugar33">IMAGENCOMOJUGAR33</string>
+    <string name="boton_comosejuega3">COMOSEJUEGA3</string>
+
+    <!-- Fragment_ComoJugar_4 -->
+    <string name="imagen_comojugar41">IMAGENCOMOJUGAR41</string>
+    <string name="boton_comosejuega4">COMOSEJUEGA4</string>
+
     <!-- Activity_desafios -->
     <string name="desafio_bronce_01">bronce_01</string>
     <string name="desafio_bronce_02">bronce_02</string>
@@ -77,6 +98,7 @@
     <string name="desafio_plata_02">plata_02</string>
     <string name="desafio_oro_01" />
     <string name="desafio_oro_02" />
+
     <!-- Activity_main -->
     <string name="botonjugar">jugar</string>
     <string name="botonlogros">logros</string>
@@ -88,6 +110,7 @@
     <string name="desafio_plata_02_Letra" />
     <string name="botondesafios" />
     <string name="title_activity_historia_supermercado">HistoriaSupermercado</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

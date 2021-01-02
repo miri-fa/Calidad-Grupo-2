@@ -31,36 +31,36 @@
     </fragment>
     <fragment
         android:id="@+id/tutorial0"
-        android:name="com.aplicacionps.tutorial0"
+        android:name="com.aplicacionps.ComoJugar_0"
         android:label="fragment_tutorial0"
-        tools:layout="@layout/fragment_tutorial0" >
+        tools:layout="@layout/fragment_ComoJugar_00" >
         <action
             android:id="@+id/action_tutorial0_to_tutorial1"
-            app:destination="@id/tutorial1" />
+            app:destination="@id/ComoJugar_1" />
     </fragment>
     <fragment
-        android:id="@+id/tutorial1"
-        android:name="com.aplicacionps.tutorial1"
+        android:id="@+id/ComoJugar_1"
+        android:name="com.aplicacionps.ComoJugar_1"
         android:label="fragment_tutorial1"
-        tools:layout="@layout/fragment_tutorial1" >
+        tools:layout="@layout/fragment_ComoJugar_1" >
         <action
             android:id="@+id/action_tutorial1_to_tutorial2"
-            app:destination="@id/tutorial2" />
+            app:destination="@id/ComoJugar2" />
     </fragment>
     <fragment
-        android:id="@+id/tutorial2"
-        android:name="com.aplicacionps.tutorial2"
+        android:id="@+id/ComoJugar2"
+        android:name="com.aplicacionps.ComoJugar_2"
         android:label="fragment_tutorial2"
-        tools:layout="@layout/fragment_tutorial2" >
+        tools:layout="@layout/fragment_ComoJugar_2" >
         <action
             android:id="@+id/action_tutorial2_to_tutorial3"
-            app:destination="@id/tutorial3" />
+            app:destination="@id/comojugar3" />
     </fragment>
     <fragment
-        android:id="@+id/tutorial3"
-        android:name="com.aplicacionps.tutorial3"
+        android:id="@+id/comojugar3"
+        android:name="com.aplicacionps.ComoJugar_3"
         android:label="fragment_tutorial3"
-        tools:layout="@layout/fragment_tutorial3" >
+        tools:layout="@layout/fragment_ComoJugar_3" >
         <action
             android:id="@+id/action_tutorial3_to_menuInicio"
             app:destination="@id/menuInicio" />
