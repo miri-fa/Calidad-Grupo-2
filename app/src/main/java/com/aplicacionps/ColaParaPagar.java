@@ -54,6 +54,12 @@ public class ColaParaPagar extends AppCompatActivity {
         startActivity(tarjeta);
     }
 
+    //Este método hace que no podamos retroceder de escenario en la historia jugable
+    @Override
+    public void onBackPressed() {
+
+    }
+
     //Los siguientes metodos sirven para poner musica que se va a escuchar en la aplicacion
     @Override
     public void onPause() {

@@ -98,6 +98,7 @@
     <string name="desafio_plata_02">plata_02</string>
     <string name="desafio_oro_01" />
     <string name="desafio_oro_02" />
+    <string name="botonvolver">botonvolver</string>
 
     <!-- Activity_main -->
     <string name="botonjugar">jugar</string>

@@ -63,6 +63,12 @@ public class AutobusInterior extends AppCompatActivity {
         startActivity(sitioSolo);
     }
 
+    //Este método hace que no podamos retroceder de escenario en la historia jugable
+    @Override
+    public void onBackPressed() {
+
+    }
+
     //Los siguientes metodos sirven para poner la musica que se va a escuchar a lo largo de la aplicacion
     @Override
     public void onPause() {
