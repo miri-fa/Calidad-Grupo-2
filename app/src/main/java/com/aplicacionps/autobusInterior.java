@@ -42,7 +42,7 @@ public class autobusInterior extends AppCompatActivity {
     }
 
 
-    // EL BOTÓN HACE QUE SALGA UN MENSAJE EMERGENTE QUE PONE "NO DISPONIBLE"
+    // EL BOTÓN TE LLEVA DIRECTAMENTE A LA ENTRADA DEL SUPER
     public void sitioSenhora(View view){
         // se obtiene el porcentaje actual y el booleano de la mascarilla y se actualiza al elegir una mala opcion
         String bool = Boolean.toString(mascarilla);

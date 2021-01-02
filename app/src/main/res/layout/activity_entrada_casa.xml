@@ -62,6 +62,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.895" />
 
+    <!-- Implementamos la barra de progreso del porcentaje de contagio, donde relacionamos esta
+    parte del diseño con la parte lógica que se encontrará en la clase EscenarioCasa-->
+
     <ProgressBar
         android:id="@+id/barra1"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
