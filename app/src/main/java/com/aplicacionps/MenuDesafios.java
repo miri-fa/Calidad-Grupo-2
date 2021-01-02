@@ -15,7 +15,6 @@ import android.widget.ImageView;
 
 public class MenuDesafios extends Fragment {
     public MenuDesafios() {
-        // Required empty public constructor
     }
 
     @Override
@@ -24,11 +23,11 @@ public class MenuDesafios extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_desafios, container, false);
+        return inflater.inflate(R.layout.fragment_menudesafios, container, false);
     }
+
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ImageView titulo_desafiobronce01 = view.findViewById(R.id.titulo_desafiobronce01);
@@ -38,7 +37,7 @@ public class MenuDesafios extends Fragment {
         ImageView titulo_desafiooro01 = view.findViewById(R.id.titulo_desafiooro01);
         ImageView titulo_desafiooro02 = view.findViewById(R.id.titulo_desafiooro02);
         ImageButton btnVolver = view.findViewById(R.id.btnVolver);
-        //implementacion de boton que lleva de un fragmento a otro fragment
+        //Implementacion de boton que lleva de un fragmento a otro fragment
         titulo_desafiobronce01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

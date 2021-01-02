@@ -1,26 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Aquí aplicamos el fondo de pantalla de este activity, lo colocamos en orientación
- horizontal y relacionamos este XML con la clase irAndando-->
-
+<!-- AQUÍ SE COLOCA EL FONDO DE PANTALLA DEL ACTIVITY, SE CAMBIA LA ORIENTACIÓN A HORIZONTAL Y SE RELACIONA EL XML CON LA CLASE CORRESPONDIENTE -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/calle_congente_o_singente"
+    android:background="@drawable/camino"
     android:orientation="horizontal"
-    tools:context=".irAndando">
+    tools:context=".ElegirCamino">
 
-    <!-- Aquí implementamos el texto donde se hace la pregunta al usuario y
-    personalizamos su aspecto-->
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN IR EN BUS QUE TE LLEVA AL INTERIOR DEL BUS -->
+    <Button
+        android:id="@+id/boton_ir_autobus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="caminoAutobus"
+        android:text="@string/boton_autobus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN IR ANDANDO QUE TE LLEVA A LA PANTALLA IR ANDANDO -->
+    <Button
+        android:id="@+id/boton_ir_andando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkable="false"
+        android:onClick="caminoAndando"
+        android:text="@string/boton_andando"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
+
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "¿CÓMO QUIERES IR AL SUPERMERCADO?" -->
     <TextView
-        android:id="@+id/TextoQueCaminoEscoges"
+        android:id="@+id/texto_elegir_camino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="@string/texto_que_camino_escoges"
+        android:text="@string/texto_como_ir_super"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,39 +53,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148" />
-
-    <!-- Implementamos el botón 'Calle vacía, pero tardo más', donde relacionamos esta parte del diseño
-    con la parte lógica que se encontrará en el método CalleSinGente de la clase irAndando-->
-
-    <Button
-        android:id="@+id/botonCalleVacía"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="CalleSinGente"
-        android:text="@string/boton_calle_vacia"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
-
-    <!-- Implementamos el botón 'Calle con gente', donde relacionamos esta parte del diseño
-    con la parte lógica que se encontrará en el método CalleConGente de la clase irAndando-->
-
-    <Button
-        android:id="@+id/botonCalleLlena"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="CalleConGente"
-        android:text="@string/boton_calle_llena"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintVertical_bias="0.145" />
 
     <ProgressBar
         android:id="@+id/barra1"

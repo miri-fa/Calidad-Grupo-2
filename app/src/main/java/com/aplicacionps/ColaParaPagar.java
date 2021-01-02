@@ -9,64 +9,52 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
-public class colaparapagar extends AppCompatActivity {
-
-    // se crea un progressbar para representar el pocentaje de contagio que lleva el personaje
-    // se crean otra variable para almacenar el valor que se pasa de un activity a otro
-
-    private ProgressBar progressbar;
-    private int porcentajeActual;
-
-    // AQUI SE RELACIONA LA CLASE colaparapagar.java CON SU XML activity_colaparapagar.xml
+public class ColaParaPagar extends AppCompatActivity {
+    //Se crea un ProgressBar para representar el pocentaje de contagio que lleva el personaje
+    private ProgressBar ProgressBar;
+    //Se crean otra variable para almacenar el valor que se pasa de un activity a otro
+    private int PorcentajeActual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Relacionaremos la clase ColaParaPagar.java con su XML activity_colaparapagar.xml
         setContentView(R.layout.activity_colaparapagar);
-
-        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
-        //se muestre a pantalla completa, sin barra de notificaciones
-
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que se muestre a
+        // pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        // se obtienen el dato como string y luego se convierte en sus tipo correspondiente
-
+        //Se obtienen el dato como string y luego se convierte en sus tipo correspondiente
         String Dato = getIntent().getStringExtra("dato");
-        porcentajeActual = Integer.parseInt(Dato);
-
-        // la barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con el numero anteriormente obtenido
-
-        progressbar= (ProgressBar)findViewById(R.id.barra1);
-        progressbar.setProgress(porcentajeActual);
-
+        PorcentajeActual = Integer.parseInt(Dato);
+        //La barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con
+        //el numero anteriormente obtenido
+        ProgressBar = (ProgressBar)findViewById(R.id.barra1);
+        ProgressBar.setProgress(PorcentajeActual);
     }
 
-    // EL BOTÓN TE LLEVA A LA PANTALLA FINAL AL HABER ACABADO EL RECORRIDO
-    // AL SER LA OPCIÓN INCORRECTA, SE AUMENTARÁ EN UN 10% EL PORCENTAJE DE CONTAGIO
-
+    //El boton te lleva a la pantalla final al haber acabado el recorrido al ser la opcion incorrecta,
+    //se aumentara en un 10% el porcentaje de contagio
     public void efectivo(View view){
-        int valor= porcentajeActual + 10;
+        int valor= PorcentajeActual + 10;
         String val= String.valueOf(valor);
-        Intent efectivo = new Intent (this, pantallafinal.class);
+        Intent efectivo = new Intent (this, PantallaFinal.class);
         efectivo.putExtra("dato", val);
         startActivity(efectivo);
     }
 
-    // EL BOTÓN TE LLEVA A LA PANTALLA FINAL AL HABER ACABADO EL RECORRIDO
-    // AL SER LA OPCIÓN CORRECTA, EL PORCENTAJE DE CONTAGIO NO VARIARÁ
-
+    //El boton te lleva a la pantalla final al haber acabado el recorrido, al ser opcion correcta,
+    //el porcentaje de contagio no variará
     public void tarjeta(View view){
-        int valor= porcentajeActual;
+        int valor= PorcentajeActual;
         String val= String.valueOf(valor);
-        Intent tarjeta = new Intent (this, pantallafinal.class);
+        Intent tarjeta = new Intent (this, PantallaFinal.class);
         tarjeta.putExtra("dato", val);
         startActivity(tarjeta);
     }
 
-    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
+    //Los siguientes metodos sirven para poner musica que se va a escuchar en la aplicacion
     @Override
     public void onPause() {
         super.onPause();

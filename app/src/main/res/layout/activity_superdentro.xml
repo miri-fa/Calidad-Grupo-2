@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/superalentrar"
     android:orientation="horizontal"
-    tools:context=".superdentro">
+    tools:context=".SuperDentro">
 
     <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "ANTES DE EMPEZAR LA COMPRA ¿QUÉ HACES?" -->
 

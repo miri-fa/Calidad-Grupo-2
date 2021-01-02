@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_liso"
     android:orientation="horizontal"
-    tools:context=".ComoJugar_2">
+    tools:context=".ComoJugar_3">
 
     <HorizontalScrollView
         android:id="@+id/ScrollView_comojugar3"

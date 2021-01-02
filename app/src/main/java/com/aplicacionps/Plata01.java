@@ -14,13 +14,12 @@ import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link plata02#newInstance} factory method to
+ * Use the {@link Plata01#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class plata02 extends Fragment {
 
-    public plata02() {
-        // Required empty public constructor
+public class Plata01 extends Fragment {
+    public Plata01() {
     }
 
     @Override
@@ -29,15 +28,15 @@ public class plata02 extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plata02, container, false);
+        return inflater.inflate(R.layout.fragment_plata01, container, false);
     }
+
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ImageButton btnVolver = view.findViewById(R.id.btnVolver);
-        //implementacion de boton que lleva de un fragmento a otro fragment
+        //Implementacion de boton que lleva de un fragmento a otro fragment
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

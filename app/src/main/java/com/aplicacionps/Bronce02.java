@@ -14,31 +14,29 @@ import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link bronce02#newInstance} factory method to
+ * Use the {@link Bronce02#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class bronce02 extends Fragment {
-
-
-
-    public bronce02() {
-        // Required empty public constructor
+public class Bronce02 extends Fragment {
+    public Bronce02() {
+        //Required empty public constructor
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bronce02, container, false);
     }
+
+    //Implementacion de boton que lleva de un fragmento a otro fragmento (menuDesafios)
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ImageButton btnVolver = view.findViewById(R.id.btnVolver);
-        //implementacion de boton que lleva de un fragmento a otro fragment
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -15,19 +15,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
-        //se muestre a pantalla completa, sin barra de notificaciones
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que se muestre a
+        //pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
     }
-    //Estos 2 últimos métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
-    //siendo la música constante y permanente durante el tiempo que te encuentres dentro del juego
+
+    //Los siguientes metodos sirven para poner musica que se va a escuchar en la aplicacion
     @Override
     public void onPause() {
         super.onPause();
-
-        //IMPLEMENTACIÓN DEL SERVICIO DE AUDIO (INTERRUMPE EL SERVICIO CUANDO SE SALE DE ESTA ACTIVITY
+        //Implemnetacion del servicio de audio (Interrumpe el servicio cuando se sale de esta activity)
         Intent i = new Intent(this, AudioService.class);
         i.putExtra("action", AudioService.PAUSE);
         startService(i);
@@ -36,12 +34,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-
-        //SE RECUPERA DE VALORES GUARDADOS EL VALOR DEL SWITCH SILENCIAR Y SE ALMACENA EN valorboton.
+        //Se recuperan los valores guardados, el valor del switch silenciar y se almacena en valorboton.
         SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
         Boolean valordelboton = sharedPreferences.getBoolean("value", false);
-
-        //DEPENDIENDO DEL CONTENIDO DE valorboton SE REANUDA EL SERVICIO DE AUDIO EN ESTA ACTIVITY
+        //Dependiendo del contenido de valorboton se reanuda el servicio de audio en esta activity
         if (valordelboton != true) {
             Intent i = new Intent(this, AudioService.class);
             i.putExtra("action", AudioService.START);

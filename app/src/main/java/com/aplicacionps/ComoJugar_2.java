@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-
 public class ComoJugar_2 extends Fragment {
     public ComoJugar_2() {
         // Required empty public constructor
@@ -23,22 +22,21 @@ public class ComoJugar_2 extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    //Relacionamos la clase ComoJugar_2 con su respectivo XML fragment_ComoJugar_2
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_comojugar_4, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //Relacionamos la clase ComoJugar_2 con su respectivo XML fragment_ComoJugar_2
+        return inflater.inflate(R.layout.fragment_comojugar_2, container, false);
     }
 
-    //implementacion de boton que lleva de un fragmento a otro fragmento (ComoJugar_3)
+    //Implementacion de boton que lleva de un fragmento a otro fragmento (ComoJugar_3)
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ImageButton boton_comojugar3 = view.findViewById(R.id.boton_comojugar3);
-        boton_comojugar3.setOnClickListener(new View.OnClickListener() {
+        ImageButton boton_comosejuega2 = view.findViewById(R.id.boton_comosejuega2);
+        boton_comosejuega2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.comojugar3);
+                Navigation.findNavController(v).navigate(R.id.ComoJugar2);
             }
         });
     }

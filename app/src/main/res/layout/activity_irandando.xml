@@ -1,58 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- AQUÍ SE COLOCA EL FONDO DE PANTALLA DEL ACTIVITY, SE CAMBIA LA ORIENTACIÓN A HORIZONTAL Y SE RELACIONA EL XML CON LA CLASE CORRESPONDIENTE-->
+<!-- Aquí aplicamos el fondo de pantalla de este activity, lo colocamos en orientación
+ horizontal y relacionamos este XML con la clase IrAndando-->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/autobuspordentro"
+    android:background="@drawable/calle_congente_o_singente"
     android:orientation="horizontal"
-    tools:context=".autobusInterior">
+    tools:context=".IrAndando">
 
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "¿DÓNDE TE SIENTAS?" -->
+    <!-- Aquí implementamos el texto donde se hace la pregunta al usuario y
+    personalizamos su aspecto-->
+
     <TextView
-        android:id="@+id/texto_donde_sentarse"
+        android:id="@+id/TextoQueCaminoEscoges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="@string/texto_donde_sentarse"
+        android:text="@string/texto_que_camino_escoges"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.148" />
 
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN SEÑORA QUE HACE APARECER UN MENSAJE EMERGENTE -->
+    <!-- Implementamos el botón 'Calle vacía, pero tardo más', donde relacionamos esta parte del diseño
+    con la parte lógica que se encontrará en el método CalleSinGente de la clase IrAndando-->
+
     <Button
-        android:id="@+id/boton_Senora"
+        android:id="@+id/botonCalleVacía"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="sitioSenhora"
-        android:text="@string/boton_senora"
+        android:onClick="CalleSinGente"
+        android:text="@string/boton_calle_vacia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.87" />
 
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN SOLO QUE TE LLEVA AL EXTERIOR DEL SUPERMERCADO -->
+    <!-- Implementamos el botón 'Calle con gente', donde relacionamos esta parte del diseño
+    con la parte lógica que se encontrará en el método CalleConGente de la clase IrAndando-->
+
     <Button
-        android:id="@+id/boton_Solo"
+        android:id="@+id/botonCalleLlena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="sitioSolo"
-        android:text="@string/boton_solo"
+        android:onClick="CalleConGente"
+        android:text="@string/boton_calle_llena"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.87" />
 
     <ProgressBar
         android:id="@+id/barra1"
