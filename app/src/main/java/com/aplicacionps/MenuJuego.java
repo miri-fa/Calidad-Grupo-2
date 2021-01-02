@@ -24,11 +24,14 @@ public class MenuJuego extends Fragment {
         );
     }
     @Override
+    //Relacionamos la clase MenuJuego con su respectivo XML fragment_menu_juego
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu_juego, container, false);
     }
+
+    //implemnetacion de los diferentes botones que hay en la pantalla de MenuJuego
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -37,6 +40,7 @@ public class MenuJuego extends Fragment {
         //implementacion de boton que lleva de un fragmento a una activity
         btnHistoriaSupermercado.setOnClickListener(new View.OnClickListener(){
             @Override
+            //implementacion botón que nos llevará al hacer click en supermercado a la salida desde nuestro escenariocasa
             public void onClick(View v){
                 Intent jugar= new Intent (getActivity(),EscenarioCasa.class);
                 jugar.putExtra("datos","mas datos");

@@ -12,39 +12,34 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link tutorial0#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class tutorial0 extends Fragment {
-    public tutorial0() {
+
+public class ComoJugar_3 extends Fragment {
+    public ComoJugar_3() {
         // Required empty public constructor
     }
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
+    //Relacionamos la clase ComoJugar_3 con su respectivo XML fragment_ComoJugar_3
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tutorial0, container, false);
+        return inflater.inflate(R.layout.fragment_ComoJugar_3, container, false);
     }
-    @Override
+
+    //implementacion de boton que lleva de un fragmento a otro fragmento (menuInicio)
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ImageButton btnsig = view.findViewById(R.id.btnsig);
+        ImageButton boton_comojugar4 = view.findViewById(R.id.boton_comojugar4);
         //implementacion de boton que lleva de un fragmento a otro fragment
-        btnsig.setOnClickListener(new View.OnClickListener(){
+        boton_comojugar4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(v).navigate(R.id.tutorial1);
+                Navigation.findNavController(v).navigate(R.id.menuInicio);
             }
         });
-
     }
 }
