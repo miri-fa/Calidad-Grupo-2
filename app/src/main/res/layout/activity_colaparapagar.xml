@@ -12,7 +12,6 @@
 
     <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "¿CÓMO VAS A PAGAR?" -->
 
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN PAGAR EN EFECTIVO QUE HACE QUE APAREZCA UN MENSAJE EMERGENTE -->
     <TextView
         android:id="@+id/texto_como_pagar"
         android:layout_width="wrap_content"
@@ -27,6 +26,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.131" />
+
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN PAGAR EN EFECTIVO QUE HACE QUE APAREZCA UN MENSAJE EMERGENTE -->
 
     <Button
         android:id="@+id/boton_efectivo"
@@ -54,6 +55,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.884" />
+
+    <!-- Implementamos la barra de progreso del porcentaje de contagio, donde relacionamos esta
+    parte del diseño con la parte lógica que se encontrará en la clase EscenarioCasa-->
 
     <ProgressBar
         android:id="@+id/barra1"

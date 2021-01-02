@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- Aquí aplicamos el fondo de pantalla de este activity, lo colocamos en orientación
- horizontal y relacionamos este XML con la clase Jugar-->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     android:orientation="horizontal"
-    tools:context=".Jugar">
+    tools:context=".MenuJuego">
 
     <!-- Aquí implementamos la imagen de la flecha que nos lleva
      a la pantalla inicial-->
     <ImageButton
-        android:id="@+id/flechaatras_escenarios"
+        android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:contentDescription="@string/flechaatras_escenarios"
-        android:onClick="volver"
         android:padding="0px"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,11 +63,10 @@
             <!-- Implementamos el botón 'supermercado', donde relacionamos esta parte del diseño
      con la parte lógica que se encontrará en el método supermercado de la clase Jugar-->
             <ImageView
-                android:id="@+id/boton_supermercado"
+                android:id="@+id/btnHistoriaSupermercado"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
                 android:contentDescription="@string/boton_supermercado"
-                android:onClick="supermercado"
                 app:srcCompat="@drawable/supermercado" />
 
             <!-- Esta parte simplemnete nos servirá de separador entre los dos botones-->
@@ -84,11 +80,10 @@
             <!-- Implementamos el botón 'instituto', donde relacionamos esta parte del diseño
     con la parte lógica que se encontrará en el método instituto de la clase Jugar-->
             <ImageView
-                android:id="@+id/boton_instituto"
+                android:id="@+id/btnHistoriaInstituo"
                 android:layout_width="match_parent"
                 android:layout_height="232dp"
                 android:contentDescription="@string/boton_instituto"
-                android:onClick="instituto"
                 app:srcCompat="@drawable/instituto" />
         </LinearLayout>
     </ScrollView>

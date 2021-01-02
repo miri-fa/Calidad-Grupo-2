@@ -21,30 +21,6 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
-
-    //SistemaContagio SI= new SistemaContagio(0);
-
-    //implementacion del boton jugar que lleva al menu de juego
-    public void jugar(View view){
-        Intent jugar= new Intent (this, Jugar.class);
-        //jugar.putExtra("dato", 0);
-        startActivity(jugar);
-    }
-    //implementacion del boton logros que lleva al menu de logros
-    public void desafios(View view){
-        Intent desafios = new Intent (this, Desafios.class);
-        startActivity(desafios);
-    }
-    //implementacion del como se juga que lleva al menu de como se juega
-    public void comoSeJuega(View view){
-        Intent csj = new Intent (this, ComoJugar.class);
-        startActivity(csj);
-    }
-    //implementacion del boton ajustes que lleva al menu de ajustes
-    public void ajustes(View view){
-        Intent sett = new Intent (this, Ajustes.class);
-        startActivity(sett);
-    }
     //Estos 2 últimos métodos sirven para implementar la música del juego dentro de esta clase y para las demás,
     //siendo la música constante y permanente durante el tiempo que te encuentres dentro del juego
     @Override

@@ -4,14 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Plata_01_SindromeIndianaJones">
+    android:background="#CFEAFB"
+    tools:context=".oro01">
+
+    <!-- Implementación del título del desafío-->
+
+    <ImageView
+        android:id="@+id/titulo_desafiooro01"
+        android:layout_width="738dp"
+        android:layout_height="77dp"
+        android:background="#2679af"
+        android:contentDescription="@string/desafio_oro_01"
+        app:srcCompat="@drawable/el_camino_del_ninja"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-7dp" />
 
     <ImageButton
-        android:id="@+id/flechaatras_escenarios"
+        android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:contentDescription="@string/botonvolver"
-        android:onClick="volver"
         android:orientation="horizontal"
         android:padding="0px"
         android:scaleType="fitXY"
@@ -22,18 +35,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/flecha" />
-
-    <!-- Implementación del título del desafío-->
-
-    <ImageView
-        android:id="@+id/titulo_desafioplata01_Letra"
-        android:layout_width="733dp"
-        android:layout_height="91dp"
-        android:contentDescription="@string/desafio_plata_01_Letra"
-        app:srcCompat="@drawable/sindrome_indiana_jones_letra"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="16dp" />
 
     <ScrollView
         android:id="@+id/scrollview_escenarios"
@@ -48,31 +49,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginHorizontal="50dp">
+            android:layout_marginHorizontal="50dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/texto_bronce_01"
+                android:id="@+id/texto_oro_01"
                 android:layout_width="match_parent"
                 android:layout_height="236dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:text='¡No sabes que este es un club exclusivo! Sólo exploradores entran aquí. No cualquier niñito que usa un casco y un par de gafas. ¿Reúnes los requisitos? Ve y descubre todos los caminos que el mapa del supermercado te puede ofrecer'
-                android:textSize="24sp" />
+                android:text='Cuatro hermanos vigilan las calles pero ahora están en cuarentena bajo tierra. ¿Cumplirás tu su misión? LLévales la pizza que tanto adoran. Pero cuidado, solo se la podrás dar si no tienes ningún riesgo de tener coronavirus. Buena suerte'
+                android:textColor="#000000"
+                android:textSize="23dp" />
 
             <ImageView
-                android:id="@+id/explorador"
+                android:id="@+id/fondo_ninja"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
-                app:srcCompat="@drawable/explorador" />
+                app:srcCompat="@drawable/ninja" />
         </LinearLayout>
     </ScrollView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="141dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="332dp"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="352dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -80,13 +82,14 @@
         app:srcCompat="@drawable/logo_equipo" />
 
     <ImageView
-        android:id="@+id/copaplata"
-        android:layout_width="100dp"
-        android:layout_height="79dp"
+        android:id="@+id/copaoro"
+        android:layout_width="83dp"
+        android:layout_height="55dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/copaplata" />
+        app:srcCompat="@drawable/copaoro" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

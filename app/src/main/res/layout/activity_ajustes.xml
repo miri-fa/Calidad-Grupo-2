@@ -42,7 +42,7 @@
     //Las siguientes lineas de codigo corresponden al boton de vuelta al menu ppal
 
     <ImageButton
-        android:id="@+id/flechaatras_escenarios"
+        android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:contentDescription="@string/boton_atras"

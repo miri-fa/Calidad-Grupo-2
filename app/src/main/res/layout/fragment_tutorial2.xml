@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_liso"
     android:orientation="horizontal"
-    tools:context=".Comojugar22">
+    tools:context=".tutorial2">
 
     <HorizontalScrollView
-        android:id="@+id/scrollview_comojugar2"
+        android:id="@+id/ScrollView_comojugar3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,33 +23,32 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imagen_comojugar23"
+                android:id="@+id/imagen_comojugar31"
                 android:layout_width="650dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/comojugar2a" />
+                app:srcCompat="@drawable/comojugar3a" />
 
             <ImageView
-                android:id="@+id/imagen_comojugar22"
+                android:id="@+id/imagen_comojugar32"
                 android:layout_width="650dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/comojugar2b" />
+                app:srcCompat="@drawable/comojugar3b" />
 
             <ImageView
-                android:id="@+id/imagen_comojugar21"
+                android:id="@+id/imagen_comojugar33"
                 android:layout_width="650dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/comojugar2c" />
+                app:srcCompat="@drawable/comojugar3c" />
 
             <ImageButton
-                android:id="@+id/boton_comosejuega2"
+                android:id="@+id/boton_comojugar3"
                 android:layout_width="wrap_content"
                 android:layout_height="400dp"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:onClick="siguiente"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

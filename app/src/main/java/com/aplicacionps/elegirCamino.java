@@ -13,7 +13,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class elegirCamino extends AppCompatActivity {
-
+    // se crea un progressbar para representar el pocentaje de contagio que lleva el personaje
+    // se crean dos variables para almacenar los valores que se pasan de un activity a otro
     private ProgressBar progressbar;
     private int porcentajeActual;
     private boolean mascarilla;
@@ -24,12 +25,16 @@ public class elegirCamino extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elegir_camino);
+
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
+        //se muestre a pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // se obtienen los datos como strings y luego se convierten en sus tipos correspondientes
         String Dato = getIntent().getStringExtra("dato");
         String Masc = getIntent().getStringExtra("masc");
-        Toast.makeText(this, "No disponible " + Dato, Toast.LENGTH_SHORT).show();
         porcentajeActual = Integer.parseInt(Dato);
+        // la barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con el numero anteriormente obtenido
         progressbar= (ProgressBar)findViewById(R.id.barra1);
         progressbar.setProgress(porcentajeActual);
         mascarilla = Boolean.valueOf(Masc);
@@ -38,11 +43,14 @@ public class elegirCamino extends AppCompatActivity {
 
     // EL BOTÓN TE LLEVA AL INTERIOR DEL AUTOBÚS
     public void caminoAutobus(View view) {
+        // se obtiene el porcentaje actual y el booleano de la mascarilla
         int valor = porcentajeActual;
         String bool = Boolean.toString(mascarilla);
         String val = String.valueOf(valor);
+        // se crean los 2 intentos que se iniciaran dependiendo del booleano
         Intent caminoAutobus = new Intent(this, autobusInterior.class);
         Intent caminoVuelta = new Intent(this, CaminoVuelta.class);
+        // en ambos caminos se envian los datos para no perderlos y se inicia la actividad correspondiente
         if (!mascarilla) {
             caminoVuelta.putExtra("dato", val);
             caminoVuelta.putExtra("masc", bool);
@@ -56,9 +64,11 @@ public class elegirCamino extends AppCompatActivity {
 
     // EL BOTÓN TE LLEVA A LA CALLE QUE LLEVA AL SUPERMERCADO
     public void caminoAndando(View view){
+        // se obtiene el porcentaje actual y el booleano
         int valor= porcentajeActual;
         String val= String.valueOf(valor);
         String bool = Boolean.toString(mascarilla);
+        // se crea el nuevo intento, se envian los datos y se inicializa la actividad
         Intent caminoAndando = new Intent(this, irAndando.class);
         caminoAndando.putExtra("dato", val);
         caminoAndando.putExtra("masc", bool);

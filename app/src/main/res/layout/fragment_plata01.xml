@@ -4,25 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Bronce_01_PrimeraHistoria">
+    android:background="#CFEAFB"
+    tools:context=".plata01">
 
+    <!-- Implementación del título del desafío-->
 
     <ImageView
-        android:id="@+id/titulo_desafiobronce02_Letra"
-        android:layout_width="733dp"
-        android:layout_height="91dp"
-        android:contentDescription="@string/desafio_bronce_02_Letra"
-        app:srcCompat="@drawable/conductor_primera_letra"
+        android:id="@+id/titulo_desafioplata01_Letra"
+        android:layout_width="738dp"
+        android:layout_height="77dp"
+        android:background="#2679af"
+        android:contentDescription="@string/desafio_plata_01_Letra"
+        app:srcCompat="@drawable/sindrome_indiana_jones_letra"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="-5dp" />
 
     <ImageButton
-        android:id="@+id/flechaatras_escenarios"
+        android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:contentDescription="@string/botonvolver"
-        android:onClick="volver"
         android:orientation="horizontal"
         android:padding="0px"
         android:scaleType="fitXY"
@@ -33,8 +35,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/flecha" />
-
-    <!-- Implementación del título del desafío-->
 
     <ScrollView
         android:id="@+id/scrollview_escenarios"
@@ -49,41 +49,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginHorizontal="50dp">
-
-            <ImageView
-                android:id="@+id/titulo_desafiobronce02"
-                android:layout_width="733dp"
-                android:layout_height="91dp"
-                android:contentDescription="@string/desafio_bronce_02"
-                app:srcCompat="@drawable/fotobusdibujo"
-                tools:ignore="MissingConstraints" />
+            android:layout_marginHorizontal="50dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/bronce_02"
+                android:id="@+id/texto_bronce_01"
                 android:layout_width="match_parent"
                 android:layout_height="236dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:text='Para ser conductor de primera acelera, acelera. Para ser conductor de segunda ten cuidado, con las curvas.
-                              Para ser conductor de tercera ten cuidado con la acera... Bien hecho, has montado en el autobús.'
+                android:text='¡No sabes que este es un club exclusivo! Sólo exploradores entran aquí. No cualquier niñito que usa un casco y un par de gafas. ¿Reúnes los requisitos? Ve y descubre todos los caminos que el mapa del supermercado te puede ofrecer'
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <ImageView
-                android:id="@+id/boton_supermercado"
+                android:id="@+id/explorador"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
-                android:contentDescription="@string/boton_autobus"
-                app:srcCompat="@drawable/autobuspordentro" />
+                app:srcCompat="@drawable/explorador" />
         </LinearLayout>
     </ScrollView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="141dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="332dp"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="352dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -91,13 +82,13 @@
         app:srcCompat="@drawable/logo_equipo" />
 
     <ImageView
-        android:id="@+id/copabronce"
-        android:layout_width="100dp"
-        android:layout_height="79dp"
+        android:id="@+id/copaplata"
+        android:layout_width="83dp"
+        android:layout_height="55dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/copabronce" />
+        app:srcCompat="@drawable/copaplata" />
 </androidx.constraintlayout.widget.ConstraintLayout>

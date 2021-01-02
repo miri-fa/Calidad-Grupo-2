@@ -4,15 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Oro_02_Alumno_Excelente">
+    android:background="#CFEAFB"
+    tools:context=".plata02">
 
+
+    <ImageView
+        android:id="@+id/titulo_desafioplata02_Letra"
+        android:layout_width="738dp"
+        android:layout_height="77dp"
+        android:background="#2679AF"
+        android:contentDescription="@string/desafio_plata_02_Letra"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/houston_tenemos_un_problema_letra"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-4dp" />
 
     <ImageButton
-        android:id="@+id/flechaatras_escenarios"
+        android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:contentDescription="@string/botonvolver"
-        android:onClick="volver"
         android:orientation="horizontal"
         android:padding="0px"
         android:scaleType="fitXY"
@@ -24,17 +35,6 @@
         app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/flecha" />
 
-    <!-- Implementación del título del desafío-->
-
-    <ImageView
-        android:id="@+id/titulo_desafiooro02"
-        android:layout_width="733dp"
-        android:layout_height="91dp"
-        android:contentDescription="@string/desafio_oro_02"
-        app:srcCompat="@drawable/alumno_excelente_letra"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-5dp" />
     <ScrollView
         android:id="@+id/scrollview_escenarios"
         android:layout_width="731dp"
@@ -48,31 +48,51 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginHorizontal="50dp">
+            android:layout_marginHorizontal="50dp"
+            android:orientation="vertical">
+
 
             <TextView
-                android:id="@+id/texto_oro_02"
+                android:id="@+id/plata_02"
                 android:layout_width="match_parent"
                 android:layout_height="236dp"
                 android:layout_marginBottom="10dp"
+                android:contentDescription="@string/desafio_plata_02"
                 android:gravity="center"
-                android:text='Eres el mejor alumno de tu instituto, eres un ejemplo tanto para tus compañeros como para tus profesores, es por ello que has completado con exito este difícil desafío de oro. Consigue un 0% de contagio en el mapa del instituto.'
-                android:textSize="23dp" />
+                android:text='Fue el día 13 de abril de 1970 cuando Jack Swigert dijo las famosas palabras ¡Houston, tenemos un problema!,
+                              debido a las explosiones de los tanques de oxígeno de la nave en la que viajaban. Pero ahora el que tiene el problema
+                              eres tú, y no porque hayan explotado unos tanques de oxigeno, sino porque el coronavirus seguramente esté
+                              corriendo por tus venas, ya que te has llenado tu barra de contagio al 100%.'
+                android:textColor="#000000"
+                android:textSize="24sp" />
 
             <ImageView
-                android:id="@+id/oro2"
+                android:id="@+id/titulo_desafioplata02"
+                android:layout_width="733dp"
+                android:layout_height="91dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/desafio_plata_02"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/naveespacial"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="-2dp" />
+
+            <ImageView
+                android:id="@+id/desafioplata02"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
-                app:srcCompat="@drawable/examen10" />
+                android:contentDescription="@string/desafio_plata_02"
+                app:srcCompat="@drawable/progressbar" />
+
         </LinearLayout>
     </ScrollView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="141dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="332dp"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="352dp"
+        android:background="#2679AF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -80,14 +100,13 @@
         app:srcCompat="@drawable/logo_equipo" />
 
     <ImageView
-        android:id="@+id/copaoro"
-        android:layout_width="100dp"
-        android:layout_height="79dp"
+        android:id="@+id/copaplata"
+        android:layout_width="83dp"
+        android:layout_height="55dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/copaoro" />
-
+        app:srcCompat="@drawable/copaplata" />
 </androidx.constraintlayout.widget.ConstraintLayout>
