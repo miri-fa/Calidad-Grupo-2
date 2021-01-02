@@ -8,33 +8,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.navigation.Navigation;
 
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MenuInicio extends Fragment {
     public MenuInicio() {
-        // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_inicio, container, false);
+        return inflater.inflate(R.layout.fragment_menuinicio, container, false);
     }
 
     @Override
@@ -44,7 +35,7 @@ public class MenuInicio extends Fragment {
         ImageButton btncomojugar = view.findViewById(R.id.btncomojugar);
         ImageButton btndesafios = view.findViewById(R.id.btndesafios);
         ImageButton btnajustes = view.findViewById(R.id.btnajustes);
-        //implementacion de boton que lleva de un fragmento a otro fragment
+        //Implementacion de boton que lleva de un fragmento a otro fragment
         btnjugar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/cajasuper"
     android:orientation="horizontal"
-    tools:context=".colaparapagar">
+    tools:context=".ColaParaPagar">
 
     <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "¿CÓMO VAS A PAGAR?" -->
 

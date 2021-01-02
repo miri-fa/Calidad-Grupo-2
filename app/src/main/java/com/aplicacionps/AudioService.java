@@ -2,59 +2,56 @@ package com.aplicacionps;
 
 import android.app.Service;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.util.Log;
 
-//SERVICIO QUE IMPLEMENTAN TODAS LAS ACTIVITY QUE POSEAN MÚSICA DE FONDO
+//Servicio que implementan todas las activity que posean musica de fondo
 public class AudioService extends Service {
-
-    //DISITNTAS ACCIONES QUE SE PUEDEN REALIZAR. EN ORDEN SON: DISMINUIR VOLUMEN, AUMENTAR VOLUMEN, EMPEZAR MÚSICA, PARAR MÚSICA
+    //Distintas acciones que se pueden realizar. En orden son: disminuir volumen, aumentar volumen,
+    // empezar musica, parar musica
     static final int DECREASE = 1, INCREASE= 2, START = 3, PAUSE = 4;
-    Boolean shouldPause = false;
+    Boolean ShouldPause = false;
     MediaPlayer loop;
-
-    //LA MÚSICA SE EJECUTA EN BUCLE.
+    //La musica se ejecuta en bucle
     private void startLoop(){
-
-        //SI AUN NO SE HA EJECUTADO EL BUCLE, SE INSERTA LA CANCIÓN EN loop (musica_fondo_final EN CARPETA raw)
+        //Si aun no se ha ejecutado el bucle, se inserta la cancion en loop
+        // (musica_fondo_final en carpeta raw)
         if(loop == null){
             loop = MediaPlayer.create(this, R.raw.musica_fondo_final);
         }
-
-        //SI YA SE HABIA ASIGNADO UNA CACNCIÓN Y TERMINA, SE REPRODUCE DESDE LE PRINCIPIO
+        //Si ya se habia asignado una cancion y termina, se reproduce desde el principio
         if(!loop.isPlaying()){
             loop.setLooping(true);
             loop.start();
         }
     }
 
-    //FUNCIÓN QUE DISMINUYE EL VOLUMNE DE LA MÚSICA
+    //Funcion que disminuye el volumen de la musica
     private void decrease(){
         loop.setVolume(0.2f, 0.2f);
     }
 
-    //FUNCIÓN QUE AUMENTA EL VOLUMEN DE LA MÚSICA
+    //Funcion que aumenta el volumen de la musica
     private void increase(){
         loop.setVolume(1.0f, 1.0f);
     }
 
-    //FUNCIÓN QUE EMPIEZA LA REPRODUCCIÓN DE LA MÚSICA
+    //Funcion que empieza la reproduccion de la musica
     private void start(){
         startLoop();
-        shouldPause = false;
+        ShouldPause = false;
     }
 
-    //FUNCIÓN QUE PAUSA LA MÚSICA
+    //Funcion que pausa la musica
     private void stop(){
-        shouldPause = true;
-
-        //SE PAUSA EL BUCLE PARA PODER REANUDARLO CUANDO SE VUELVA A LA ACTIVITY (SENSACIÓN DE CONTINUIDAD EN LA MÚSICA)
+        ShouldPause = true;
+        //Se pausa el bucle para poder reanudarlo cuando se vuelva a la activity (sensacion de
+        // continuidad en la musica)
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        if(shouldPause&&loop!=null) {
+                        if(ShouldPause &&loop!=null) {
                             loop.pause();
                         }
                     }
@@ -71,18 +68,15 @@ public class AudioService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
         Log.i(getClass().getSimpleName(), "Intent received");
-
         try {
             int actionDefault = 0;
             int action = actionDefault;
-
             if(intent != null){
                 if(intent.hasExtra("action")){
                     action = intent.getIntExtra("action", actionDefault);
                 }
             }
-
-            //DEPENDIENDO EL VALOR QUE SE INTRODUCA A LA FUNCIÓN SE EJECUTA UNA FUNCIÓN U OTRA
+            //Dependiendo el valor que se introduzca a la función se ejecuta una funcion u otra
             switch (action) {
                 case INCREASE:
                     increase();
@@ -100,29 +94,28 @@ public class AudioService extends Service {
         }catch (Exception e){
             e.printStackTrace();
         }
-
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        //SE LIBERA LA MEMORIA QUE OCUPASE LA CANCIÓN AL DESTRUIR ESTE SERVICIO (CIERRE TOTAL DE LA APLICACIÓN)
+        //Se libera la memoria que ocupase la cancion al destruir este servicio (cierre total de la aplicacion)
         if (loop != null) loop.release();
     }
 
-    //FUNCIÓN POR DEFECTO QUE TIENE QUE APARECER EN TODOS LOS Service
+    //Funcion por defecto que tiene que aparecer en todos los service
     @Override
     public IBinder onBind(Intent intent){
         return null;
     }
 }
 
-//LAS SIGUIENTES TRES LÍNEAS SE INSERTAN EN EL PROCEDIMEINTO onPause() DE TODA ACTIVITY QUE REPRODUZCA MÚSICA DE FONDO
+//LAS SIGUIENTES TRES LÍNEAS SE INSERTAN EN EL PROCEDIMEINTO onPause() DE TODA ACTIVITY QUE REPRODUZCA MUSICA DE FONDO
 /*Intent i = new Intent(this, AudioService.class);
   i.putExtra("action", AudioService.PAUSE);
   startService(i);*/
 
-//LAS SIGUIENTES DOS LINEAS SE INSERTAN EN EL PROCEDIMIENTO onResume() DE TODA ACTIVITY QUE REPRODUZCA MÚSICA DE FONDO
+//LAS SIGUIENTES DOS LINEAS SE INSERTAN EN EL PROCEDIMIENTO onResume() DE TODA ACTIVITY QUE REPRODUZCA MUSICA DE FONDO
 /*SharedPreferences sharedPreferences = getSharedPreferences("save", MODE_PRIVATE);
   Boolean valordelboton = sharedPreferences.getBoolean("value", false);*/

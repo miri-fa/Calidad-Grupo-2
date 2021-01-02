@@ -9,53 +9,42 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 public class superfuera extends AppCompatActivity {
-
-    // se crea un progressbar para representar el pocentaje de contagio que lleva el personaje
-    // se crean dos variables para almacenar los valores que se pasan de un activity a otro
-
-    private ProgressBar progressbar;
-    private int porcentajeActual;
-    private boolean mascarilla;
-
-    // AQUI SE RELACIONA LA CLASE superfuera.java CON SU XML activity_superfuera.xml
+    //Se crea un ProgressBar para representar el pocentaje de contagio que lleva el personaje
+    private ProgressBar ProgressBar;
+    //Se crean dos variables para almacenar los valores que se pasan de un activity a otro
+    private int PorcentajeActual;
+    private boolean Mascarilla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Relacionaremos la clase superfuera.java con su XML activity_superfuera.xml
         setContentView(R.layout.activity_superfuera);
-
-        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
-        //se muestre a pantalla completa, sin barra de notificaciones
-
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que se muestre a
+        // pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        // se obtienen los datos como strings y luego se convierten en sus tipos correspondientes
-
+        //Se obtienen los datos como strings y luego se convierten en sus tipos correspondientes
         String Dato = getIntent().getStringExtra("dato");
         String Masc = getIntent().getStringExtra("masc");
-        porcentajeActual = Integer.parseInt(Dato);
-        mascarilla = Boolean.valueOf(Masc);
-
-        // la barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con el numero anteriormente obtenido
-
-        progressbar= (ProgressBar)findViewById(R.id.barra1);
-        progressbar.setProgress(porcentajeActual);
-
+        PorcentajeActual = Integer.parseInt(Dato);
+        Mascarilla = Boolean.valueOf(Masc);
+        //La barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con
+        // el numero anteriormente obtenido
+        ProgressBar = (ProgressBar)findViewById(R.id.barra1);
+        ProgressBar.setProgress(PorcentajeActual);
     }
 
-    // EL BOTON TE LLEVA AL INTERIOR DEL SUPERMERCADO PARA INICIAR LA COMPRA
-    // AL SER LA OPCIÓN INCORRECTA, SE AUMENTARÁ EN UN 10% EL PORCENTAJE DE CONTAGIO
-    // Y NO DEJARÁ ENTRAR EN EL SUPERMERCADO
+    //El boton te lleva al interior del supermercado para iniciar la compra.Al ser opcion incorrecta,
+    //se aumentará en un 10% el porcentaje de contagio y no dejará entrar en el supermercado
     public void entrar(View view){
-        int valor= porcentajeActual + 10;
+        int valor= PorcentajeActual + 10;
         String val= String.valueOf(valor);
-        Intent entrar = new Intent(this, superdentro.class);
+        Intent entrar = new Intent(this, SuperDentro.class);
         Intent caminoVuelta = new Intent(this, CaminoVuelta.class);
-        if (!mascarilla) {
+        if (!Mascarilla) {
             caminoVuelta.putExtra("dato", val);
             startActivity(caminoVuelta);
         } else {
@@ -64,15 +53,14 @@ public class superfuera extends AppCompatActivity {
         }
     }
 
-    // EL BOTON TE LLEVA AL INTERIOR DEL SUPERMERCADO PARA INICIAR LA COMPRA
-    // AL SER LA OPCIÓN CORRECTA, EL PORCENTAJE DE CONTAGIO NO VARIARÁ
-    // Y SE PODRÁ ENTRAR AL SUPERMERCADO
+    //El boton te lleva al interior del supermercado para iniciar la compra. Al ser opcion correcta,
+    //el porcentaje de contagio no variará y se podrá entrar al supermercado
     public void esperar(View view){
-        int valor= porcentajeActual;
+        int valor= PorcentajeActual;
         String val= String.valueOf(valor);
-        Intent esperar = new Intent (this, superdentro.class);
+        Intent esperar = new Intent (this, SuperDentro.class);
         Intent caminoVuelta = new Intent(this, CaminoVuelta.class);
-        if (!mascarilla) {
+        if (!Mascarilla) {
             caminoVuelta.putExtra("dato", val);
             startActivity(caminoVuelta);
         } else {
@@ -81,7 +69,7 @@ public class superfuera extends AppCompatActivity {
         }
     }
 
-    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
+    //Los siguientes metodos sirven para poner musica que se va a escuchar en la aplicacion
     @Override
     public void onPause() {
         super.onPause();
@@ -101,5 +89,4 @@ public class superfuera extends AppCompatActivity {
             startService(i);
         }
     }
-
 }

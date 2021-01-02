@@ -9,7 +9,7 @@
         android:id="@+id/menuInicio"
         android:name="com.aplicacionps.MenuInicio"
         android:label="fragment_menu_inicio"
-        tools:layout="@layout/fragment_menu_inicio">
+        tools:layout="@layout/fragment_menuinicio">
         <action
             android:id="@+id/action_menuInicio_to_menuJuego"
             app:destination="@id/menuJuego" />
@@ -24,14 +24,14 @@
         android:id="@+id/menuJuego"
         android:name="com.aplicacionps.MenuJuego"
         android:label="fragment_menu_juego"
-        tools:layout="@layout/fragment_menu_juego" >
+        tools:layout="@layout/fragment_menujuego" >
         <action
             android:id="@+id/action_menuJuego_to_menuInicio"
             app:destination="@id/menuInicio" />
     </fragment>
     <fragment
         android:id="@+id/tutorial0"
-        android:name="com.aplicacionps.ComoJugar_0"
+        android:name="com.aplicacionps.ComoJugar_1"
         android:label="fragment_tutorial0"
         tools:layout="@layout/fragment_ComoJugar_00" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/ComoJugar_1"
-        android:name="com.aplicacionps.ComoJugar_1"
+        android:name="com.aplicacionps.ComoJugar_2"
         android:label="fragment_tutorial1"
         tools:layout="@layout/fragment_ComoJugar_1" >
         <action
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/ComoJugar2"
-        android:name="com.aplicacionps.ComoJugar_2"
+        android:name="com.aplicacionps.ComoJugar_3"
         android:label="fragment_tutorial2"
         tools:layout="@layout/fragment_ComoJugar_2" >
         <action
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/comojugar3"
-        android:name="com.aplicacionps.ComoJugar_3"
+        android:name="com.aplicacionps.ComoJugar_4"
         android:label="fragment_tutorial3"
         tools:layout="@layout/fragment_ComoJugar_3" >
         <action
@@ -69,7 +69,7 @@
         android:id="@+id/menuDesafios"
         android:name="com.aplicacionps.MenuDesafios"
         android:label="fragment_menu_desafios"
-        tools:layout="@layout/fragment_menu_desafios" >
+        tools:layout="@layout/fragment_menudesafios" >
         <action
             android:id="@+id/action_menuDesafios_to_menuInicio"
             app:destination="@id/menuInicio" />
@@ -94,7 +94,7 @@
     </fragment>
     <fragment
         android:id="@+id/bronce01"
-        android:name="com.aplicacionps.bronce01"
+        android:name="com.aplicacionps.Bronce01"
         android:label="fragment_bronce01"
         tools:layout="@layout/fragment_bronce01" >
         <action
@@ -103,7 +103,7 @@
     </fragment>
     <fragment
         android:id="@+id/bronce02"
-        android:name="com.aplicacionps.bronce02"
+        android:name="com.aplicacionps.Bronce02"
         android:label="fragment_bronce02"
         tools:layout="@layout/fragment_bronce02" >
         <action
@@ -112,7 +112,7 @@
     </fragment>
     <fragment
         android:id="@+id/plata01"
-        android:name="com.aplicacionps.plata01"
+        android:name="com.aplicacionps.Plata01"
         android:label="fragment_plata01"
         tools:layout="@layout/fragment_plata01" >
         <action
@@ -121,7 +121,7 @@
     </fragment>
     <fragment
         android:id="@+id/plata02"
-        android:name="com.aplicacionps.plata02"
+        android:name="com.aplicacionps.Plata02"
         android:label="fragment_plata02"
         tools:layout="@layout/fragment_plata02" >
         <action
@@ -130,7 +130,7 @@
     </fragment>
     <fragment
         android:id="@+id/oro01"
-        android:name="com.aplicacionps.oro01"
+        android:name="com.aplicacionps.Oro01"
         android:label="fragment_oro01"
         tools:layout="@layout/fragment_oro01" >
         <action
@@ -139,7 +139,7 @@
     </fragment>
     <fragment
         android:id="@+id/oro02"
-        android:name="com.aplicacionps.oro02"
+        android:name="com.aplicacionps.Oro02"
         android:label="fragment_oro02"
         tools:layout="@layout/fragment_oro02" >
         <action

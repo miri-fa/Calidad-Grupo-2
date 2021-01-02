@@ -10,41 +10,39 @@ import android.view.View;
 import android.view.WindowManager;
 
 public class CaminoVuelta extends AppCompatActivity {
+    //Se crean las variables que van a almacenar los datos que se han pasado de la otra activity
+    private int PorcentajeActual;
+    private boolean Mascarilla;
 
-    // se crean las variables que van a almacenar los datos que se han pasado de la otra activity
-    private int porcentajeActual;
-    private boolean mascarilla;
-    // AQUI SE RELACIONA LA CLASE CaminoVuelta.java CON SU XML activity_camino_vuelta.xml
-    //Y TAMBIEN SE PONE LA PANTALLA EN HORIZONTAL AL INICIARLA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camino_vuelta);
-
-        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que
-        //se muestre a pantalla completa, sin barra de notificaciones
+        //Relacionaremos la clase CaminoVuelta.java con su XML activity_caminovuelta.xml
+        setContentView(R.layout.activity_caminovuelta);
+        //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que se muestre a
+        //pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        // se obtiene el porcentaje actual
+        //Se obtiene el porcentaje actual
         String Dato = getIntent().getStringExtra("dato");
-        porcentajeActual = Integer.parseInt(Dato);
+        PorcentajeActual = Integer.parseInt(Dato);
     }
 
     public void vueltaAElegirCamino(View view){
-        int valor = porcentajeActual;
-        // el booleano mascarilla se pone en true ya que es obligado a volver a su casa para ponersela
+        int valor = PorcentajeActual;
+        //El booleano Mascarilla se pone en true ya que es obligado a volver a su casa para ponersela
         String mascarilla = Boolean.toString(true);
         String val = String.valueOf(valor);
-        // se crea el intento de volver a elegir el camino con la mascarilla ya puesta y el numero de porcentaje se mantiene
-        Intent vueltaAElegirCamino = new Intent(this, elegirCamino.class);
-        // se pasan ambos datos y se inicia la actividad
+        //Se crea el intento de volver a elegir el camino con la mascarilla ya puesta y el numero de
+        //porcentaje se mantiene
+        Intent vueltaAElegirCamino = new Intent(this, ElegirCamino.class);
+        //Se pasan ambos datos y se inicia la actividad
         vueltaAElegirCamino.putExtra("dato", val);
         vueltaAElegirCamino.putExtra("masc", mascarilla);
         startActivity(vueltaAElegirCamino);
     }
 
-    // LOS SIGUIENTES MÉTODOS SIRVEN PARA PONER LA MUSICA QUE SE VA A ESCUCHAR A LO LARGO DE LA APLICACIÓN
+    //Los siguientes metodos sirven para poner musica que se va a escuchar en la aplicacion
     @Override
     public void onPause() {
         super.onPause();

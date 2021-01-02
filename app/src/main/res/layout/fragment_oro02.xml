@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CFEAFB"
-    tools:context=".oro02">
+    tools:context=".Oro02">
 
 
     <!-- Implementación del título del desafío-->

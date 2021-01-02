@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     android:orientation="horizontal"
-    tools:context=".pantallafinal">
+    tools:context=".PantallaFinal">
 
     <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN VOLVER A JUGAR QUE TE LLEVA A LA PANTALLA ESCENARIO CASA -->
 
