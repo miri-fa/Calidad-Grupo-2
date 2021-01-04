@@ -14,7 +14,7 @@
         android:layout_height="77dp"
         android:background="#2679af"
         android:contentDescription="@string/desafio_bronce_02_Letra"
-        app:srcCompat="@drawable/conductor_primera_letra"
+        app:srcCompat="@drawable/desafio_conductor_primera_titulo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-1dp"
         tools:layout_editor_absoluteY="-2dp" />
@@ -23,7 +23,6 @@
         android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:contentDescription="@string/botonvolver"
         android:orientation="horizontal"
         android:padding="0px"
         android:scaleType="fitXY"
@@ -33,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
-        app:srcCompat="@drawable/flecha" />
+        app:srcCompat="@drawable/flecha_volver_atras" />
 
     <!-- Implementación del título del desafío-->
 
@@ -63,7 +62,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/fotobusdibujo"
+                app:srcCompat="@drawable/desafio_conductor_de_primera_foto"
                 tools:ignore="MissingConstraints"
                 tools:layout_conversion_absoluteHeight="88dp"
                 tools:layout_conversion_absoluteWidth="733dp" />
@@ -94,7 +93,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/autobuspordentro"
+                app:srcCompat="@drawable/juego_autobus_dentro"
                 tools:layout_conversion_absoluteHeight="231dp"
                 tools:layout_conversion_absoluteWidth="631dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -109,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logo_equipo" />
+        app:srcCompat="@drawable/inicio_logo_equipo" />
 
     <ImageView
         android:id="@+id/copabronce"
@@ -120,5 +119,5 @@
         app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/copabronce" />
+        app:srcCompat="@drawable/desafio_copa_bronce" />
 </androidx.constraintlayout.widget.ConstraintLayout>

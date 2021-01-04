@@ -15,7 +15,7 @@
         android:layout_height="77dp"
         android:background="#2679af"
         android:contentDescription="@string/desafio_plata_01_Letra"
-        app:srcCompat="@drawable/sindrome_indiana_jones_letra"
+        app:srcCompat="@drawable/desafio_sindrome_indiana_jones_titulo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-5dp" />
@@ -24,7 +24,6 @@
         android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:contentDescription="@string/botonvolver"
         android:orientation="horizontal"
         android:padding="0px"
         android:scaleType="fitXY"
@@ -34,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
-        app:srcCompat="@drawable/flecha" />
+        app:srcCompat="@drawable/flecha_volver_atras" />
 
     <ScrollView
         android:id="@+id/scrollview_escenarios"
@@ -66,7 +65,7 @@
                 android:id="@+id/explorador"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
-                app:srcCompat="@drawable/explorador" />
+                app:srcCompat="@drawable/desafio_sindrome_indiana_jones_foto" />
         </LinearLayout>
     </ScrollView>
 
@@ -79,7 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logo_equipo" />
+        app:srcCompat="@drawable/inicio_logo_equipo" />
 
     <ImageView
         android:id="@+id/copaplata"
@@ -90,5 +89,5 @@
         app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/copaplata" />
+        app:srcCompat="@drawable/desafio_copa_plata" />
 </androidx.constraintlayout.widget.ConstraintLayout>

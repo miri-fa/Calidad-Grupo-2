@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_liso"
+    android:background="@drawable/fondo_liso_azul"
     android:orientation="horizontal"
     tools:context=".ComoJugar_2">
 
@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/imagen_comojugar23"
-                app:srcCompat="@drawable/comojugar2a" />
+                app:srcCompat="@drawable/como_jugar_2a" />
 
             <ImageView
                 android:id="@+id/imagen_comojugar22"
@@ -36,7 +36,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/imagen_comojugar22"
-                app:srcCompat="@drawable/comojugar2b" />
+                app:srcCompat="@drawable/como_jugar_2b" />
 
             <ImageView
                 android:id="@+id/imagen_comojugar21"
@@ -44,7 +44,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/imagen_comojugar21"
-                app:srcCompat="@drawable/comojugar2c" />
+                app:srcCompat="@drawable/como_jugar_2c" />
 
             <ImageButton
                 android:id="@+id/boton_comosejuega2"
@@ -57,7 +57,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/flechasiguiente" />
+                app:srcCompat="@drawable/como_jugar_flecha_siguiente" />
         </LinearLayout>
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

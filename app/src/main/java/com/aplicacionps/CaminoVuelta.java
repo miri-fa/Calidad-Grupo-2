@@ -33,7 +33,7 @@ public class CaminoVuelta extends AppCompatActivity {
         //El booleano Mascarilla se pone en true ya que es obligado a volver a su casa para ponersela
         String mascarilla = Boolean.toString(true);
         String val = String.valueOf(valor);
-        //Se crea el intento de volver a elegir el camino con la mascarilla ya puesta y el numero de
+        //Se crea el intento de volver a elegir el juego_autobus_fuera con la mascarilla ya puesta y el numero de
         //porcentaje se mantiene
         Intent vueltaAElegirCamino = new Intent(this, ElegirCamino.class);
         //Se pasan ambos datos y se inicia la actividad

@@ -58,7 +58,7 @@ public class ElegirCamino extends AppCompatActivity {
         }
     }
 
-    //El boton te lleva a la calle que lleva al supermercado
+    //El boton te lleva a la calle que lleva al menu_boton_supermercado
     public void caminoAndando(View view){
         //Se obtiene el porcentaje actual y el booleano
         int valor= PorcentajeActual;
