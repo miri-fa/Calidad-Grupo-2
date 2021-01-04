@@ -76,7 +76,7 @@ public class PantallaFinal extends AppCompatActivity {
     }
 
     //Al pulsar el boton de volver a jugar, el juego te lleva a la casa del jugador para iniciar de nuevo
-    //el camino
+    //el juego_autobus_fuera
     public void volverajugar(View view){
         Intent volverajugar = new Intent (this, EscenarioCasa.class);
         startActivity(volverajugar);

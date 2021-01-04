@@ -37,8 +37,8 @@ public class superfuera extends AppCompatActivity {
         ProgressBar.setProgress(PorcentajeActual);
     }
 
-    //El boton te lleva al interior del supermercado para iniciar la compra.Al ser opcion incorrecta,
-    //se aumentará en un 10% el porcentaje de contagio y no dejará entrar en el supermercado
+    //El boton te lleva al interior del menu_boton_supermercado para iniciar la compra.Al ser opcion incorrecta,
+    //se aumentará en un 10% el porcentaje de contagio y no dejará entrar en el menu_boton_supermercado
     public void entrar(View view){
         int valor= PorcentajeActual + 10;
         String val= String.valueOf(valor);
@@ -53,8 +53,8 @@ public class superfuera extends AppCompatActivity {
         }
     }
 
-    //El boton te lleva al interior del supermercado para iniciar la compra. Al ser opcion correcta,
-    //el porcentaje de contagio no variará y se podrá entrar al supermercado
+    //El boton te lleva al interior del menu_boton_supermercado para iniciar la compra. Al ser opcion correcta,
+    //el porcentaje de contagio no variará y se podrá entrar al menu_boton_supermercado
     public void esperar(View view){
         int valor= PorcentajeActual;
         String val= String.valueOf(valor);

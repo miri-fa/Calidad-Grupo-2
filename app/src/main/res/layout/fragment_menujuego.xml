@@ -6,11 +6,11 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_coronavirus"
     android:orientation="horizontal"
     tools:context=".MenuJuego">
 
-    <!-- Aquí implementamos la imagen de la flecha que nos lleva
+    <!-- Aquí implementamos la imagen de la flecha_volver_atras que nos lleva
      a la pantalla inicial-->
     <ImageButton
         android:id="@+id/btnVolver"
@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.043"
-        app:srcCompat="@drawable/flecha" />
+        app:srcCompat="@drawable/flecha_volver_atras" />
 
     <!-- Aquí implementamos el texto donde se escribe el título de la pantalla-->
     <TextView
@@ -60,31 +60,31 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Implementamos el botón 'supermercado', donde relacionamos esta parte del diseño
-     con la parte lógica que se encontrará en el método supermercado de la clase Jugar-->
+            <!-- Implementamos el botón 'menu_boton_supermercado', donde relacionamos esta parte del diseño
+     con la parte lógica que se encontrará en el método menu_boton_supermercado de la clase Jugar-->
             <ImageView
                 android:id="@+id/btnHistoriaSupermercado"
                 android:layout_width="match_parent"
                 android:layout_height="231dp"
                 android:contentDescription="@string/boton_supermercado"
-                app:srcCompat="@drawable/supermercado" />
+                app:srcCompat="@drawable/menu_boton_supermercado" />
 
-            <!-- Esta parte simplemnete nos servirá de separador entre los dos botones-->
+            <!-- Esta parte simplemnete nos servirá de menu_separador entre los dos botones-->
             <ImageView
                 android:id="@+id/espacio_boton"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:contentDescription="@string/espaciador"
-                app:srcCompat="@drawable/separador" />
+                app:srcCompat="@drawable/menu_separador" />
 
-            <!-- Implementamos el botón 'instituto', donde relacionamos esta parte del diseño
-    con la parte lógica que se encontrará en el método instituto de la clase Jugar-->
+            <!-- Implementamos el botón 'menu_boton_instituto', donde relacionamos esta parte del diseño
+    con la parte lógica que se encontrará en el método menu_boton_instituto de la clase Jugar-->
             <ImageView
                 android:id="@+id/btnHistoriaInstituo"
                 android:layout_width="match_parent"
                 android:layout_height="232dp"
                 android:contentDescription="@string/boton_instituto"
-                app:srcCompat="@drawable/instituto" />
+                app:srcCompat="@drawable/menu_boton_instituto" />
         </LinearLayout>
     </ScrollView>
 

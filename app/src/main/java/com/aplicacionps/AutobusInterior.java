@@ -37,7 +37,7 @@ public class AutobusInterior extends AppCompatActivity {
         ProgressBar.setProgress(PorcentajeActual);
     }
 
-    //El boton te lleva directamente a la entrada del supermercado
+    //El boton te lleva directamente a la entrada del menu_boton_supermercado
     public void sitioSenhora(View view){
         //Se obtiene el porcentaje actual y el booleano de la Mascarilla y se actualiza al elegir una mala opcion
         String bool = Boolean.toString(Mascarilla);
@@ -50,7 +50,7 @@ public class AutobusInterior extends AppCompatActivity {
         startActivity(sitioSenhora);
     }
 
-    //El boton te lleva directamnete a la entrada del supermercado
+    //El boton te lleva directamnete a la entrada del menu_boton_supermercado
     public void sitioSolo(View view){
         //Se obtiene el porcentaje actual y el booleano de la Mascarilla
         String bool = Boolean.toString(Mascarilla);

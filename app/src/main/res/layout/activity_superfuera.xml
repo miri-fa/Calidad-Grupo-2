@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/supermarketfuera"
+    android:background="@drawable/juego_supermercado_fuera"
     android:orientation="horizontal"
     tools:context=".superfuera">
     <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "LLEGAS AL SUPER Y HAY MUCHA GENTE, ¿QUÉ HACES?" -->
