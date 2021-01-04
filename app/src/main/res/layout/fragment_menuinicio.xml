@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_coronavirus"
     android:orientation="horizontal"
     tools:context=".MenuInicio">
 
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.087"
-        app:srcCompat="@drawable/logocoronastop" />
+        app:srcCompat="@drawable/inicio_logo_coronastop" />
 
     <ImageButton
         android:id="@+id/btnajustes"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.955"
-        app:srcCompat="@drawable/ajustesboton" />
+        app:srcCompat="@drawable/inicio_boton_ajustes" />
 
     <ImageButton
         android:id="@+id/btndesafios"
@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.842"
-        app:srcCompat="@drawable/botondesafios" />
+        app:srcCompat="@drawable/inicio_debotondesafios" />
 
     <ImageButton
         android:id="@+id/btncomojugar"
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.626"
-        app:srcCompat="@drawable/comojugar" />
+        app:srcCompat="@drawable/como_jugar" />
 
     <ImageButton
         android:id="@+id/btnjugar"
@@ -79,6 +79,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.426"
-        app:srcCompat="@drawable/jugar2" />
+        app:srcCompat="@drawable/inicio_boton_jugar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

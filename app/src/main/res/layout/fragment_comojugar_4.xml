@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_liso"
+    android:background="@drawable/fondo_liso_azul"
     android:orientation="horizontal"
     tools:context=".ComoJugar_4">
 
@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/imagen_comojugar41"
-                app:srcCompat="@drawable/comojugar4a" />
+                app:srcCompat="@drawable/como_jugar_4a" />
 
             <ImageButton
                 android:id="@+id/boton_comojugar4"
@@ -41,7 +41,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/flechasiguiente" />
+                app:srcCompat="@drawable/como_jugar_flecha_siguiente" />
         </LinearLayout>
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

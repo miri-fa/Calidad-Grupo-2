@@ -6,7 +6,7 @@ import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.util.Log;
 
-//Servicio que implementan todas las activity que posean musica de fondo
+//Servicio que implementan todas las activity que posean musica de fondo_coronavirus
 public class AudioService extends Service {
     //Distintas acciones que se pueden realizar. En orden son: disminuir volumen, aumentar volumen,
     // empezar musica, parar musica

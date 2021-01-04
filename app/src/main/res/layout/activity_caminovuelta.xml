@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_coronavirus"
     android:orientation="horizontal"
     tools:context=".CaminoVuelta">
 
@@ -31,6 +31,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/meninamensajevuelta" />
+        app:srcCompat="@drawable/juego_mensaje_vuelta_sin_mascarilla" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

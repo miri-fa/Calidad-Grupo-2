@@ -25,7 +25,7 @@
 
     <!--ESTILO DE LA PANTALLA SPLASH-->
     <style name="SplashTheme" parent="Theme.AplicacionPS.NoActionBar">
-        <item name="android:windowBackground">@drawable/pantallla_splash</item>
+        <item name="android:windowBackground">@drawable/pantallla_carga</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>

@@ -60,7 +60,7 @@
     <string name="mensajeFinal">MENSAJEALEATORIO</string>
     <string name="porciento">PORCENTAJEFINAL</string>
 
-    <!-- Activity camino vuelta -->
+    <!-- Activity juego_autobus_fuera vuelta -->
     <string name="boton_camino_vuelta">SIGUIENTE</string>
     <string name="imagenCaminoVuelta">IMAGEN ALICIA CAMINO VUELTA</string>
 

@@ -38,7 +38,7 @@ public class MenuJuego extends Fragment {
         //Implementacion de boton que lleva de un fragmento a una activity
         btnHistoriaSupermercado.setOnClickListener(new View.OnClickListener(){
             @Override
-            //Implementacion botón que nos llevará al hacer click en supermercado a la salida desde
+            //Implementacion botón que nos llevará al hacer click en menu_boton_supermercado a la salida desde
             //nuestro escenariocasa
             public void onClick(View v){
                 Intent jugar= new Intent (getActivity(),EscenarioCasa.class);
