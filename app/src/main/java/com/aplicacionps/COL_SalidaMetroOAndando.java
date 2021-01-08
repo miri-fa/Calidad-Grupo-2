@@ -8,38 +8,51 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 
-public class CaminoVuelta extends AppCompatActivity {
-    //Se crean las variables que van a almacenar los datos que se han pasado de la otra activity
+public class COL_SalidaMetroOAndando extends AppCompatActivity {
+
+    //Se crea un ProgressBar para representar el pocentaje de contagio que lleva el personaje
+    private ProgressBar ProgressBar;
+    //Se crea otra variable para almacenar el valor que se pasa de un activity a otro
     private int PorcentajeActual;
-    private boolean Mascarilla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Relacionaremos la clase CaminoVuelta.java con su XML activity_caminovuelta.xml
-        setContentView(R.layout.activity_caminovuelta);
+        //Relacionaremos la clase SuperDentro.java con su XML activity_superdentro.xml
+        setContentView(R.layout.activity_col_salida_metro_o_andando);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que se muestre a
-        //pantalla completa, sin barra de notificaciones
+        // pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        //Se obtiene el porcentaje actual
+        //Se obtienen el dato como string y luego se convierte en sus tipo correspondiente
         String Dato = getIntent().getStringExtra("dato");
         PorcentajeActual = Integer.parseInt(Dato);
+        //La barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con
+        //el numero anteriormente obtenido
+        ProgressBar = (ProgressBar) findViewById(R.id.barra1);
+        ProgressBar.setProgress(PorcentajeActual);
     }
 
-    public void vueltaAElegirCamino(View view){
+    //El boton te lleva a la cola del super al haber acabado la compra. Al ser la opion correcta,
+    //el porcentaje de contagio no variará
+    public void irAndando(View view) {
         int valor = PorcentajeActual;
-        //El booleano Mascarilla se pone en true ya que es obligado a volver a su casa para ponersela
-        String mascarilla = Boolean.toString(true);
         String val = String.valueOf(valor);
-        //Se crea el intento de volver a elegir el juego_autobus_fuera con la mascarilla ya puesta y el numero de
-        //porcentaje se mantiene
-        Intent vueltaAElegirCamino = new Intent(this, ElegirCamino.class);
-        //Se pasan ambos datos y se inicia la actividad
-        vueltaAElegirCamino.putExtra("dato", val);
-        vueltaAElegirCamino.putExtra("masc", mascarilla);
-        startActivity(vueltaAElegirCamino);
+        Intent irAndando = new Intent(this, PantallaFinal.class);
+        irAndando.putExtra("dato", val);
+        startActivity(irAndando);
+    }
+
+    //El boton te lleva a la cola del super al haber acabado la compra. Al ser la opcion incorrecta,
+    //se aumentará en un 10% el porcentaje de contagio
+    public void enMetro(View view) {
+        int valor = PorcentajeActual + 10;
+        String val = String.valueOf(valor);
+        Intent enMetro = new Intent(this, COL_EnElMetro.class);
+        enMetro.putExtra("dato", val);
+        startActivity(enMetro);
     }
 
     //Este método hace que no podamos retroceder de escenario en la historia jugable
@@ -67,6 +80,9 @@ public class CaminoVuelta extends AppCompatActivity {
             i.putExtra("action", AudioService.START);
             startService(i);
         }
+
     }
+
+
 
 }

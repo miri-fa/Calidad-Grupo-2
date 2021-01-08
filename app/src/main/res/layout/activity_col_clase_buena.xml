@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Aquí aplicamos el fondo_coronavirus de pantalla de este activity, lo colocamos en orientación
- horizontal y relacionamos este XML con la clase IrAndando-->
-
+<!-- AQUÍ SE COLOCA EL FONDO DE PANTALLA DEL ACTIVITY, SE CAMBIA LA ORIENTACIÓN A HORIZONTAL Y SE RELACIONA EL XML CON LA CLASE CORRESPONDIENTE-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/juego_calle_con_gente_o_sin_gente"
+    android:background="@drawable/instituto_ventana_clase_buena"
     android:orientation="horizontal"
-    tools:context=".IrAndando">
+    tools:context=".COL_ClaseBuena">
 
-    <!-- Aquí implementamos el texto donde se hace la pregunta al usuario y
-    personalizamos su aspecto-->
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "ANTES DE EMPEZAR LA COMPRA ¿QUÉ HACES?" -->
 
     <TextView
-        android:id="@+id/TextoQueCaminoEscoges"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/texto_ventana_abierta_cerrada"
+        android:layout_width="537dp"
+        android:layout_height="47dp"
         android:background="#FFFFFF"
-        android:text="@string/texto_que_camino_escoges"
+        android:text="@string/texto_ventana_abierta_cerrada"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,39 +25,41 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148" />
+        app:layout_constraintVertical_bias="0.13" />
 
-    <!-- Implementamos el botón 'Calle vacía, pero tardo más', donde relacionamos esta parte del diseño
-    con la parte lógica que se encontrará en el método CalleSinGente de la clase IrAndando-->
-
-    <Button
-        android:id="@+id/botonCalleVacía"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="CalleSinGente"
-        android:text="@string/boton_calle_vacia"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
-
-    <!-- Implementamos el botón 'Calle con gente', donde relacionamos esta parte del diseño
-    con la parte lógica que se encontrará en el método CalleConGente de la clase IrAndando-->
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ECHAR GEL Y PONER GUANTES QUE TE LLEVA A LA COLA DEL SUPERMERCADO -->
 
     <Button
-        android:id="@+id/botonCalleLlena"
+        android:id="@+id/boton_si_es_necesario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="CalleConGente"
-        android:text="@string/boton_calle_llena"
+        android:onClick="esNecesario"
+        android:text="@string/boton_si_es_necesario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintVertical_bias="0.878" />
+
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN NO HACER NADA QUE HACE QUE APAREZCA UN MENSAJE EMERGENTE -->
+    <Button
+        android:id="@+id/boton_tengo_frio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tengoFrio"
+        android:text="@string/boton_tengo_frio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.878" />
+
+
+    <!-- Implementamos la barra de progreso del porcentaje de contagio, donde relacionamos esta
+    parte del diseño con la parte lógica que se encontrará en la clase EscenarioCasa-->
+
 
     <ProgressBar
         android:id="@+id/barra1"
@@ -77,5 +76,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,66 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- Aquí aplicamos el fondo_coronavirus de pantalla de este activity, lo colocamos en orientación
- horizontal y relacionamos este XML con la clase DentroDeLaCalle-->
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/juego_mascarilla_interrogacion"
+    android:background="@drawable/instituto_salida_metro_o_andando"
     android:orientation="horizontal"
-    tools:context=".DentroDeLaCalle">
+    tools:context=".COL_SalidaMetroOAndando">
 
-    <!-- Aquí implementamos el texto donde se hace la pregunta al usuario y
-    personalizamos su aspecto-->
-
-    <!-- Implementamos el botón 'Me la quito, necesito respirar', donde relacionamos esta parte del diseño
-    con la parte lógica que se encontrará en el método MeLaQuito de la clase DentroDeLaCalle-->
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ECHAR GEL Y PONER GUANTES QUE TE LLEVA A LA COLA DEL SUPERMERCADO -->
 
     <TextView
-        android:id="@+id/TextoQueHacerConMascarilla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/texto_volver_a_casa"
+        android:layout_width="286dp"
+        android:layout_height="31dp"
         android:background="#FFFFFF"
-        android:text="@string/texto_que_hacer_con_mascarilla"
+        android:text="@string/texto_volver_a_casa"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.21" />
 
     <Button
-        android:id="@+id/botonMeLaQuito"
+        android:id="@+id/boton_en_metro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="MeLaQuito"
-        android:text="@string/boton_me_la_quito"
+        android:onClick="enMetro"
+        android:text="@string/boton_en_metro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.789" />
+        app:layout_constraintVertical_bias="0.878" />
 
-    <!-- Implementamos el botón 'No me la quito', donde relacionamos esta parte del diseño
-    con la parte lógica que se encontrará en el método NoMeLaQuito de la clase DentroDeLaCalle-->
-
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN NO HACER NADA QUE HACE QUE APAREZCA UN MENSAJE EMERGENTE -->
     <Button
-        android:id="@+id/botonNoMeLaQuito"
+        android:id="@+id/boton_andando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="NoMeLaQuito"
-        android:text="@string/boton_no_me_la_quito"
+        android:onClick="irAndando"
+        android:text="@string/boton_ir_andando"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintHorizontal_bias="0.866"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.789" />
+        app:layout_constraintVertical_bias="0.878" />
+
+
+    <!-- Implementamos la barra de progreso del porcentaje de contagio, donde relacionamos esta
+    parte del diseño con la parte lógica que se encontrará en la clase EscenarioCasa-->
 
     <ProgressBar
         android:id="@+id/barra1"

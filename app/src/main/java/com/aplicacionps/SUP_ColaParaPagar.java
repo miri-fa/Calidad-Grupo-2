@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 
-public class ColaParaPagar extends AppCompatActivity {
+public class SUP_ColaParaPagar extends AppCompatActivity {
     //Se crea un ProgressBar para representar el pocentaje de contagio que lleva el personaje
     private ProgressBar ProgressBar;
     //Se crean otra variable para almacenar el valor que se pasa de un activity a otro
@@ -20,7 +20,7 @@ public class ColaParaPagar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Relacionaremos la clase ColaParaPagar.java con su XML activity_colaparapagar.xml
-        setContentView(R.layout.activity_colaparapagar);
+        setContentView(R.layout.activity_sup_colaparapagar);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que se muestre a
         // pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);

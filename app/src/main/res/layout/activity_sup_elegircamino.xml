@@ -6,58 +6,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/juego_caja_supermercado"
+    android:background="@drawable/juego_autobus_fuera"
     android:orientation="horizontal"
-    tools:context=".ColaParaPagar">
+    tools:context=".SUP_ElegirCamino">
 
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "¿CÓMO VAS A PAGAR?" -->
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN IR EN BUS QUE TE LLEVA AL INTERIOR DEL BUS -->
+    <Button
+        android:id="@+id/boton_ir_autobus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="caminoAutobus"
+        android:text="@string/boton_autobus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
 
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN IR ANDANDO QUE TE LLEVA A LA PANTALLA IR ANDANDO -->
+    <Button
+        android:id="@+id/boton_ir_andando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkable="false"
+        android:onClick="caminoAndando"
+        android:text="@string/boton_andando"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
+
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "¿CÓMO QUIERES IR AL SUPERMERCADO?" -->
     <TextView
-        android:id="@+id/texto_como_pagar"
+        android:id="@+id/texto_elegir_camino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="@string/texto_cola_para_pagar"
+        android:text="@string/texto_como_ir_super"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.131" />
-
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN PAGAR EN EFECTIVO QUE HACE QUE APAREZCA UN MENSAJE EMERGENTE -->
-
-    <Button
-        android:id="@+id/boton_efectivo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="efectivo"
-        android:text="@string/boton_efectivo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884" />
-
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN PAGAR CON TARJETA QUE LLEVA A LA PANTALLA FINAL -->
-    <Button
-        android:id="@+id/boton_tarjeta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="tarjeta"
-        android:text="@string/boton_tarjeta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884" />
-
-    <!-- Implementamos la barra de progreso del porcentaje de contagio, donde relacionamos esta
-    parte del diseño con la parte lógica que se encontrará en la clase EscenarioCasa-->
+        app:layout_constraintVertical_bias="0.145" />
 
     <ProgressBar
         android:id="@+id/barra1"
