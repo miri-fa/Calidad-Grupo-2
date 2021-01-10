@@ -57,6 +57,13 @@
                 app:srcCompat="@drawable/desafio_conductor_primera" />
 
             <ImageView
+                android:id="@+id/titulo_desafiobronce03"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_bronce_03"
+                app:srcCompat="@drawable/desafio_la_comunidad" />
+
+            <ImageView
                 android:id="@+id/titulo_desafioplata01"
                 android:layout_width="match_parent"
                 android:layout_height="115dp"

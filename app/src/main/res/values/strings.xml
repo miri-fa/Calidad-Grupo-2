@@ -94,6 +94,7 @@
     <!-- Activity_desafios -->
     <string name="desafio_bronce_01">bronce_01</string>
     <string name="desafio_bronce_02">bronce_02</string>
+    <string name="desafio_bronce_03">bronce_03</string>
     <string name="desafio_plata_01" />
     <string name="desafio_plata_02">plata_02</string>
     <string name="desafio_oro_01" />
@@ -107,6 +108,7 @@
     <string name="logo">logo</string>
     <string name="botonajustes">ajustes</string>
     <string name="desafio_bronce_02_Letra" />
+    <string name="desafio_bronce_03_Letra" />
     <string name="desafio_plata_01_Letra" />
     <string name="desafio_plata_02_Letra" />
     <string name="botondesafios" />

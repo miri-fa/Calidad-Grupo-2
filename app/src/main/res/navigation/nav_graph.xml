@@ -146,4 +146,13 @@
             android:id="@+id/action_oro02_to_menuDesafios"
             app:destination="@id/menuDesafios" />
     </fragment>
+    <fragment
+        android:id="@+id/bronce03"
+        android:name="com.aplicacionps.Bronce03"
+        android:label="fragment_bronce03"
+        tools:layout="@layout/fragment_bronce03" >
+        <action
+            android:id="@+id/action_bronce03_to_menuDesafios"
+            app:destination="@id/menuDesafios" />
+    </fragment>
 </navigation>

@@ -58,7 +58,7 @@
                 android:layout_width="241dp"
                 android:layout_height="131dp"
                 android:contentDescription="@string/desafio_bronce_02"
-                app:layout_constraintBottom_toTopOf="@+id/bronce_02"
+                app:layout_constraintBottom_toTopOf="@+id/bronce_03"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -68,7 +68,7 @@
                 tools:layout_conversion_absoluteWidth="733dp" />
 
             <TextView
-                android:id="@+id/bronce_02"
+                android:id="@+id/bronce_03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
