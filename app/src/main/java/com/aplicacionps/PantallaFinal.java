@@ -14,6 +14,7 @@ public class PantallaFinal extends AppCompatActivity {
     //Se crea una variable para almacenar el porcentaje final obtenido y 2 textview para mostrar el
     //porcentaje y el Mensaje final
     private int PorcentajeActual;
+    private String pantalla;
     private TextView Mensaje;
     private TextView Porciento;
 
@@ -28,6 +29,7 @@ public class PantallaFinal extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //Se obtiene el porcentaje de la actividad anterior
         String Dato = getIntent().getStringExtra("dato");
+        String pantalla = getIntent().getStringExtra("volver");
         PorcentajeActual = Integer.parseInt(Dato);
         //Se relaciona el TextView "Porciento" con el del activity y muestra el porcentaje final obtenido
         Porciento = (TextView) findViewById(R.id.porciento);
@@ -78,8 +80,15 @@ public class PantallaFinal extends AppCompatActivity {
     //Al pulsar el boton de volver a jugar, el juego te lleva a la casa del jugador para iniciar de nuevo
     //el juego_autobus_fuera
     public void volverajugar(View view){
-        Intent volverajugar = new Intent (this, SUP_EscenarioCasa.class);
-        startActivity(volverajugar);
+        //Se obtiene el string de la historia a la que debemos volver
+        String historia = pantalla;
+        Intent volverSuper = new Intent (this, EscenarioCasa.class);
+        Intent volverInsti = new Intent (this, COL_EntradaInstituto.class);
+        if(historia=="super"){
+            startActivity(volverSuper);
+        }else{
+            startActivity(volverInsti);
+        }
     }
 
     //Al pulsar el boton de menu, te lleva a la pantalla principal del juego
