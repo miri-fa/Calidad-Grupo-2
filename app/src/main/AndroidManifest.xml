@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".COL_Recreo"></activity>
+        <activity android:name=".COL_PasarLista"></activity>
+        <activity android:name=".COL_MesaClase" />
+        <activity android:name=".COL_SaludoAmigos" />
+        <activity android:name=".COL_Pasillos" />
+        <activity android:name=".COL_EntradaInstituto" />
+        <activity android:name=".COL_Recreo"/>
         <activity android:name=".COL_ClaseBuena" />
         <activity android:name=".COL_EnElMetro" />
         <activity android:name=".COL_SalidaMetroOAndando" />
