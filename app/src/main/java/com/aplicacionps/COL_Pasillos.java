@@ -27,6 +27,7 @@ public class COL_Pasillos extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //Se obtiene el dato como string y luego se convierte en su tipo correspondiente
         String Dato = getIntent().getStringExtra("dato");
+        String Am= getIntent().getStringExtra("am");
         PorcentajeActual = Integer.parseInt(Dato);
         //La barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con
         //el numero anteriormente obtenido
@@ -38,10 +39,12 @@ public class COL_Pasillos extends AppCompatActivity {
     public void claseBuena(View view) {
         //Se obtiene el porcentaje actual
         int valor = PorcentajeActual;
+        String Bool= String.valueOf(false);
         String val = String.valueOf(valor);
         //Se crea el intento
         Intent claseBuena = new Intent(this, COL_ClaseBuena.class);
         //Se envia el dato y se inicia la actividad
+        claseBuena.putExtra("am", Bool);
         claseBuena.putExtra("dato", val);
         startActivity(claseBuena);
     }
@@ -50,9 +53,11 @@ public class COL_Pasillos extends AppCompatActivity {
     public void claseMala(View view){
         //Se obtiene el porcentaje actual y se actualiza al escoger mal
         int valor = PorcentajeActual+10;
+        String Bool= String.valueOf(true);
         String val = String.valueOf(valor);
         //Se crea el nuevo intento, se envia el dato y se inicializa la actividad
         Intent claseMala = new Intent(this, COL_SaludoAmigos.class);
+        claseMala.putExtra("am", Bool);
         claseMala.putExtra("dato", val);
         startActivity(claseMala);
     }
