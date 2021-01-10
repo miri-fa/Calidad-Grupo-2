@@ -12,7 +12,7 @@ import android.widget.ProgressBar;
 
 public class COL_Pasillos extends AppCompatActivity {
     //Se crea un ProgressBar para representar el pocentaje de contagio que lleva el personaje
-    private android.widget.ProgressBar ProgressBar;
+    private ProgressBar ProgressBar;
     //Se crea una variable para almacenar el valor que se pasa de un activity a otro
     private int PorcentajeActual;
 

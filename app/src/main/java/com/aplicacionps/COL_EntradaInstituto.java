@@ -14,7 +14,7 @@ public class COL_EntradaInstituto extends AppCompatActivity {
     //Se crea un nuevo sistema de contagio con porcentaje igual a 0 y se crea un ProgressBar que será
     //utilizado después
     SistemaContagio si = new SistemaContagio(0);
-    private android.widget.ProgressBar ProgressBar;
+    private ProgressBar ProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

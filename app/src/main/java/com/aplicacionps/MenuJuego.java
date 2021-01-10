@@ -56,6 +56,7 @@ public class MenuJuego extends Fragment {
                 jugar.putExtra("datos","mas datos");
                 startActivity(jugar);
             }
+
         });
         //Implementacion de boton que lleva de un fragmento a otro fragment
         btnVolver.setOnClickListener(new View.OnClickListener(){

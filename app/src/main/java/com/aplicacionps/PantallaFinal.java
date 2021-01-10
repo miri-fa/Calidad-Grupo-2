@@ -82,7 +82,7 @@ public class PantallaFinal extends AppCompatActivity {
     public void volverajugar(View view){
         //Se obtiene el string de la historia a la que debemos volver
         String historia = pantalla;
-        Intent volverSuper = new Intent (this, EscenarioCasa.class);
+        Intent volverSuper = new Intent (this, SUP_EscenarioCasa.class);
         Intent volverInsti = new Intent (this, COL_EntradaInstituto.class);
         if(historia=="super"){
             startActivity(volverSuper);
