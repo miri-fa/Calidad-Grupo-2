@@ -13,7 +13,7 @@ import android.widget.ProgressBar;
 public class COL_SaludoAmigos extends AppCompatActivity {
 
     //Se crea un ProgressBar para representar el pocentaje de contagio que lleva el personaje
-    private android.widget.ProgressBar ProgressBar;
+    private ProgressBar ProgressBar;
     //Se crea una variable para almacenar el valor que se pasa de un activity a otro
     private int PorcentajeActual;
 
@@ -52,9 +52,9 @@ public class COL_SaludoAmigos extends AppCompatActivity {
         int valor= PorcentajeActual;
         String val= String.valueOf(valor);
         //Se crea el nuevo activity, se pasa el dato anteriormente sacado y se inicializa
-        Intent ColElCodo = new Intent (this, COL_MesaClase.class);
-        ColElCodo.putExtra("dato", val);
-        startActivity(ColElCodo);
+        Intent ConElCodo = new Intent (this, COL_MesaClase.class);
+        ConElCodo.putExtra("dato", val);
+        startActivity(ConElCodo);
     }
 
     //Este método hace que no podamos retroceder de escenario en la historia jugable

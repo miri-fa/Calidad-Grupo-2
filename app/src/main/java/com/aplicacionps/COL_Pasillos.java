@@ -49,8 +49,8 @@ public class COL_Pasillos extends AppCompatActivity {
     //El boton te lleva a la calle que lleva al COL_SaludoAmigos
     public void claseMala(View view){
         //Se obtiene el porcentaje actual y se actualiza al escoger mal
-        int valor = PorcentajeActual;
-        String val = String.valueOf(valor)+10;
+        int valor = PorcentajeActual+10;
+        String val = String.valueOf(valor);
         //Se crea el nuevo intento, se envia el dato y se inicializa la actividad
         Intent claseMala = new Intent(this, COL_SaludoAmigos.class);
         claseMala.putExtra("dato", val);

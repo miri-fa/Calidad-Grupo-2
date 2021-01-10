@@ -50,8 +50,8 @@ public class COL_MesaClase extends AppCompatActivity {
     //El boton te lleva a la clase COL_Lista
     public void noDesinfectar(View view){
         //Se obtiene el porcentaje actual
-        int valor = PorcentajeActual;
-        String val = String.valueOf(valor) + 10;
+        int valor = PorcentajeActual + 10;
+        String val = String.valueOf(valor);
         //Se crea el nuevo intento, se envia el dato y se inicializa la actividad
         Intent noDesinfectar = new Intent(this, COL_PasarLista.class);
         noDesinfectar.putExtra("dato", val);
