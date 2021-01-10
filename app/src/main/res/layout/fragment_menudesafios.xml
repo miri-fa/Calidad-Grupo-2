@@ -64,6 +64,13 @@
                 app:srcCompat="@drawable/desafio_la_comunidad" />
 
             <ImageView
+                android:id="@+id/titulo_desafiobronce04"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_bronce_04"
+                app:srcCompat="@drawable/desafio_he_sido_yo" />
+
+            <ImageView
                 android:id="@+id/titulo_desafioplata01"
                 android:layout_width="match_parent"
                 android:layout_height="115dp"
