@@ -6,6 +6,30 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_como_jugar">ComoJugar</string>
 
+        <!-- Activity_col_entrada_instituto -->
+    <string name="textoEntradaInstituto">¿TE ECHAS GEL AL ENTRAR AL INSTITUTO?</string>
+    <string name="botonGelSi">POR SUPUESTO</string>
+    <string name="botonGelNo">ESTA VEZ NO</string>
+
+    <!-- Activity_col_pasillos -->
+    <string name="textoPasillos">¿A QUE CLASE VAS?</string>
+    <string name="botonClaseCorrecta">A LA QUE ME CORRESPONDE</string>
+    <string name="botonClasePanas">A LA DE MIS AMIGOS</string>
+
+    <!-- Activity_col_saludo_amigos -->
+    <string name="textoSaludo">TE ENCUENTRAS CON TUS AMIGOS, ¿CÓMO LES SALUDAS?</string>
+    <string name="botonCodo">CON EL CODO</string>
+    <string name="botonMano">CON LA MANO</string>
+
+    <!-- Activity_col_mesa_clase -->
+    <string name="textoDesinfectar">ANTES DE SENTARTE, ¿DESINFECTAS TU MESA Y TU SILLA?</string>
+    <string name="botonDesinfectar">SI LA DESINFECTO</string>
+    <string name="botonNoDesinfectar">NO HACE FALTA</string>
+
+    <!-- Activity_col_pasar_lista -->
+    <string name="textoPasarLista">LA PROFESORA PASA LISTA Y TU NOMBRE NO ESTÁ AHí, POR LO QUE TIENES QUE VOLVER A LA TUYA</string>
+    <string name="boton_continuarClaseBuena">VALE</string>
+
     <!-- Activity_col_clasebuena -->
     <string name="texto_ventana_abierta_cerrada">¿ABRO LA VENTANA PARA VENTILAR LA CLASE?</string>
     <string name="boton_si_es_necesario">SÍ, ES NECESARIO</string>
