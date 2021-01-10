@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 
-public class EscenarioCasa extends AppCompatActivity {
+public class SUP_EscenarioCasa extends AppCompatActivity {
     //Se crea un nuevo sistema de contagio con porcentaje igual a 0 y se crea un ProgressBar que será
     //utilizado después
     SistemaContagio si= new SistemaContagio(0);
@@ -20,7 +20,7 @@ public class EscenarioCasa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Relacionamos la clase EscenarioCasa con su respectivo XML activity_entradacasa
-        setContentView(R.layout.activity_entradacasa);
+        setContentView(R.layout.activity_sup_entradacasa);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que se muestre a
         // pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -38,7 +38,7 @@ public class EscenarioCasa extends AppCompatActivity {
         int valor = si.getPorcentaje();
         String bool = Boolean.toString(true);
         String val = String.valueOf(valor);
-        Intent mascarilla = new Intent (this, ElegirCamino.class);
+        Intent mascarilla = new Intent (this, SUP_ElegirCamino.class);
         //Se pasan los datos anteriormente sacados al siguiente activity y se inicializa
         mascarilla.putExtra("dato", val);
         mascarilla.putExtra("masc", bool);
@@ -53,7 +53,7 @@ public class EscenarioCasa extends AppCompatActivity {
         int valor = si.getPorcentaje() + 10;
         String bool = Boolean.toString(false);
         String val = String.valueOf(valor);
-        Intent noMascarilla = new Intent (this, ElegirCamino.class);
+        Intent noMascarilla = new Intent (this, SUP_ElegirCamino.class);
         //Se pasan los datos anteriormente sacados al siguiente activity y se inicializa
         noMascarilla.putExtra("dato", val);
         noMascarilla.putExtra("masc", bool);

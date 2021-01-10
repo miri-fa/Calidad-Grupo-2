@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- AQUÍ SE COLOCA EL FONDO DE PANTALLA DEL ACTIVITY, SE CAMBIA LA ORIENTACIÓN A HORIZONTAL Y SE RELACIONA EL XML CON LA CLASE CORRESPONDIENTE-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/juego_supermercado_fuera"
+    android:background="@drawable/instituto_educacion_fisica1"
     android:orientation="horizontal"
-    tools:context=".superfuera">
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "LLEGAS AL SUPER Y HAY MUCHA GENTE, ¿QUÉ HACES?" -->
+    tools:context=".COL_EducacionFisica">
 
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ESPERAR PARA ENTRAR AL SUPER QUE TE LLEVA AL INTERIOR DEL SUPERMERCADO -->
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL TEXTO QUE APARECE EN LA PANTALLA "ANTES DE EMPEZAR LA COMPRA ¿QUÉ HACES?" -->
 
     <TextView
-        android:id="@+id/texto_como_entrar"
-        android:layout_width="611dp"
-        android:layout_height="47dp"
+        android:id="@+id/texto_correr_con_mascarilla"
+        android:layout_width="464dp"
+        android:layout_height="60dp"
         android:background="#FFFFFF"
-        android:text="@string/texto_como_entrar"
+        android:text="@string/texto_correr_con_mascarilla"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,34 +23,40 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintVertical_bias="0.13" />
+
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ECHAR GEL Y PONER GUANTES QUE TE LLEVA A LA COLA DEL SUPERMERCADO -->
 
     <Button
-        android:id="@+id/boton_esperar"
+        android:id="@+id/boton_necesito_respirar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="esperar"
-        android:text="@string/boton_esperar"
+        android:onClick="necesitoRespirar"
+        android:text="@string/boton_necesito_respirar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintVertical_bias="0.878" />
 
-    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN ENTRAR DIRECTAMENTE QUE HACE QUE APAREZCA UN MENSAJE EMERGENTE -->
+    <!-- AQUÍ ESTÁN LAS CARACTERISTICAS DEL BOTÓN NO HACER NADA QUE HACE QUE APAREZCA UN MENSAJE EMERGENTE -->
     <Button
-        android:id="@+id/boton_entrar"
+        android:id="@+id/boton_aguanto_bien_asi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="entrar"
-        android:text="@string/boton_entrar"
+        android:onClick="aguantoBienAsi"
+        android:text="@string/boton_aguanto_bien_asi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintHorizontal_bias="0.866"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintVertical_bias="0.878" />
+
+
+    <!-- Implementamos la barra de progreso del porcentaje de contagio, donde relacionamos esta
+    parte del diseño con la parte lógica que se encontrará en la clase EscenarioCasa-->
 
     <ProgressBar
         android:id="@+id/barra1"

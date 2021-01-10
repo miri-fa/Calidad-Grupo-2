@@ -6,7 +6,33 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_como_jugar">ComoJugar</string>
 
-    <!--Activity_menu_escenarios -->
+    <!-- Activity_col_clasebuena -->
+    <string name="texto_ventana_abierta_cerrada">¿ABRO LA VENTANA PARA VENTILAR LA CLASE?</string>
+    <string name="boton_si_es_necesario">SÍ, ES NECESARIO</string>
+    <string name="boton_tengo_frio">NO, PORQUE TENGO FRÍO</string>
+
+
+    <!-- Activity_col_recreo -->
+    <string name="texto_invita_bocadillo">TU AMIGO TE INVITA A TU BOCADILLO, ¿QUÉ HACES?</string>
+    <string name="boton_tengo_hambre">ACEPTO, TENGO MUCHA HAMBRE</string>
+    <string name="boton_no_gracias">NO LO COJO, NO ME APETECE</string>
+
+    <!-- Activity_col_educacion_fisica -->
+    <string name="texto_correr_con_mascarilla">ESTÁS CORRIENDO POR EL PATIO CON LA MASCARILLA PUESTA, ¿QUÉ DECIDES?</string>
+    <string name="boton_necesito_respirar">QUITÁRMELA, NECESITO RESPIRAR</string>
+    <string name="boton_aguanto_bien_asi">LA MANTENGO PUESTA, AGUANTO BIEN ASÍ</string>
+
+    <!-- Activity_col_salida_metro_o_andando -->
+    <string name="texto_volver_a_casa">¿CÓMO VUELVES A CASA?</string>
+    <string name="boton_en_metro">EN METRO, ASÍ LLEGO MÁS RÁPIDO</string>
+    <string name="boton_ir_andando">PREFIERO IR ANDANDO</string>
+
+    <!-- Activity_col_en_el_metro -->
+    <string name="texto_metro_lleno">EL METRO ESTÁ LLENO, ¿QUÉ PIENSAS HACER?</string>
+    <string name="boton_hay_prisa">ME METO, TENGO MUCHA PRISA</string>
+    <string name="boton_esperar_al_siguiente">SERÁ MEJOR ESPERAR AL SIGUIENTE</string>
+
+    <!-- Activity_menu_escenarios -->
     <string name="flechaatras_escenarios">FLECHA_ATRAS_ESCENARIOS</string>
     <string name="titulo_escenarios">ESCENARIOS</string>
     <string name="boton_supermercado">SUPERMERCADO</string>

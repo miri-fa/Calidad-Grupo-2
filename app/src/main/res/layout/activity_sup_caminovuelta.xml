@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_coronavirus"
     android:orientation="horizontal"
-    tools:context=".CaminoVuelta">
+    tools:context=".SUP_CaminoVuelta">
 
     <Button
         android:id="@+id/boton_camino_vuelta"

@@ -1,7 +1,5 @@
 package com.aplicacionps;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -10,7 +8,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 
-public class AutobusInterior extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SUP_DentroDeLaCalle extends AppCompatActivity {
     //Se crea un ProgressBar para representar el pocentaje de contagio que lleva el personaje
     private ProgressBar ProgressBar;
     //Se crean dos variables para almacenar los valores que se pasan de un activity a otro
@@ -20,8 +20,8 @@ public class AutobusInterior extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Relaccionaremos la clase AutobusInterior.java con su XML activity_autobusinterior.xml
-        setContentView(R.layout.activity_autobusinterior);
+        //Relacionamos la clase DentroDeLaCalle con su respectivo XML activity_dentrodelacalle
+        setContentView(R.layout.activity_sup_dentrodelacalle);
         //Cambiamos la orientación para que la pantalla se pueda ver en horizontal y que se muestre a
         //pantalla completa, sin barra de notificaciones
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -31,36 +31,40 @@ public class AutobusInterior extends AppCompatActivity {
         String Masc = getIntent().getStringExtra("masc");
         PorcentajeActual = Integer.parseInt(Dato);
         Mascarilla = Boolean.valueOf(Masc);
-        //La barra de progreso se relaciona con el activity y se establece el porcentaje que se va a
-        //mostrar con el numero anteriormente obtenido
+        //La barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con
+        //el numero anteriormente obtenido
         ProgressBar = (ProgressBar)findViewById(R.id.barra1);
         ProgressBar.setProgress(PorcentajeActual);
     }
 
-    //El boton te lleva directamente a la entrada del menu_boton_supermercado
-    public void sitioSenhora(View view){
+    //Este método MeLaQuito corresponde con la parte lógica del botón 'Me la quito, necesito respirar'
+    //del XML activity_dentrodelacalle,y por el momento, al no estar disponible la acción de incrementar
+    //el porcentaje de contagio de nuestro personaje, nos saldrá por pantalla un toast con el mensaje 'No disponible'
+    public void MeLaQuito(View view){
         //Se obtiene el porcentaje actual y el booleano de la Mascarilla y se actualiza al elegir una mala opcion
         String bool = Boolean.toString(Mascarilla);
-        int valor= PorcentajeActual +10;
+        int valor= PorcentajeActual + 10;
         String val= String.valueOf(valor);
         //Se crea el nuevo activity, se pasan los datos anteriormente sacados y se inicializa
-        Intent sitioSenhora = new Intent (this, superfuera.class);
-        sitioSenhora.putExtra("dato", val);
-        sitioSenhora.putExtra("masc", bool);
-        startActivity(sitioSenhora);
+        Intent MeLaQuito= new Intent(this, SUP_superfuera.class);
+        MeLaQuito.putExtra("dato", val);
+        MeLaQuito.putExtra("masc", bool);
+        startActivity(MeLaQuito);
     }
 
-    //El boton te lleva directamnete a la entrada del menu_boton_supermercado
-    public void sitioSolo(View view){
+    //Este método NoMeLaQuito corresponde con la parte lógica del botón 'No me la quito' del XML
+    //activity_dentrodelacalle, y lo que hará es que nos llevará al siguiente escenario que corresponde
+    // la clase superfuera
+    public void NoMeLaQuito(View view){
         //Se obtiene el porcentaje actual y el booleano de la Mascarilla
         String bool = Boolean.toString(Mascarilla);
         int valor= PorcentajeActual;
         String val= String.valueOf(valor);
         //Se crea el nuevo activity, se pasan los datos anteriormente sacados y se inicializa
-        Intent sitioSolo = new Intent (this, superfuera.class);
-        sitioSolo.putExtra("dato", val);
-        sitioSolo.putExtra("masc", bool);
-        startActivity(sitioSolo);
+        Intent NoMeLaQuito= new Intent(this, SUP_superfuera.class);
+        NoMeLaQuito.putExtra("dato", val);
+        NoMeLaQuito.putExtra("masc", bool);
+        startActivity(NoMeLaQuito);
     }
 
     //Este método hace que no podamos retroceder de escenario en la historia jugable
@@ -69,7 +73,7 @@ public class AutobusInterior extends AppCompatActivity {
 
     }
 
-    //Los siguientes metodos sirven para poner la musica que se va a escuchar a lo largo de la aplicacion
+    //Los siguientes metodos sirven para poner musica que se va a escuchar en la aplicacion
     @Override
     public void onPause() {
         super.onPause();

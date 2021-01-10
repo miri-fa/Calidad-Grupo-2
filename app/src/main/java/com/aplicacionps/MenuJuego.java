@@ -41,7 +41,7 @@ public class MenuJuego extends Fragment {
             //Implementacion botón que nos llevará al hacer click en menu_boton_supermercado a la salida desde
             //nuestro escenariocasa
             public void onClick(View v){
-                Intent jugar= new Intent (getActivity(),EscenarioCasa.class);
+                Intent jugar= new Intent (getActivity(), SUP_EscenarioCasa.class);
                 jugar.putExtra("datos","mas datos");
                 startActivity(jugar);
             }
