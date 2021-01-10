@@ -34,6 +34,7 @@ public class MenuJuego extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ImageView btnHistoriaSupermercado = view.findViewById(R.id.btnHistoriaSupermercado);
+        ImageView btnHistoriaInstituto = view.findViewById(R.id.btnHistoriaInstituo);
         ImageButton btnVolver = view.findViewById(R.id.btnVolver);
         //Implementacion de boton que lleva de un fragmento a una activity
         btnHistoriaSupermercado.setOnClickListener(new View.OnClickListener(){
@@ -42,6 +43,16 @@ public class MenuJuego extends Fragment {
             //nuestro escenariocasa
             public void onClick(View v){
                 Intent jugar= new Intent (getActivity(), SUP_EscenarioCasa.class);
+                jugar.putExtra("datos","mas datos");
+                startActivity(jugar);
+            }
+        });
+        
+         btnHistoriaInstituto.setOnClickListener(new View.OnClickListener(){
+            @Override
+            //Implementacion botón que nos llevará al hacer click en menu_boton_instituto 
+            public void onClick(View v){
+                Intent jugar = new Intent (getActivity(),COL_EntradaInstituto.class);
                 jugar.putExtra("datos","mas datos");
                 startActivity(jugar);
             }
