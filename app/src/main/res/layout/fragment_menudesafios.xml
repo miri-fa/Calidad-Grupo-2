@@ -92,6 +92,13 @@
                 app:srcCompat="@drawable/desafio_strange" />
 
             <ImageView
+                android:id="@+id/titulo_desafioplata04"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_plata_04"
+                app:srcCompat="@drawable/desafio_leroy_jenkins" />
+
+            <ImageView
                 android:id="@+id/titulo_desafiooro01"
                 android:layout_width="match_parent"
                 android:layout_height="115dp"

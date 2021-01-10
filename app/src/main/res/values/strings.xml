@@ -99,6 +99,7 @@
     <string name="desafio_plata_01" />
     <string name="desafio_plata_02">plata_02</string>
     <string name="desafio_plata_03">plata_03</string>
+    <string name="desafio_plata_04">plata_04</string>
     <string name="desafio_oro_01" />
     <string name="desafio_oro_02" />
     <string name="botonvolver">botonvolver</string>
@@ -114,6 +115,7 @@
     <string name="desafio_plata_01_Letra" />
     <string name="desafio_plata_02_Letra" />
     <string name="desafio_plata_03_Letra" />
+    <string name="desafio_plata_04_Letra" />
     <string name="botondesafios" />
     <string name="title_activity_historia_supermercado">HistoriaSupermercado</string>
 

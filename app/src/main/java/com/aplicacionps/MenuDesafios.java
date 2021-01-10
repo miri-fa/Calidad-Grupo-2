@@ -37,6 +37,7 @@ public class MenuDesafios extends Fragment {
         ImageView titulo_desafioplata01 = view.findViewById(R.id.titulo_desafioplata01);
         ImageView titulo_desafioplata02 = view.findViewById(R.id.titulo_desafioplata02);
         ImageView titulo_desafioplata03 = view.findViewById(R.id.titulo_desafioplata03);
+        ImageView titulo_desafioplata04 = view.findViewById(R.id.titulo_desafioplata04);
         ImageView titulo_desafiooro01 = view.findViewById(R.id.titulo_desafiooro01);
         ImageView titulo_desafiooro02 = view.findViewById(R.id.titulo_desafiooro02);
         ImageButton btnVolver = view.findViewById(R.id.btnVolver);
@@ -83,7 +84,12 @@ public class MenuDesafios extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.plata03);
             }
         });
-
+        titulo_desafioplata04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.plata04);
+            }
+        });
         titulo_desafiooro01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
