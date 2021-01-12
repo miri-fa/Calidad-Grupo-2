@@ -28,10 +28,6 @@ public class COL_PasarLista extends AppCompatActivity {
         //Se obtiene el dato como string y luego se convierte en su tipo correspondiente
         String Dato = getIntent().getStringExtra("dato");
         PorcentajeActual = Integer.parseInt(Dato);
-        //La barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con
-        //el numero anteriormente obtenido
-        ProgressBar = (android.widget.ProgressBar)findViewById(R.id.barra1);
-        ProgressBar.setProgress(PorcentajeActual);
     }
 
     //El boton te lleva a la clase COL_ClaseBuena

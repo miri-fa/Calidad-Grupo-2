@@ -40,7 +40,7 @@ public class COL_SalidaMetroOAndando extends AppCompatActivity {
     public void irAndando(View view) {
         int valor = PorcentajeActual;
         String val = String.valueOf(valor);
-        Intent irAndando = new Intent(this, PantallaFinal.class);
+        Intent irAndando = new Intent(this, PantallaFinal2.class);
         irAndando.putExtra("dato", val);
         startActivity(irAndando);
     }

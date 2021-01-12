@@ -6,7 +6,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_como_jugar">ComoJugar</string>
 
-        <!-- Activity_col_entrada_instituto -->
+    <!-- Activity_col_entrada_instituto -->
     <string name="textoEntradaInstituto">¿TE ECHAS GEL AL ENTRAR AL INSTITUTO?</string>
     <string name="botonGelSi">POR SUPUESTO</string>
     <string name="botonGelNo">ESTA VEZ NO</string>

@@ -10,10 +10,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-public class PantallaFinal extends AppCompatActivity {
+public class PantallaFinal2 extends AppCompatActivity {
     //Se crea una variable para almacenar el porcentaje final obtenido y 2 textview para mostrar el
     //porcentaje y el Mensaje final
     private int PorcentajeActual;
+    private Boolean vuelta;
     private TextView Mensaje;
     private TextView Porciento;
 
@@ -29,6 +30,7 @@ public class PantallaFinal extends AppCompatActivity {
         //Se obtiene el porcentaje de la actividad anterior
         String Dato = getIntent().getStringExtra("dato");
         String pantalla = getIntent().getStringExtra("volver");
+        vuelta = Boolean.parseBoolean(pantalla);
         PorcentajeActual = Integer.parseInt(Dato);
         //Se relaciona el TextView "Porciento" con el del activity y muestra el porcentaje final obtenido
         Porciento = (TextView) findViewById(R.id.porciento);
@@ -42,7 +44,7 @@ public class PantallaFinal extends AppCompatActivity {
         //Si el porcentaje final obtenido es 0 no se puede contagiar
         if (PorcentajeActual == 0) {
             Mensaje.setText("¡ENHORABUENA! No te has contagiado ya que tienes un 0 por ciento de probabilidades. Sigue así.");
-        //Si el porcentaje final es 100 o mas se contagiará si o si
+            //Si el porcentaje final es 100 o mas se contagiará si o si
         }
         else if (PorcentajeActual <= 100) {
             Mensaje.setText("Te has contagiado. Ten más cuidado ya que puedes enfermar a los que más quieres.");
@@ -60,7 +62,7 @@ public class PantallaFinal extends AppCompatActivity {
                 else {
                     Mensaje.setText("Te has contagiado. Tienes que tener más cuidado si no quieres que te vuelva a pasar");
                 }
-            //Por el contrario, si es mayor no se contagiará
+                //Por el contrario, si es mayor no se contagiará
             } else {
                 //Dependiendo del porcentaje que se haya obtenido al final aparecerá un Mensaje diferente cada vez
                 if (PorcentajeActual <= 30) {
@@ -79,8 +81,9 @@ public class PantallaFinal extends AppCompatActivity {
     //Al pulsar el boton de volver a jugar, el juego te lleva a la casa del jugador para iniciar de nuevo
     //el juego_autobus_fuera
     public void volverajugar(View view){
-        Intent volverSuper = new Intent (this, SUP_EscenarioCasa.class);
-        startActivity(volverSuper);
+        //Se obtiene el string de la historia a la que debemos volver
+        Intent volverInsti = new Intent (this, COL_EntradaInstituto.class);
+        startActivity(volverInsti);
     }
 
     //Al pulsar el boton de menu, te lleva a la pantalla principal del juego

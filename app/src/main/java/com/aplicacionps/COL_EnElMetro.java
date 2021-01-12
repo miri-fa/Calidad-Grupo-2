@@ -40,7 +40,7 @@ public class COL_EnElMetro extends AppCompatActivity {
     public void esperarAlSiguiente(View view) {
         int valor = PorcentajeActual;
         String val = String.valueOf(valor);
-        Intent esperarAlSiguiente = new Intent(this, PantallaFinal.class);
+        Intent esperarAlSiguiente = new Intent(this, PantallaFinal2.class);
         esperarAlSiguiente.putExtra("dato", val);
         startActivity(esperarAlSiguiente);
     }
@@ -50,7 +50,7 @@ public class COL_EnElMetro extends AppCompatActivity {
     public void hayPrisa(View view) {
         int valor = PorcentajeActual + 10;
         String val = String.valueOf(valor);
-        Intent hayPrisa = new Intent(this, PantallaFinal.class);
+        Intent hayPrisa = new Intent(this, PantallaFinal2.class);
         hayPrisa.putExtra("dato", val);
         startActivity(hayPrisa);
     }
