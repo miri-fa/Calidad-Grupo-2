@@ -39,9 +39,11 @@ public class COL_SaludoAmigos extends AppCompatActivity {
     public void ConLaMano(View view){
         //Se obtiene el porcentaje actual y se actualiza al elegir una mala opcion
         int valor= PorcentajeActual + 10;
+        String Bool= String.valueOf(true);
         String val= String.valueOf(valor);
         //Se crea el nuevo activity, se pasa el dato anteriormente sacado y se inicializa
         Intent ConLaMano = new Intent (this, COL_MesaClase.class);
+        ConLaMano.putExtra("amigo", Bool);
         ConLaMano.putExtra("dato", val);
         startActivity(ConLaMano);
     }
@@ -50,9 +52,11 @@ public class COL_SaludoAmigos extends AppCompatActivity {
     public void ConElCodo(View view){
         //Se obtiene el porcentaje actual
         int valor= PorcentajeActual;
+        String Bool= String.valueOf(true);
         String val= String.valueOf(valor);
         //Se crea el nuevo activity, se pasa el dato anteriormente sacado y se inicializa
         Intent ConElCodo = new Intent (this, COL_MesaClase.class);
+        ConElCodo.putExtra("amigo", Bool);
         ConElCodo.putExtra("dato", val);
         startActivity(ConElCodo);
     }

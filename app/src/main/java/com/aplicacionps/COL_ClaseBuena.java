@@ -15,7 +15,6 @@ public class COL_ClaseBuena extends AppCompatActivity {
     private ProgressBar ProgressBar;
     //Se crea otra variable para almacenar el valor que se pasa de un activity a otro
     private int PorcentajeActual;
-    private boolean Amigos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,23 +27,21 @@ public class COL_ClaseBuena extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //Se obtienen el dato como string y luego se convierte en sus tipo correspondiente
         String Dato = getIntent().getStringExtra("dato");
-        String Am = getIntent().getStringExtra("am");
         PorcentajeActual = Integer.parseInt(Dato);
         //La barra se relaciona con el activity y se establece el porcentaje que se va a mostrar con
         //el numero anteriormente obtenido
         ProgressBar = (ProgressBar) findViewById(R.id.barra1);
         ProgressBar.setProgress(PorcentajeActual);
-        Amigos= Boolean.valueOf(Am);
     }
 
     //El boton te lleva a la cola del super al haber acabado la compra. Al ser la opion correcta,
     //el porcentaje de contagio no variará
     public void esNecesario(View view) {
         int valor = PorcentajeActual;
-        String Bool= String.valueOf(Amigos);
+        String Bool= String.valueOf(false);
         String val = String.valueOf(valor);
         Intent esNecesario = new Intent(this, COL_MesaClase.class);
-        esNecesario.putExtra("am", Bool);
+        esNecesario.putExtra("amigos", Bool);
         esNecesario.putExtra("dato", val);
         startActivity(esNecesario);
     }
@@ -53,10 +50,10 @@ public class COL_ClaseBuena extends AppCompatActivity {
     //se aumentará en un 10% el porcentaje de contagio
     public void tengoFrio(View view) {
         int valor = PorcentajeActual + 10;
-        String Bool= String.valueOf(Amigos);
+        String Bool= String.valueOf(false);
         String val = String.valueOf(valor);
         Intent tengoFrio = new Intent(this, COL_MesaClase.class);
-        tengoFrio.putExtra("am", Bool);
+        tengoFrio.putExtra("amigos", Bool);
         tengoFrio.putExtra("dato", val);
         startActivity(tengoFrio);
     }
