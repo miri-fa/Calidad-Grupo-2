@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_coronavirus"
     tools:context=".Ajustes">
 
     //Las siguientes lineas de codigo corresponden al boton switch
@@ -42,7 +42,7 @@
     //Las siguientes lineas de codigo corresponden al boton de vuelta al menu ppal
 
     <ImageButton
-        android:id="@+id/flechaatras_escenarios"
+        android:id="@+id/btnVolver"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:contentDescription="@string/boton_atras"
@@ -55,5 +55,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.043"
-        app:srcCompat="@drawable/flecha" />
+        app:srcCompat="@drawable/flecha_volver_atras" />
 </androidx.constraintlayout.widget.ConstraintLayout>
