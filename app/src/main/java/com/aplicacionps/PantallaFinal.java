@@ -121,14 +121,14 @@ public class PantallaFinal extends AppCompatActivity {
     }
     public void vaccine(int PorcentajeActual){
         int year= Calendar.getInstance().get(Calendar.YEAR);
-        if (PorcentajeActual==0 && PorcentajeActual<=30){
+        if (PorcentajeActual>=0 && PorcentajeActual<=30){
             year=year+2;
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
+            Mensaje.setText("Tu año estimado de vacunación es "+year);
         }else if (PorcentajeActual>30 && PorcentajeActual<=60){
             year=year+1;
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
+            Mensaje.setText("Tu año estimado de vacunación es "+year);
         }else{
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
+            Mensaje.setText("Tu año estimado de vacunación es "+year);
         }
     }
 }
