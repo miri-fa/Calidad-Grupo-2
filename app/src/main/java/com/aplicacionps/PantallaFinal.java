@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import java.util.Date;
+
 public class PantallaFinal extends AppCompatActivity {
     //Se crea una variable para almacenar el porcentaje final obtenido y 2 textview para mostrar el
     //porcentaje y el Mensaje final
@@ -74,6 +76,7 @@ public class PantallaFinal extends AppCompatActivity {
                 }
             }
         }
+        vaccine(PorcentajeActual);
     }
 
     //Al pulsar el boton de volver a jugar, el juego te lleva a la casa del jugador para iniciar de nuevo
@@ -113,6 +116,16 @@ public class PantallaFinal extends AppCompatActivity {
             Intent i = new Intent(this, AudioService.class);
             i.putExtra("action", AudioService.START);
             startService(i);
+        }
+    }
+    public void vaccine(int PorcentajeActual){
+        int date=(int) new Date().getYear();
+        if (PorcentajeActual==0 && PorcentajeActual<=30){
+            Mensaje.setText("Tu año estimada de vacunación es "+date+2);
+        }else if (PorcentajeActual>30 && PorcentajeActual<=60){
+            Mensaje.setText("Tu año estimada de vacunación es "+date+1);
+        }else{
+            Mensaje.setText("Tu año estimada de vacunación es "+date);
         }
     }
 }
