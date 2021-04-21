@@ -77,7 +77,7 @@ public class PantallaFinal extends AppCompatActivity {
                 }
             }
         }
-        vaccine(PorcentajeActual);
+        Mensaje.setText(vaccine(PorcentajeActual));
     }
 
     //Al pulsar el boton de volver a jugar, el juego te lleva a la casa del jugador para iniciar de nuevo
@@ -119,16 +119,16 @@ public class PantallaFinal extends AppCompatActivity {
             startService(i);
         }
     }
-    public void vaccine(int PorcentajeActual){
-        int year= Calendar.getInstance().get(Calendar.YEAR);
-        if (PorcentajeActual==0 && PorcentajeActual<=30){
-            year=year+2;
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
-        }else if (PorcentajeActual>30 && PorcentajeActual<=60){
-            year=year+1;
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
-        }else{
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
+    public String vaccine(int PorcentajeActual) {
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        if (PorcentajeActual == 0 && PorcentajeActual <= 30) {
+            year = year + 2;
+            return ("Tu año estimada de vacunación es " + year);
+        } else if (PorcentajeActual > 30 && PorcentajeActual <= 60) {
+            year = year + 1;
+            return ("Tu año estimada de vacunación es " + year);
+        } else {
+            return ("Tu año estimada de vacunación es " + year);
         }
     }
 }
