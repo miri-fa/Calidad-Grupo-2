@@ -45,51 +45,45 @@ public class PantallaFinal extends AppCompatActivity {
         //Si el porcentaje final obtenido es 0 no se puede contagiar
         if (PorcentajeActual == 0) {
             Mensaje.setText("¡ENHORABUENA! No te has contagiado ya que tienes un 0 por ciento de probabilidades. Sigue así.");
-        //Si el porcentaje final es 100 o mas se contagiará si o si
-        }
-        else if (PorcentajeActual <= 100) {
+            //Si el porcentaje final es 100 o mas se contagiará si o si
+        } else if (PorcentajeActual <= 100) {
             Mensaje.setText("Te has contagiado. Ten más cuidado ya que puedes enfermar a los que más quieres.");
-        }
-        else {
+        } else {
             //Si el numero aleatorio obtenido es menor o igual que el porcentaje obtenido, se contagiará
             if (numAleatorio <= PorcentajeActual) {
                 //Dependiendo del porcentaje que se haya obtenido al final aparecerá un Mensaje diferente cada vez
                 if (PorcentajeActual <= 30) {
                     Mensaje.setText("Mala suerte, te has contagiado. Incluso con poco porcentaje te puedes contagiar. Ten más cuidado la proxima vez");
-                }
-                else if ((PorcentajeActual <= 60) && (PorcentajeActual > 30)) {
+                } else if ((PorcentajeActual <= 60) && (PorcentajeActual > 30)) {
                     Mensaje.setText("Mala suerte, te ha contagiado. Ten más cuidado la proxima vez");
-                }
-                else {
+                } else {
                     Mensaje.setText("Te has contagiado. Tienes que tener más cuidado si no quieres que te vuelva a pasar");
                 }
-            //Por el contrario, si es mayor no se contagiará
+                //Por el contrario, si es mayor no se contagiará
             } else {
                 //Dependiendo del porcentaje que se haya obtenido al final aparecerá un Mensaje diferente cada vez
                 if (PorcentajeActual <= 30) {
                     Mensaje.setText("No te has contagiado aunque habian pocas posibilidades. Intentalo de nuevo para bajarlas.");
-                }
-                else if ((PorcentajeActual <= 60) && (PorcentajeActual > 30)) {
+                } else if ((PorcentajeActual <= 60) && (PorcentajeActual > 30)) {
                     Mensaje.setText("Has tenido suerte y no te has contagiado. Puedes mejorar este resultado. Intentálo de nuevo");
-                }
-                else {
+                } else {
                     Mensaje.setText("Has tenido muchiiiisima suerte. Pero puede que algún día no la tengas y lo pilles. Ten cuidado.");
                 }
             }
         }
-        vaccine(PorcentajeActual);
+        Mensaje.setText(vaccine(PorcentajeActual));
     }
 
     //Al pulsar el boton de volver a jugar, el juego te lleva a la casa del jugador para iniciar de nuevo
     //el juego_autobus_fuera
-    public void volverajugar(View view){
-        Intent volverSuper = new Intent (this, SUP_EscenarioCasa.class);
+    public void volverajugar(View view) {
+        Intent volverSuper = new Intent(this, SUP_EscenarioCasa.class);
         startActivity(volverSuper);
     }
 
     //Al pulsar el boton de menu, te lleva a la pantalla principal del juego
-    public void menuprincipal(View view){
-        Intent menuprincipal = new Intent (this, MainActivity.class);
+    public void menuprincipal(View view) {
+        Intent menuprincipal = new Intent(this, MainActivity.class);
         startActivity(menuprincipal);
     }
 
@@ -119,16 +113,17 @@ public class PantallaFinal extends AppCompatActivity {
             startService(i);
         }
     }
-    public void vaccine(int PorcentajeActual){
-        int year= Calendar.getInstance().get(Calendar.YEAR);
-        if (PorcentajeActual==0 && PorcentajeActual<=30){
-            year=year+2;
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
-        }else if (PorcentajeActual>30 && PorcentajeActual<=60){
-            year=year+1;
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
-        }else{
-            Mensaje.setText("Tu año estimada de vacunación es "+year);
+
+    public String vaccine(int PorcentajeActual) {
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        if (PorcentajeActual == 0 && PorcentajeActual <= 30) {
+            year = year + 2;
+            return ("Tu año estimada de vacunación es " + year);
+        } else if (PorcentajeActual > 30 && PorcentajeActual <= 60) {
+            year = year + 1;
+            return ("Tu año estimada de vacunación es " + year);
+        } else {
+            return ("Tu año estimada de vacunación es " + year);
         }
     }
 }
