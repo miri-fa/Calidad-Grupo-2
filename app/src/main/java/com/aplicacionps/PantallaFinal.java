@@ -2,12 +2,14 @@ package com.aplicacionps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -19,6 +21,8 @@ public class PantallaFinal extends AppCompatActivity {
     private int PorcentajeActual;
     private TextView Mensaje;
     private TextView Porciento;
+    private Button button;
+    private View.OnClickListener corkyListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,6 +128,7 @@ public class PantallaFinal extends AppCompatActivity {
         if (PorcentajeActual>=0 && PorcentajeActual<=30){
             year=year+2;
             Mensaje.setText("Tu año estimado de vacunación es "+year);
+
         }else if (PorcentajeActual>30 && PorcentajeActual<=60){
             year=year+1;
             Mensaje.setText("Tu año estimado de vacunación es "+year);
@@ -131,4 +136,6 @@ public class PantallaFinal extends AppCompatActivity {
             Mensaje.setText("Tu año estimado de vacunación es "+year);
         }
     }
+
+
 }

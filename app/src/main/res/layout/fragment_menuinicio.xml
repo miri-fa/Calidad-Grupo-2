@@ -45,10 +45,25 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.842"
+        app:layout_constraintVertical_bias="0.755"
+        app:srcCompat="@drawable/inicio_debotondesafios" />
+
+    <ImageButton
+        android:id="@+id/btnytutorial"
+        android:layout_width="488dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/botonyt"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955"
         app:srcCompat="@drawable/inicio_debotondesafios" />
 
     <ImageButton

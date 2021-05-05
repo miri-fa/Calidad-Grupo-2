@@ -5,7 +5,9 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
-
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
     defaultConfig {
         applicationId "com.aplicacionps"
         minSdkVersion 16
@@ -13,7 +15,15 @@ android {
         versionCode 1
         versionName "1.0"
 
+
+        testApplicationId "com.aplicacionps.testYoutube"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    configurations {
+        cucumberRuntime {
+            extendsFrom testImplementation
+        }
     }
 
     buildTypes {
@@ -36,11 +46,15 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.1'
     implementation 'androidx.navigation:navigation-ui:2.3.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    // Required for instrumented tests
-    androidTestImplementation 'com.android.support:support-annotations:24.0.0'
-    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'io.cucumber:cucumber-java8:6.8.1'
+    androidTestImplementation 'io.cucumber:cucumber-junit:6.8.1'
+    androidTestImplementation 'com.android.support.test:testing-support-lib:0.1'
+    androidTestImplementation 'com.android.support:support-annotations:26.1.0'
+    androidTestImplementation 'info.cukes:cucumber-android:1.2.4'
+    androidTestImplementation 'info.cukes:cucumber-picocontainer:1.2.4'
+
+
+
     }
-}

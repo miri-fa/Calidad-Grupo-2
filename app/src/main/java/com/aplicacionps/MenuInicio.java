@@ -1,5 +1,7 @@
 package com.aplicacionps;
 
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,7 +13,10 @@ import android.content.Intent;
 
 import androidx.navigation.Navigation;
 
+import android.widget.Button;
 import android.widget.ImageButton;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class MenuInicio extends Fragment {
     public MenuInicio() {
@@ -35,6 +40,7 @@ public class MenuInicio extends Fragment {
         ImageButton btncomojugar = view.findViewById(R.id.btncomojugar);
         ImageButton btndesafios = view.findViewById(R.id.btndesafios);
         ImageButton btnajustes = view.findViewById(R.id.btnajustes);
+        ImageButton btnyoutube = view.findViewById(R.id.btnytutorial);
         //Implementacion de boton que lleva de un fragmento a otro fragment
         btnjugar.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -60,6 +66,17 @@ public class MenuInicio extends Fragment {
                     Intent ajustes= new Intent (getActivity(),Ajustes.class);
                 ajustes.putExtra("datos","mas datos");
                 startActivity(ajustes);
+            }
+        });
+        btnyoutube.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v){
+
+                String link = "https://www.youtube.com/";
+                Intent viewIntent =
+                        new Intent("android.intent.action.VIEW",
+                                Uri.parse(link));
+                startActivity(viewIntent);
             }
         });
     }
